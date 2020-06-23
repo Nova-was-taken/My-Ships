@@ -1,0 +1,272 @@
+addShivrom = (n, xpos, ypos, zpos, size, angle) ->
+    addShurikenBarrel('barrelInnerLeft'+n,[20,20,20,20,20,20,20,20],xpos,ypos,zpos,size,angle,1)
+    addShurikenBarrel('barrelInnerRight'+n,[20,20,20,20,20,20,20,20],xpos,ypos,zpos,size,angle,-1)
+    addShurikenBarrel('barrelOuterLeft'+n,[35,35,35,35,35,35,35,35],xpos,ypos+10*size,zpos,size,angle,1)
+    addShurikenBarrel('barrelOuterRight'+n,[35,35,35,35,35,35,35,35],xpos,ypos+10*size,zpos,size,angle,-1)
+    model.bodies['cannonBodyMain'+n] =
+      section_segments: 6
+      offset:
+        x: xpos
+        y: ypos+15*size
+        z: zpos
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-54,-50,-50,-12,-12,-12,-12,-10].mult(size)
+        z: [0,0,0,0,0,0,0,0].mult(size)
+      width: [0,18,18,18,18,18,18,0].mult(size)
+      height: [0,5,5,5,5,5,5,0].mult(size)
+      texture: [2.9]
+      angle: angle
+    model.bodies['cannonBodySecondary'+n] =
+      section_segments: [45,90+45,180+45,270+45]
+      offset:
+        x: xpos
+        y: ypos+15*size
+        z: zpos
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-52,-49,-49,-13,-13,-13,-13,-11].mult(size)
+        z: [0,0,0,0,0,0,0,0].mult(size)
+      width: [0,16,16,16,16,16,16,0].mult(size)
+      height: [0,6,6,6,6,6,6,0].mult(size)
+      texture: [4.9]
+      angle: angle
+    model.bodies['mount'+n] =
+      section_segments: [45,90+45,180+45,270+45]
+      offset:
+        x: xpos
+        y: ypos+15*size
+        z: zpos-8*size
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-49,-49,-49,-13,-13,-13,-13,-13].mult(size)
+        z: [0,0,0,0,0,0,0,0].mult(size)
+      width: [0,16,16,16,16,16,16,0].mult(size)
+      height: [0,9,9,9,9,9,9,0].mult(size)
+      texture: [4]
+      angle: angle
+    model.bodies['wingThingLeft'+n] =
+      section_segments: 6
+      offset:
+        x: xpos
+        y: ypos+15*size
+        z: zpos
+      position:
+        x: [41,45,45,53,53,53,53,53].mult(size)
+        y: [-52,-49,-49,5,5,5,5,12].mult(size)
+        z: [0,0,0,0,0,0,0,0].mult(size)
+      width: [0,6,6,20,20,20,20,0].mult(size)
+      height: [0,3,3,7,7,7,7,0].mult(size)
+      texture: [5.9]
+      angle: angle
+    model.bodies['wingThingRight'+n] =
+      section_segments: 6
+      offset:
+        x: xpos
+        y: ypos+15*size
+        z: zpos
+      position:
+        x: [41,45,45,53,53,53,53,53].mult(-size)
+        y: [-52,-49,-49,5,5,5,5,12].mult(size)
+        z: [0,0,0,0,0,0,0,0].mult(size)
+      width: [0,6,6,20,20,20,20,0].mult(size)
+      height: [0,3,3,7,7,7,7,0].mult(size)
+      texture: [5.9]
+      angle: angle
+
+addShurikenBarrel = (name, xcoords, xpos, ypos, zpos, size, angle, neg) ->
+    model.bodies[name] =
+      section_segments: 14
+      offset:
+        x: xpos
+        y: ypos
+        z: zpos
+      position:
+        x: xcoords.mult(size*neg)
+        y: [-45,-50,-50,-42,-42,5,10,30].mult(size)
+        z: [0,0,0,0,0,0,0,0].mult(size)
+      width: [0,5,9,9,7,10,10,0].mult(size)
+      height: [0,5,9,9,7,10,10,0].mult(size)
+      angle: angle
+      laser:
+        damage: [30,45]
+        rate: 7
+        type: 2
+        speed: [2,2]
+        number: 5
+        angle: 360
+        error: 0
+      texture: [17,4,18,4,3,4,3]
+
+  model =
+  name: "Hellion"
+  level: 5
+  model: 9
+  size: 1.8
+  specs:
+    shield:
+      capacity: [225,275]
+      reload: [5,7]
+    generator:
+      capacity: [85,140]
+      reload: [20,28]
+    ship:
+      mass: 225
+      speed: [60,90]
+      rotation: [50,80]
+      acceleration: [90,120]
+  bodies:
+    main:
+      section_segments: 12
+      offset:
+        x: 0
+        y: 0
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-70,-65,-40,-20,0,30,60,80,100,110,120,110]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,1,8,12,17,20,20,17,13,13,13,0]
+      height: [0,1,7,10,15,15,15,15,10,10,10,0]
+      texture: [17,4,10,63,4,4,63,4,18,13,17]
+      propeller: true
+      laser:
+        damage: [2,5]
+        rate: 10
+        type: 1
+        speed: [200,230]
+        number: 1
+        angle: 0
+        error: 0
+        recoil: 0
+    Engine2:
+      section_segments: 12
+      offset:
+        x: 20
+        y: 50
+        z: 0
+      position:
+        x: [-18,-2,8,8,7,7,5,1,1,0,0]
+        y: [-120,-80,-40,-15,1,15,30,50,70,55]
+        z: [0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,10,10,10,10,10,10,10,10,0]
+      height: [0,7,7,7,7,7,8,8,8,0]
+      texture: [3,4,4,63,3,3,11,13,17]
+      propeller: true
+    cockpit:
+      section_segments: [45,90,180,270,320]
+      offset:
+        x: 0
+        y: 12
+        z: 100
+      position:
+        x: [-70,-70,-70,-70,-70,-70,-70]
+        y: [-30,-10,10,30,50,60,75]
+        z: [0,0,0,0,0,0,0]
+      width: [0,7,9,9,8,5,0]
+      height: [0,3,5,5,4,2,0]
+      texture: [7,9,9,63,4,4]
+    spikes:
+      section_segments: 4
+      offset:
+        x: 0
+        y: 0
+        z: 1100000000000000
+      position:
+        x: [-10,-18,-18,-15,-24,-24,-20,-32,-32]
+        y: [-30,20,20,-23,30,30,-12,40,40]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,1.5,0,0,1.5,0,0,2,0]
+      height: [0,1,0,0,1,0,0,1,0]
+      texture: [1]  
+    cockpit_Marauder:
+      section_segments: [0,60,60*2,60*3,54*4,60*5,60*6,52*7]
+      offset:
+        x: 0
+        y: 12
+        z: 15
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-30,-10,10,30,50,60,75]
+        z: [0,0,0,0,0,0,0]
+      width: [0,7,9,9,8,5,0]
+      height: [0,3,5,5,4,2,0]
+      texture: [7,9,8.98,63,4,4]
+    main_laser:
+      section_segments: 10
+      offset:
+        x: 0
+        y: -31
+        z: -8
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-30,-35,-20,30,30,0]
+        z: [0,0,0,0,0,0]
+      width: [0,2,6,6,0]
+      height: [0,2,6,6,0]
+      texture: [15.9,4,4,4]
+      laser:
+        damage: [2,5]
+        rate: 10
+        type: 1
+        speed: [200,230]
+        number: 1
+        angle: 0
+        error: 0
+        recoil: 0
+    mini_lasers:
+      section_segments: 10
+      offset:
+        x: 30
+        y: -8
+        z: 1
+      position:
+        x: [0,0,0,0,-0]
+        y: [-30,-35,-20,30,30]
+        z: [0,0,0,0,0,0]
+      width: [0,1,3,3,1,0,0]
+      height: [0,1,3,3,0,0,0]
+      texture: [15.9,63,4,4]
+      laser:
+        damage: [6,12]
+        rate: 2
+        type: 1
+        speed: [130,160]
+        number: 1
+        angle: 0
+        error: 0
+  wings:
+    top:
+      doubleside: true
+      offset:
+        x: 17
+        y: 66
+        z: 4
+      length: [25,10,6]
+      width: [60,40,30,20,10]
+      angle: [20,-20,-30]
+      position: [-34,-10,10,20]
+      texture: [11,4,63]
+      bump:
+        position: 5
+        size: 5
+    winglets:
+      doubleside: true
+      offset:
+        x: 10
+        y: 97
+        z: 3
+      length: [25]
+      width: [40,7]
+      angle: [40]
+      position: [0,30]
+      texture: [4]
+      bump:
+        position: 0
+        size: 5
+
+
+addShivrom(0,0,0,-11110,1,0) #see parameters if you can't tell what these numbers mean
+#if you don't know what a parameter is, you probably shouldn't be doing this
+
+return model;
