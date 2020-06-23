@@ -1,0 +1,225 @@
+return model =
+  name: "Zenith"
+  level: 5
+  model: 8
+  size: 1.5
+  specs:
+    shield:
+      capacity: [175,225]
+      reload: [3,7]
+    generator:
+      capacity: [90,170]
+      reload: [20,50]
+    ship:
+      mass: 220
+      speed: [70,100]
+      rotation: [140,180]
+      acceleration: [100,120]
+  bodies:
+    main:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 0
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-130,-120,-85,-60,-30,-10,20,40,50,70,95,60]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,20,30,30,36,36,30,25,25,25,15,0]
+      height: [0,10,10,15,25,25,25,20,15,15,10,0]
+      texture: [6,11,3,63,3,10,4,5,18,13,17]
+      propeller: true
+      laser:
+        damage: [12,18]
+        rate: 2
+        type: 1
+        speed: [200,240]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+    cockpit:
+      section_segments: 7
+      offset:
+        x: 0
+        y: 20
+        z: 12
+      position:
+        x: [0,0,0,0,0]
+        y: [-120,-95,-75,-60,-30]
+        z: [0,0,0,10,10]
+      width: [5,13,15,15,0]
+      height: [0,10,10,10,0]
+      texture: [9,9,4]
+      propeller: false
+    side_things:
+      section_segments: 8
+      offset:
+        x: 95
+        y: 0
+        z: 0
+      position:
+        x: [-60,-30,-25,-25,-10,-10,-20,-25,-30,-30,-30,-30]
+        y: [-140,-95,-85,-60,-30,-20,20,40,50,70,85,70]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,10,15,15,21,21,15,15,15,10,5,0]
+      height: [0,10,15,15,20,20,15,15,15,10,10,0]
+      texture: [3,4,63,11,4,63,3,63,18,12,17]
+      propeller: true
+    cockpit_armor:
+      section_segments: 8
+      offset:
+        x: 19
+        y: -115
+        z: 11
+      position:
+        x: [-20,-10,-5,-3,0,0]
+        y: [5,20,30,60,90,90]
+        z: [0,0,0,0,0,0]
+      width: [0,4,4,4,4,0]
+      height: [0,7,7,7,8,0]
+      texture: [4,4,63]
+    cockpit_armor2:
+      section_segments: 8
+      offset:
+        x: 15
+        y: -25
+        z: -15
+      position:
+        x: [-14,-14,-3,1,1,-3]
+        y: [-10,10,90,110,125,115]
+        z: [0,0,0,0,0,0]
+      width: [0,4,4,4,4,0]
+      height: [0,7,7,7,8,0]
+      texture: [4,3,8,13,17]
+      propeller: true
+    cannon_sides:
+      section_segments: 8
+      offset:
+        x: 76
+        y: -115
+        z: 10
+      position:
+        x: [0,0,0,0,0]
+        y: [12.5,20,30,70,70]
+        z: [0,0,0,0,0]
+      width: [0,4,4,4,0]
+      height: [0,4,4,4,0]
+      texture: [6,3,3]
+      propeller: false
+      angle: 0
+      laser:
+        damage: [5,7]
+        rate: 3
+        type: 1
+        speed: [150,190]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+    cannon_mini:
+      section_segments: 8
+      offset:
+        x: 15
+        y: -140
+        z: -11
+      position:
+        x: [0,0,0,0,0]
+        y: [5,15,60,90,90]
+        z: [0,0,0,6,6]
+      width: [0,4,4,4,0]
+      height: [0,4,4,4,0]
+      texture: [6,4,2]
+      propeller: false
+      angle: 0
+      laser:
+        damage: [5,7]
+        rate: 3
+        type: 1
+        speed: [150,190]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+    cannon_main:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -130
+        z: -19
+      position:
+        x: [0,0,0,0,0,0]
+        y: [20,10,30,40,90,90]
+        z: [0,0,0,0,5,5]
+      width: [0,10,8,7,7,0]
+      height: [0,10,7,7,7,0]
+      texture: [4,3,4]
+      propeller: false
+      angle: 0
+      laser:
+        damage: [12,18]
+        rate: 2
+        type: 1
+        speed: [200,240]
+        number: 1
+        error: 0
+        angle: 0
+        recoil: 0
+  wings:
+    main:
+      offset:
+        x: 20
+        y: -40
+        z: 0
+      length: [70]
+      width: [70,0]
+      angle: [0]
+      position: [-20,20]
+      texture: [3]
+      doubleside: true
+      bump:
+        position: 10
+        size: 10
+    main_back:
+      offset:
+        x: 20
+        y: 15
+        z: 0
+      length: [56]
+      width: [70,0]
+      angle: [0]
+      position: [-20,20]
+      texture: [8.2]
+      doubleside: true
+      bump:
+        position: 5
+        size: 2
+    winglets1:
+      offset:
+        x: 80
+        y: 25
+        z: 10
+      length: [36]
+      width: [50,20]
+      angle: [30,-10,0]
+      position: [-20,30]
+      texture: [18]
+      doubleside: true
+      bump:
+        position: 5
+        size: 2
+    winglets:
+      offset:
+        x: 10
+        y: 27
+        z: 10
+      length: [26]
+      width: [50,20]
+      angle: [20,-10,0]
+      position: [-30,50]
+      texture: [3]
+      doubleside: true
+      bump:
+        position: 5
+        size: 2
