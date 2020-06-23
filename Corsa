@@ -1,0 +1,117 @@
+return model =
+  name: "Corsa"
+  level: 7
+  model: 2
+  size: 2.5
+  specs:
+    shield:
+      capacity: [400,400]
+      reload: [12,12]
+    generator:
+      capacity: [225,225]
+      reload: [50,50]
+    ship:
+      mass: 300
+      speed: [130,130]
+      rotation: [35,35]
+      acceleration: [90,90]
+  bodies:
+    main:
+      section_segments: 20
+      offset:
+        x: 0
+        y: 0
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-140,-128,-105,-60,-30,-10,50,60,90,100,120,100]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,5,10,15,20,25,25,30,30,30,20,0,0]
+      height: [0,5,10,15,10,10,15,15,15,10,10,0]
+      texture: [6,3,4,4,63,63,4,4,3,13,17]
+      propeller: true
+      laser:
+        damage: [200,200]
+        rate: 1
+        type: 1
+        speed: [200,200]
+        number: 1
+        error: 0
+        recoil: 500
+    side_thusters:
+      section_segments: 10
+      offset:
+        x: 30
+        y: 30
+        z: 15
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-60,-40,0,20,45,60,40]
+        z: [0,0,0,0,0,0,0]
+      width: [0,10,20,23,20,20,0]
+      height: [0,16,19,17,18,12,0]
+      texture: [4,3,11,63,13,16.9]
+      propeller: true
+    cockpit:
+      section_segments: 12
+      offset:
+        x: 0
+        y: -30
+        z: 18
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-65,-25,0,25,70,90,120,150,130]
+        z: [-5,-5,-5,0,0,0,0,0,0]
+      width: [5,10,15,25,25,25,25,10,0]
+      height: [0,15,20,15,15,15,25,10,0]
+      texture: [9,9,3,63,3,10,13,17]
+      propeller: true
+    laser:
+      section_segments: 10
+      offset:
+        x: 40
+        y: 50
+        z: 0
+      position:
+        x: [-30,-30,-20,-10,0,0,0,0,0,0,0]
+        y: [-190,-170,-135,-80,-50,-30,25,30,40,70,60]
+        z: [0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,5,10,15,15,15,10,10,10,10,0]
+      height: [0,5,10,15,15,15,10,10,10,10,0]
+      texture: [17,3,10,3,63,4,3,2,2,17]
+      propeller: true
+      laser:
+        damage: [7,7]
+        rate: 3
+        type: 1
+        speed: [150,150]
+        number: 1
+  wings:
+    wings:
+      offset:
+        x: 50
+        y: 30
+        z: 0
+      length: [25,5,20,15]
+      width: [90,70,60,50,45]
+      angle: [-10,20,0,0]
+      position: [0,30,40,70,120]
+      texture: [3,63,18,3]
+      doubleside: true
+      bump:
+        position: 20
+        size: 15
+    fins:
+      offset:
+        x: 15
+        y: 32
+        z: 27
+      length: [25,5]
+      width: [80,20]
+      angle: [45]
+      position: [0,30]
+      texture: [63]
+      doubleside: true
+      bump:
+        position: 5
+        size: 5
