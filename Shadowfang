@@ -1,0 +1,156 @@
+b= 50
+return model =
+  name: "Shadowfang"
+  level: 6
+  model: 8
+  size: 1.8
+  specs:
+    shield:
+      capacity: [200,300]
+      reload: [5,10]
+    generator:
+      capacity: [90,150]
+      reload: [20,46]
+    ship:
+      mass: 200
+      speed: [75,100]
+      rotation: [50,80]
+      acceleration: [100,150]
+  bodies:
+    main:
+      section_segments: 14
+      offset:
+        x: 0
+        y: 0+b
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0]
+        y: [-140,-125,-110,-80,-35,-10,16,50,80,40]
+        z: [0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,5,10,15,23,28,25,20,15,0]
+      height: [0,5,10,15,20,21,20,15,10,0]
+      texture: [4,63,4,4,63,4,18,13,17]
+      propeller: true
+    cockpit1:
+      section_segments: 7
+      offset:
+        x: 0
+        y: -36+b
+        z: 20
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-43,-20,0,20,40]
+        z: [-5,0,0,0,0]
+      width: [0,5,9,9,9,0]
+      height: [0,5,7,7,0]
+      texture: [7,9,9,4]
+    side_cannon1:
+      section_segments: 10
+      offset:
+        x: 10
+        y: -97+b
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-45,-30,-30,-35,-20,30,30]
+        z: [0,0,0,0,0,0,0]
+      width:  [0,2,0,3,5,5,0]
+      height: [0,2,0,3,5,5,0]
+      texture: [17,0,15.9,63,4,4,4,4]
+      laser:
+        damage: [3,8]
+        rate: 5
+        speed: [175,225]
+        number: 1
+        error: 0
+    armor1:
+      section_segments: 10
+      offset:
+        x: 9
+        y: -25+b
+        z: 15
+      position:
+        x: [-9,-3,0,0,0,0]
+        y: [-54,-35,-0,40,40,30]
+        z: [0,0,0,-5,0,0]
+      width:  [0,3,4,4,0,0]
+      height: [0,7,7,7,0,0]
+      texture: [63,4,4,3]
+    Main_cannon1:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -110+b
+        z: -14
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-5,-15,0,30,50,50]
+        z: [0,0,0,0,2,2,2]
+      width: [0,8,7,3,3,0]
+      height: [0,8,7,3,3,0]
+      texture: [15.9,4,4,4,4]
+      laser:
+        damage: [10,80]
+        rate: 10
+        type: 1
+        speed: [200,250]
+        number: 1
+        error: 0
+        recoil: 0
+    Side_thruster1:
+      section_segments: 10
+      offset:
+        x: 30
+        y: 20+b
+        z: -4
+      position:
+        x: [-25,-21,-18,0,-6,-7,-10,-10,-10,-10]
+        y: [-145,-135,-125,-30,15,30,40,50,66,50]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width:  [0,3,3,4,4,4,4,4,4,0]
+      height: [0,3,3,4,4,4,3,3,4,0]
+      texture: [4,4,63,4,63,4,4,13,17]
+      propeller: true
+  wings:
+    back_wing:
+      offset:
+        x: 10
+        y: -20+b
+        z: 0
+      doubleside: true
+      length: [50,10]
+      width: [95,35,10]
+      angle: [24,0]
+      position: [-20,20,40]
+      texture: [4,63]
+      bump:
+        position: 0
+        size: 5
+    winglets_1:
+      offset:
+        x: 16
+        y: 30+b
+        z: -1
+      doubleside: true
+      length: [30]
+      width: [55,15]
+      angle: [35]
+      position: [-10,30]
+      texture: [4]
+      bump:
+        position: 0
+        size: 10    
+    winglets_3:
+      offset:
+        x: 10
+        y: -105+b
+        z: 0
+      doubleside: true
+      length: [35]
+      width: [40,5]
+      angle: [-8]
+      position: [0,20]
+      texture: [4]
+      bump:
+        position: 0
+        size: 5
