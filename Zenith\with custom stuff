@@ -1,3 +1,4 @@
+a=0
 return model =
   name: "Zenith"
   level: 5
@@ -44,13 +45,13 @@ return model =
       offset:
         x: 0
         y: 26
-        z: 3
+        z: -5
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
         y: [-2.25,2.25,2.25,-2.25,-2.25]
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [12+2.5*1,12+2.5*1,12-2.5*1,12-2.5*1,12+2.5*1]
-      height: [12+2.5*1,12+2.5*1,12-2.5*1,12-2.5*1,12+2.5*1]
+      width: [14.5,14.5,9.5,9.5,14.5]
+      height: [14.5,14.5,9.5,9.5,14.5]
       vertical: true
       texture: [17,17,17,4]
       angle: 0
@@ -59,13 +60,13 @@ return model =
       offset:
         x: 0
         y: 29
-        z: 3
+        z: -5
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
         y: [-2.25,2.25,2.25,-2.25,-2.25]
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [7+2.5*1,7+2.5*1,7-2.5*1,7-2.5*1,7+2.5*1]
-      height: [7+2.5*1,7+2.5*1,7-2.5*1,7-2.5*1,7+2.5*1]
+      width: [9.5,9.5,4.5,4.5,9.5]
+      height: [9.5,9.5,4.5,4.5,9.5]
       vertical: true
       texture: [16,17,17,4]
       angle: 0
@@ -74,16 +75,85 @@ return model =
       offset:
         x: 0
         y: 31
-        z: 3
+        z: -5
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
         y: [-2.25,2.25,2.25,-2.25,-2.25]
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [2+2.5*1,2+2.5*1,2-2.5*1,2-2.5*1,2+2.5*1]
-      height: [2+2.5*1,2+2.5*1,2-2.5*1,2-2.5*1,2+2.5*1]
+      width:  [2.5+2.5*1,2.5+2.5*1,2.5-2.5*1,2.5-2.5*1,2.5+2.5*1]
+      height: [2.5+2.5*1,2.5+2.5*1,2.5-2.5*1,2.5-2.5*1,2.5+2.5*1]
       vertical: true
-      texture: [16,16,3,3]
-      angle: 180   
+      texture: [16,4,17,17]
+      angle: 180
+    cover_front:
+      section_segments: 4
+      offset:
+        x: 0
+        y: 5
+        z: 34
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-14.5,-14.5,-9.5,-9.5,-5,-5,-5,-5,-5]
+        z: [-10,-5,-5,-2,-2,-2,-2,-2,-2]
+      width:  [3,3,3,3,3,3,3,3,0]
+      height: [0,2,2,2,2,2,2,2,0]
+      texture: [2,2,3,3,4,4]
+    cover_back:
+      section_segments: 4
+      offset:
+        x: 0
+        y: 5
+        z: 34
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-14.5,-14.5,-9.5,-9.5,-5,-5,-5,-5,-5]
+        z: [-10,-5,-5,-2,-2,-2,-2,-2,-2]
+      width:  [3,3,3,3,3,3,3,3,0]
+      height: [0,2,2,2,2,2,2,2,0]
+      texture: [2,2,3,3,4,4] 
+      angle: 180
+    cover_right:
+      section_segments: 4
+      offset:
+        x: 0.1
+        y: 5
+        z: 34
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-14.5,-14.5,-9.5,-9.5,-5,-5,-5,-5,-5]
+        z: [-10,-5,-5,-2,-2,-2,-2,-2,-2]
+      width:  [3,3,3,3,3,3,3,3,0]
+      height: [0,2,2,2,2,2,2,2,0]
+      texture: [2,2,3,3,4,4] 
+      angle: 270
+    cover_top_straight:
+      section_segments: 4
+      offset:
+        x: 0
+        y: 15
+        z: 33.5
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-15.2,-15,-9.5,-9.5,-5,-5,-5,-5,-5]
+        z: [0,0,0,0,0,0,0,0,0]
+      width:  [3,3,3,3,3,3,3,3,0]
+      height: [0,2,2,2,2,2,2,2,0]
+      texture: [4] 
+      angle: 0
+    cover_top_sideways:
+      section_segments: 4
+      offset:
+        x: 10.5
+        y: 5
+        z: 33.5
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-15,-15,-9.5,-9.5,-5,-5,-5,-5,-5]
+        z: [0,0,0,0,0,0,0,0,0]
+      width:  [3,3,3,3,3,3,3,3,0]
+      height: [0,2,2,2,2,2,2,2,0]
+      texture: [4] 
+      angle: 90    
     Reactor_support:
       section_segments: [22.5,45,67.5,90,112.5,135,157.5,180,202.5,225,247.5,270,292.5,315]
       offset:
@@ -96,7 +166,7 @@ return model =
         z: [-1,-1,-1,-2,0,-4]
       width: [0,0,6,13,17,0]
       height: [0,2,1,5,4,0]
-      texture: [4,4,4]  
+      texture: [4,4,4]
     cockpit:
       section_segments: 7
       offset:
@@ -105,27 +175,12 @@ return model =
         z: 12
       position:
         x: [0,0,0,0,0]
-        y: [-120,-95,-75,-60,-27]
+        y: [-130,-105,-75,-60,-15]
         z: [0,0,0,10,10]
-      width: [5,13,15,15,0]
+      width: [0,13,15,15,0]
       height: [0,10,10,10,0]
-      texture: [9,9,4]
+      texture: [7,9,4]
       propeller: false
-    
-    ###side_thrusters_template: #used to make sure custom sec segs for side thrusters 
-      section_segments: 8
-      offset:
-        x: 95
-        y: 0
-        z: 0
-      position:
-        x: [-60,-30,-25,-25,-10,-10,-20,-25,-30,-30,-30,-30]
-        y: [-140,-95,-85,-60,-30,-20,20,40,50,70,85,70]
-        z: [0,0,0,0,0,0,0,0,0,0,0,0]
-      width: [0,10,15,15,21,21,15,15,15,10,5,0]
-      height: [0,10,15,15,20,20,15,15,15,10,10,0]
-      texture: [3,4,63,11,4,63,3,63,18,12,17]
-      propeller: true###
     side_thrusters_1:
       section_segments: [45,90,135,180,225,270,315]
       offset:
@@ -139,7 +194,7 @@ return model =
       width: [0,10,15,15,21,21,15,15,15,10,5,0]
       height: [0,10,15,15,20,20,15,15,15,10,10,0]
       texture: [3,4,63,11,4,63,3,63,18,12,17]
-      propeller: true  
+      propeller: true
     side_thrusters_2:
       section_segments: [45,90,135,180,225,270,315]
       offset:
@@ -153,20 +208,7 @@ return model =
       width: [0,10,15,15,21,21,15,15,15,10,5,0]
       height: [0,10,15,15,20,20,15,15,15,10,10,0]
       texture: [3,4,63,11,4,63,3,63,18,12,17]
-      propeller: true  
-    ###cockpit_armor_template: #used to make sure custom sec segs for armor 
-      section_segments: 8
-      offset:
-        x: 19
-        y: -115
-        z: 11
-      position:
-        x: [-20,-10,-5,-3,0,0]
-        y: [5,20,30,60,90,90]
-        z: [0,0,0,0,0,0]
-      width: [0,4,4,4,4,0]
-      height: [0,7,7,7,8,0]
-      texture: [4,4,63]###
+      propeller: true
     cockpit_armor_right:
       section_segments: [45,90,135,180,225,270,315]
       offset:
@@ -174,7 +216,7 @@ return model =
         y: -115
         z: 11
       position:
-        x: [-0,-10,-13,-15,-19,-12]
+        x: [0,-10,-13,-15,-19,-12]
         y: [5,20,30,60,90,90]
         z: [0,0,0,0,0,0]
       width: [0,4,4,4,4,0]
@@ -192,7 +234,7 @@ return model =
         z: [0,0,0,0,0,0]
       width: [0,4,4,4,4,0]
       height: [0,7,7,7,8,0]
-      texture: [4,4,63]  
+      texture: [4,4,63]
     back_side_thruster:
       section_segments: 8
       offset:
