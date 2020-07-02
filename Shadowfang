@@ -6,10 +6,10 @@ return model =
   size: 1.8
   specs:
     shield:
-      capacity: [200,300]
-      reload: [5,10]
+      capacity: [150,200]
+      reload: [3,7]
     generator:
-      capacity: [90,150]
+      capacity: [90,130]
       reload: [20,46]
     ship:
       mass: 200
@@ -58,7 +58,7 @@ return model =
       height: [0,2,0,3,5,5,0]
       texture: [17,0,15.9,63,4,4,4,4]
       laser:
-        damage: [3,8]
+        damage: [3,7]
         rate: 5
         speed: [175,225]
         number: 1
@@ -90,7 +90,7 @@ return model =
       height: [0,8,7,3,3,0]
       texture: [15.9,4,4,4,4]
       laser:
-        damage: [10,80]
+        damage: [10,60]
         rate: 10
         type: 1
         speed: [200,250]
