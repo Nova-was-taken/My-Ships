@@ -1,0 +1,97 @@
+return model =
+  name: 'a ship'
+  level: 1
+  model: 1
+  size: 1
+  specs:
+    shield:
+      capacity: [50,75]
+      reload: [3,4]
+    generator:
+      capacity: [20,40]
+      reload: [10,20]
+    ship:
+      mass: 45
+      speed: [155,180]
+      rotation: [120,150]
+      acceleration: [125,140]
+  bodies:
+    main:
+      section_segments: 10
+      offset:
+        x: 0
+        y: -10
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-92,-40,-10,10,25,35,55,70,80,74]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width:  [0,10,15,18,20,20,16,14,15,0]
+      height: [0,14,17,20,21,20,17,12,11,0]
+      propeller: true
+      texture: [3,63,3,4,4,10,4,12,17]
+    cockpit:
+      section_segments: 7
+      offset:
+        x: 0
+        y: -27
+        z: 15
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-35,5,38,50,70,70]
+        z: [0,-0.3,3,4,5,0]
+      width:  [0,9,9,9,0]
+      height: [0,10,10,10,0]
+      propeller: false
+      texture: [7,9,9,4]
+    cannon:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -45
+        z: -12
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-40,-50,-20,10,20,30]
+        z: [0,0,0,0,0,0]
+      width: [0,5,8,11,7,0]
+      height: [0,4,6,10,10,0]
+      angle: 0
+      laser:
+        damage: [5,6]
+        rate: 4
+        type: 1
+        speed: [160,180]
+        number: 1
+        error: 2.5
+      propeller: false
+      texture: [16.9,2.9,63,3.9]
+  wings: 
+    main:
+      length: [40,4,18]
+      width: [49,28,20,8]
+      angle: [-10,30,30]  
+      position: [-20,20,29,55]
+      doubleside: true
+      offset:
+        x: 10
+        y: 2
+        z: 0
+      bump:
+        position: 30
+        size: 10
+      texture: [11,63,4]
+    winglets:
+      length: [38]
+      width: [46,14]
+      angle: [45]
+      position: [-10,15]
+      doubleside: true
+      offset:
+        x: 8
+        y: 56
+        z: 5
+      bump:
+        position: 15
+        size: 12
+      texture: [63]
