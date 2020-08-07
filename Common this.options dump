@@ -1,0 +1,27 @@
+Since people don't read the modding docs here's what the most common this.options and what the do (also read the modding docs) 
+  map_name: "Dueling", //Map name, i don't think there's a limit unlike the standard custom game creater but keep the name simple so people can read it
+  root_mode: "", //what game mode is getting used, Surival, team, Invasion, PDM (really touchy, must have the same number of ships in the tree as vanilla), and game mode null (makred by "") 
+  ships: adminTools,  //this is from the dueling mod but in the dueling mod this is how more ships are added 
+  reset_tree: false,  //If the vanilla tree is used or not (true if you want your own custom tree w/o vanilla ships)
+  max_players: 60,  //Maximum player count, self explanatory 
+  vocabulary: vocabulary,  //how you add chat options 
+  lives: 5,  //self explanatory, how many lives a ship has
+  map_size: 100,  //how big the map is (size 20-200)
+  crystal_value: 5, //the gem drop multiplyer from mining
+  asteroids_strength: 0.1, //how strong rocks are (note only the static rocks will count)
+  survival_level: 8,  //what lvl surival mode will kick in (note only for surival mode)
+  custom_map: [],  //how you add a custom map in, note the rock pattern when you make a map must be equal in size to the map size you picked)
+  speed_mod: 1.2,  //speed multiplier, note the default now is 1.2 in most game modes, to make it conistant with how ships handel in these have speed set to 1.2
+  weapons_store: false, //weapons store enabled or not (false is good for dueling mods to keep trolls from spamming seconds)
+  //friendly_colors: 2, //how many teams there are, any number from 1 through 5 
+  starting_ship: 800, //infinite lives (in mal's duel mod)  
+  //shield_regen_factor: 0, //ships shield regen multiplier 
+  //station_regeneration: 0, //station shield regen multiplier
+  //power_regen_factor: 10,  //energy regen multiplier
+  //starting_ship: 601,  //what ship you start as, in this case you will start as the Advanced Fighter (when using the vanilla tree) 
+  //starting_ship_maxed: true, //if said ship is maxed or not (only effects people who don't have a ECP or did not click the facebook or twitter icons on the website before joining a round)
+  //healing_ratio: 1,  //efficiency of healing lasers (1 is defalt)
+  //station_size: 1,  //how large the station is 
+  //station_crystal_capacity: 1,  //gem cap multiplier (1 is defalt but you can go from 0.1x to 10x) 
+  //station_repair_threshold: 0.1,  //what percentage of gem hold is needed to repair the base (if you have it at 100% the base will just level up, not repairing the damaged modules)
+  //chose_ship: [301,302,303], //how you can select one of 3 ships before joining a game, works in gamemode null and team  
