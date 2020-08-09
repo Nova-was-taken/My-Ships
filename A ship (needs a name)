@@ -274,6 +274,34 @@ return model =
         position: 30
         size: 10
       texture: [11,63,4]
+    detil_2:
+      length: [40,7,8]
+      width: [49,28,20,8]
+      angle: [-10,40,0]
+      position: [-20,20,20,40]
+      doubleside: true
+      offset:
+        x: 25
+        y: 20
+        z: -1.9
+      bump:
+        position: 30
+        size: 10
+      texture: [11,63,4]  
+    detal:
+      length: [40,7,8]
+      width: [53,29,22,11]
+      angle: [-10,40,0]
+      position: [-20,20,20,40]
+      doubleside: true
+      offset:
+        x: 25
+        y: 19
+        z: -.9
+      bump:
+        position: 30
+        size: 0
+      texture: [17,17,17]  
     winglets:
       length: [18]
       width: [46,14]
