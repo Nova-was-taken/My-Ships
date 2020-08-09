@@ -1,9 +1,9 @@
 a=22
 b=6
 return model =
-  name: 'a ship'
-  level: 1
-  model: 2
+  name: 'Krypton'
+  level: 6
+  model: 14
   size: 1.5
   specs:
     shield:
@@ -14,7 +14,7 @@ return model =
       reload: [20,30]
     ship:
       mass: 145
-      speed: [135,150]
+      speed: [115,130]
       rotation: [120,150]
       acceleration: [125,140]
   bodies:
@@ -137,8 +137,8 @@ return model =
       height: [0,1,4,4,4,4,4,4,2,0]
       angle: 0
       laser:
-        damage: [10,18]
-        rate: 2
+        damage: [4,8]
+        rate: 6
         type: 1
         speed: [160,180]
         number: 1
