@@ -1,0 +1,175 @@
+return model =
+  name: "Polaris"
+  level: 6
+  model: 13
+  size: 2.2
+  specs:
+    shield:
+      capacity: [200,300]
+      reload: [5,10]
+    generator:
+      capacity: [100,200]
+      reload: [30,40]
+    ship:
+      mass: 200
+      speed: [85,115]
+      rotation: [60,80]
+      acceleration: [120,130]
+  bodies:
+    main:
+      section_segments: 12
+      offset:
+        x: 0
+        y: -5
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-85,-70,-40,-25,0,36,70,80,70]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,6,18,16,19,18,10,10,0]
+      height: [0,5,15,15,15,14,10,10,0]
+      texture: [4,4,4,63,11,63,12,17]
+      propeller: true  
+    cockpit:
+      section_segments: 7
+      offset:
+        x: 0
+        y: -17
+        z: 15
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-30,-20,0,20,40]
+        z: [0,0,0,0,0]
+      width:  [0,5,9,9,9,0]
+      height: [0,5,5.7,6,0]
+      texture: [7,9,9,4]
+    cannon_top_wings:
+      section_segments: 10
+      offset:
+        x: 60
+        y: 52
+        z: 1
+      position:
+        x: [0,0,0,0,0]
+        y: [-30,-35,-20,3,3]
+        z: [0,0,0,0,0]
+      width: [0,1,3,3,1,0]
+      height: [0,1,3,3,0]
+      texture: [15.9,63,4]
+      laser:
+        damage: [4,8]
+        rate: 5
+        speed: [185,225]
+        number: 1
+        error: 0
+    mini_cannons:
+      section_segments: 10
+      offset:
+        x: 10.5
+        y: -40
+        z: -11
+      position:
+        x: [0,0,0,-2]
+        y: [-34,-35,-20,0]
+        z: [0,0,0,0]
+      width: [0,0.5,1.5,1.5,0.5,0]
+      height: [0,0.5,1.5,1.5,0]
+      texture: [15.9,4,4]
+      laser:
+        damage: [2,5]
+        rate: 10
+        speed: [185,225]
+        number: 1
+        error: 0
+    Super_cannon:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -50
+        z: -10.9
+      position:
+        x: [0,0,0,0]
+        y: [-20,-25,0,20]
+        z: [0,0,0,6]
+      width:  [0,5,4,0]
+      height: [0,5,4,0]
+      texture: [15.9,4,4]
+      laser:
+        damage: [35,45]
+        rate: 4
+        type: 1
+        speed: [230,250]
+        number: 1
+        error: 0
+        recoil: 0
+    Engines_Main_top:
+      section_segments: 12
+      offset:
+        x: 15
+        y: 0
+        z: 10
+      position:
+        x: [-4,1,2,3,-1,-4,-4,-5,0]
+        y: [-30,-15,0,25,50,60,75,70]
+        z: [0,0,0,0,0,0,0,0,0]
+      width:  [0,5,6.7,6.7,6.7,5,5,0]
+      height: [0,5,4.3,6.7,6.7,5,5,0]
+      texture: [4,63,4,4,4,13,17]
+      propeller: true  
+    Engines_bottom:
+      section_segments: 12
+      offset:
+        x: 15
+        y: 0
+        z: -9
+      position:
+        x: [-4,1,2,3,-1,-4,-4,-5,0]
+        y: [-30,-15,0,25,50,60,75,70]
+        z: [0,0,0,0,0,0,0,0,0]
+      width:  [0,5,6.7,6.7,6.7,5,5,0]
+      height: [0,5,4.3,6.7,6.7,5,5,0]
+      texture: [4,63,4,4,4,13,17]
+      propeller: true  
+    Engines_wing_tip_top:
+      section_segments: 10
+      offset:
+        x: 10
+        y: -10
+        z: 12
+      position:
+        x: [10,-5,0,0,0,0,-7,-7,0]
+        y: [-40,-35,0,15.5,25,40,85,70]
+        z: [0,0,0,0,0,0,0,0]
+      width:  [0,0,4,4,3,3,3,0,0]
+      height: [0,0,8,8,6,5,3,0,0]
+      texture: [4,63,4,11,63,4,17]
+      propeller: true
+  wings:
+    top_wing:
+      offset:
+        x: 10
+        y: 40
+        z: 0
+      doubleside: true
+      length: [40]
+      width: [75,25]
+      angle: [30]
+      position: [-30,30]
+      texture: [4]
+      bump:
+        position: 0
+        size: 5
+    bottom_wing:
+      offset:
+        x: 10
+        y: 20
+        z: -0
+      doubleside: true
+      length: [50]
+      width: [75,25]
+      angle: [0]
+      position: [-10,20]
+      texture: [4]
+      bump:
+        position: 0
+        size: 5
