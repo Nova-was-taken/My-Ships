@@ -151,7 +151,7 @@ return model =
       width:  [2.5+2.5*1,2.5+2.5*1,2.5-2.5*1,2.5-2.5*1,2.5+2.5*1]
       height: [2.5+2.5*1,2.5+2.5*1,2.5-2.5*1,2.5-2.5*1,2.5+2.5*1]
       vertical: true
-      texture: [13,4,17,17]
+      texture: [13,17,17,17]
       angle: 180
     cover_front:
       section_segments: 4
