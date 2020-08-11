@@ -1,6 +1,8 @@
 a=22
 b=6
 c=5
+d=22
+e=6
 return model =
   name: 'Krypton'
   level: 6
@@ -11,8 +13,8 @@ return model =
       capacity: [150,175]
       reload: [13,14]
     generator:
-      capacity: [250,300]
-      reload: [40,50]
+      capacity: [450,500]
+      reload: [70,80]
     ship:
       mass: 145
       speed: [115,130]
@@ -83,7 +85,7 @@ return model =
       height: [0,3,4,6,5,0]
       angle: 0
       propeller: false
-      texture: [3,3,3,3,16.9]  
+      texture: [3]  
     Side_thruster_thingys:
       section_segments: 6
       offset:
@@ -321,8 +323,8 @@ return model =
       section_segments: 6
       offset:
         x: 2
-        y: 12-a
-        z: 20+b
+        y: 12-d
+        z: 20+e
       position:
         x: [0,0,0,0,0,0]
         y: [-0,-10,-0,5,10,10]
@@ -342,8 +344,8 @@ return model =
       section_segments: [45,135,225,315]
       offset:
         x: 0
-        y: 17.5-a
-        z: 18+b
+        y: 17.5-d
+        z: 18+e
       position:
         x: [0,0,0,0,0,0]
         y: [-5,-5,3,5.5,5,18]
@@ -355,8 +357,8 @@ return model =
       section_segments: 6
       offset:
         x: 0
-        y: -10-a
-        z: 8+b
+        y: -10-d
+        z: 8+e
       position:
         x: [-14,-14,-14,-14,-14,-14]
         y: [-0,-10,-5,5,10,10]
@@ -365,7 +367,7 @@ return model =
       height: [0,1.5,1.5,1.5,1.5,0]
       angle: 0
       laser:
-        damage: [10,15]
+        damage: [20,25]
         rate: 2
         type: 1
         speed: [260,280]
