@@ -1,5 +1,6 @@
 a=22
 b=6
+c=5
 return model =
   name: 'Krypton'
   level: 6
@@ -10,8 +11,8 @@ return model =
       capacity: [150,175]
       reload: [13,14]
     generator:
-      capacity: [150,200]
-      reload: [20,30]
+      capacity: [250,300]
+      reload: [40,50]
     ship:
       mass: 145
       speed: [115,130]
@@ -40,7 +41,7 @@ return model =
         z: 15
       position:
         x: [0,0,0,0,0,0]
-        y: [-25,5,28,72,90]
+        y: [-20,5,28,72,90]
         z: [0,0,0,1,0,0]
       width:  [0,10,15,20,0]
       height: [0,7,7,4,0]
@@ -50,7 +51,7 @@ return model =
       section_segments: 6
       offset:
         x: 64
-        y: 46
+        y: 44+c
         z: -3
       position:
         x: [0,0,0,0,0,0]
@@ -68,6 +69,21 @@ return model =
         error: 0
       propeller: true
       texture: [16.9,2.9,63,3.9,16.9]
+    Cockpit_Armor:
+      section_segments: 6
+      offset:
+        x: 15
+        y: -3
+        z: 14
+      position:
+        x: [-15,-13,-3,0,-0.5,0]
+        y: [-55,-50,-20,10,23,10]
+        z: [0,0,0,0,-1,0]
+      width:  [0,2,4,4,2,0]
+      height: [0,3,4,6,5,0]
+      angle: 0
+      propeller: false
+      texture: [3,3,3,3,16.9]  
     Side_thruster_thingys:
       section_segments: 6
       offset:
@@ -103,7 +119,7 @@ return model =
       width: [14.5,14.5,9.5,9.5,14.5]
       height: [14.5,14.5,9.5,9.5,14.5]
       vertical: true
-      texture: [17,17,17,4]
+      texture: [13,17,17,4]
       angle: 0
     Reactor_ring_middle:
       section_segments: 8
@@ -118,13 +134,13 @@ return model =
       width: [9.5,9.5,4.5,4.5,9.5]
       height: [9.5,9.5,4.5,4.5,9.5]
       vertical: true
-      texture: [16,17,17,4]
+      texture: [13,17,17,4]
       angle: 0
     Reactor_inside:
       section_segments: 8
       offset:
         x: 0
-        y: 26
+        y: 23
         z: -25
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
@@ -133,7 +149,7 @@ return model =
       width:  [2.5+2.5*1,2.5+2.5*1,2.5-2.5*1,2.5-2.5*1,2.5+2.5*1]
       height: [2.5+2.5*1,2.5+2.5*1,2.5-2.5*1,2.5-2.5*1,2.5+2.5*1]
       vertical: true
-      texture: [16,4,17,17]
+      texture: [13,4,17,17]
       angle: 180
     cover_front:
       section_segments: 4
@@ -181,10 +197,10 @@ return model =
       offset:
         x: 0
         y: 35
-        z: 28.5
+        z: 25
       position:
         x: [0,0,0,0,0,0,0,0,0]
-        y: [-15.2,-15,-9.5,-9.5,-5,-5,-5,-5,-5]
+        y: [-15,-15,-9.5,-9.5,-5,-5,-5,-5,-5]
         z: [0,0,0,0,0,0,0,0,0]
       width:  [3,3,3,3,3,3,3,3,0]
       height: [0,2,2,2,2,2,2,2,0]
@@ -195,7 +211,7 @@ return model =
       offset:
         x: 10.5
         y: 25
-        z: 28.5
+        z: 25
       position:
         x: [0,0,0,0,0,0,0,0,0]
         y: [-15,-15,-9.5,-9.5,-5,-5,-5,-5,-5]
@@ -246,7 +262,7 @@ return model =
         number: 1
         error: 0
       texture: [16.9,2.9,2.9,2.9,2.9]
-    mini_gun_cannons_top_one:
+    mini_gun_cannons_top_copy:
       section_segments: 6
       offset:
         x: 2
@@ -267,7 +283,7 @@ return model =
         number: 1
         error: 0
       texture: [16.9,2.9,2.9,2.9,2.9]
-    mini_gun_cannons_bottom_one:
+    mini_gun_cannons_bottom_copy:
       section_segments: 6
       offset:
         x: 2
@@ -301,6 +317,61 @@ return model =
       width:  [0,7,7,7,7,0]
       height: [0,5,5,5,5,0]
       texture: [3,2.96,3,3]
+    Turret:
+      section_segments: 6
+      offset:
+        x: 2
+        y: 12-a
+        z: 20+b
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-0,-10,-0,5,10,10]
+        z: [0,0,0,0,0,0]
+      width:  [0,1.5,1.5,1.5,1.5,0]
+      height: [0,1.5,1.5,1.5,1.5,0]
+      angle: 0
+      laser:
+        damage: [10,15]
+        rate: 2
+        type: 1
+        speed: [260,280]
+        number: 1
+        error: 0
+      texture: [16.9,2.9,2.9,2.9,2.9]   
+    Turret_base_which_is_cube_by_money:
+      section_segments: [45,135,225,315]
+      offset:
+        x: 0
+        y: 17.5-a
+        z: 18+b
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-5,-5,3,5.5,5,18]
+        z: [0,0,0,0,0,-7]
+      width:  [0,7,7,7,7,0]
+      height: [0,5,5,5,5,0]
+      texture: [3,2.96,3,3]
+    Armor_cannon:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -10-a
+        z: 8+b
+      position:
+        x: [-14,-14,-14,-14,-14,-14]
+        y: [-0,-10,-5,5,10,10]
+        z: [0,0,0,0,0,-0]
+      width:  [0,1.5,1.5,1.5,1.5,0]
+      height: [0,1.5,1.5,1.5,1.5,0]
+      angle: 0
+      laser:
+        damage: [10,15]
+        rate: 2
+        type: 1
+        speed: [260,280]
+        number: 1
+        error: 0
+      texture: [16.9,12.9,2.9,2.9,2.9]  
   wings:
     main:
       length: [40,7,8]
@@ -310,13 +381,13 @@ return model =
       doubleside: true
       offset:
         x: 25
-        y: 20
+        y: 20+c
         z: 0
       bump:
         position: 30
         size: 10
-      texture: [11,63,4]
-    detil_2:
+      texture: [11,4]
+    Undermain:
       length: [40,7,8]
       width: [49,28,20,8]
       angle: [-10,40,0]
@@ -324,26 +395,40 @@ return model =
       doubleside: true
       offset:
         x: 25
-        y: 20
+        y: 20+c
         z: -1.9
       bump:
         position: 30
         size: 10
-      texture: [11,63,4]  
-    detal:
+      texture: [11,4]  
+    highlight:
       length: [40,7,8]
-      width: [53,29,22,11]
+      width: [53,29,22,12]
       angle: [-10,40,0]
       position: [-20,20,20,40]
       doubleside: true
       offset:
         x: 25
-        y: 19
+        y: 18+c
         z: -.9
       bump:
         position: 30
         size: 0
-      texture: [17,17,17]  
+      texture: [17]
+    more_highlights:
+      length: [42]
+      width: [19,16,12,2]
+      angle: [-11]
+      position: [-22,22]
+      doubleside: true
+      offset:
+        x: 25
+        y: 23+c
+        z: 3.9
+      bump:
+        position: 30
+        size: 5
+      texture: [63]    
     winglets:
       length: [18]
       width: [46,14]
@@ -356,5 +441,19 @@ return model =
         z: 5
       bump:
         position: 15
-        size: 12
+        size: 22
       texture: [63]
+    winglets_highlight:
+      length: [17.8]
+      width: [40,16]
+      angle: [41]
+      position: [-20,20]
+      doubleside: true
+      offset:
+        x: 7
+        y: 58
+        z: 6
+      bump:
+        position: 0
+        size: 1
+      texture: [17] 
