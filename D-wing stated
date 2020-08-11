@@ -1,7 +1,7 @@
 return model =
   name: 'D-wing'
   level: 6
-  model: 10
+  model: 50
   size: 2
   specs:
     shield:
