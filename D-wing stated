@@ -1,0 +1,96 @@
+return model =
+  name: 'D-wing'
+  level: 6
+  model: 10
+  size: 2
+  specs:
+    shield:
+      capacity: [275,350]
+      reload: [5,8]
+    generator:
+      capacity: [75,100]
+      reload: [35,50]
+    ship:
+      mass: 300
+      speed: [100,120]
+      rotation: [50,80]
+      acceleration: [80,110]
+  bodies:
+    main:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 50
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-120,-70,-30,0,20,40,30]
+        z: [0,0,0,0,0,0,0]
+      width: [0,10,22,20,16,15,0]
+      height: [0,12,14,16,16,15,0]
+      texture: [3,3,63,10,8,17]
+      propeller: true
+    cannons:
+      section_segments: 8
+      offset:
+        x: 26
+        y: 38
+        z: -5
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-85,-55,-60,-15,0,15,50,40]
+        z: [0,0,0,0,0,0,0,0]
+      width:  [1,2.5,5,7.5,7.5,10,5,0]
+      height: [1,2.5,7.5,7,7,5,5,0,0]
+      texture: [6,17,4,63,63,4,17]
+      angle: 0
+      propeller: true
+      laser:
+        damage: [20,30]
+        rate: 3
+        type: 1
+        speed: [150,240]
+        number: 1
+        error: 0
+    cockpit:
+      section_segments: 7
+      offset:
+        x: 0
+        y: 15
+        z: 12
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-35,-20,0,11,35]
+        z: [0,0,0,0,3]
+      width: [0,5,10,10,0]
+      height: [0,3,5,7,0]
+      texture: [7,9,9,4]
+  wings:
+    main1:
+      doubleside: true
+      offset:
+        x: 9
+        y: 15
+        z: 0
+      length: [0,30,0,70]
+      width: [0,160,70,30,30]
+      angle: [0,20,0,-10]
+      position: [30,-20,30,30]
+      texture: [13,63,13,8]
+      bump:
+        position: 35
+        size: 5
+    topjoin:
+      offset:
+        x: 12
+        y: 40
+        z: 7
+      doubleside: true
+      length: [40,10,10]
+      width: [50,20,20,20]
+      angle: [30,0,-5]
+      position: [-20,10,20,0]
+      texture: [11,63,4]
+      bump:
+        position: 10
+        size: 10
