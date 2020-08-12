@@ -43,7 +43,7 @@ return model =
         z: 15
       position:
         x: [0,0,0,0,0,0]
-        y: [-20,5,28,72,90]
+        y: [-17,5,28,72,90]
         z: [0,0,0,1,0,0]
       width:  [0,10,15,20,0]
       height: [0,7,7,4,0]
@@ -78,14 +78,14 @@ return model =
         y: -3
         z: 14
       position:
-        x: [-15,-13,-3,0,-0.5,0]
+        x: [-15,-14,-3,0,-0.5,0]
         y: [-55,-50,-20,10,23,10]
         z: [0,0,0,0,-1,0]
       width:  [0,2,4,4,2,0]
       height: [0,3,4,6,5,0]
       angle: 0
       propeller: false
-      texture: [3]  
+      texture: [4,3]  
     Side_thruster_thingys:
       section_segments: 6
       offset:
@@ -373,7 +373,7 @@ return model =
         speed: [260,280]
         number: 1
         error: 0
-      texture: [16.9,12.9,2.9,2.9,2.9]  
+      texture: [16.9,12.9,8,2.9,2.9]  
   wings:
     main:
       length: [40,7,8]
