@@ -1,5 +1,5 @@
 return model =
-  name: 'New_ship'
+  name: 'Stardust'
   designer: 'Nova'
   level: 1
   model: 2
