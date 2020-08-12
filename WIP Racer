@@ -3,26 +3,27 @@ return model =
   name: 'New_ship'
   level: 3
   model: 1
-  size: 1.5
-  specs:
-    shield:
-      capacity: [100,100]
-      reload: [0,0]
+  size: 1
+  zoom: 0.66
+  designer: 'Nova'
+  shield:
+      capacity: [200,400]
+      reload: [400,400]
     generator:
-      capacity: [200,200]
-      reload: [0,0]
+      capacity: [300,300]
+      reload: [19,29]
     ship:
-      mass: 100
-      speed: [150,150]
-      rotation: [100,100]
-      acceleration: [120,120]
+      mass: 185
+      speed: [290,290]
+      rotation: [110,110]
+      acceleration: [115,115]
       dash:
         rate: 2
-        burst_speed: [160,200]
-        speed: [120,150]
-        acceleration: [70,70]
-        initial_energy: [50,75]
-        energy: [20,30]
+        burst_speed: [250,250]
+        speed: [500,500]
+        acceleration: [150,150]
+        initial_energy: [60,60]
+        energy: [100,100]
   bodies:
     main:
       section_segments: 8
