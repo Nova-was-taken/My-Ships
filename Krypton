@@ -3,6 +3,7 @@ b=6
 c=5
 d=22
 e=6
+f=-0.19
 return model =
   name: 'Krypton'
   level: 6
@@ -225,7 +226,7 @@ return model =
     mini_gun_cannons_top:
       section_segments: 6
       offset:
-        x: 2
+        x: 1.5+f
         y: -60-a
         z: -17+b
       position:
@@ -246,7 +247,7 @@ return model =
     mini_gun_cannons_bottom:
       section_segments: 6
       offset:
-        x: 2
+        x: 1.5+f
         y: -60-a
         z: -20+b
       position:
@@ -267,7 +268,7 @@ return model =
     mini_gun_cannons_top_copy:
       section_segments: 6
       offset:
-        x: 2
+        x: 1.5+f
         y: -60-a
         z: -17+b
       position:
@@ -288,7 +289,7 @@ return model =
     mini_gun_cannons_bottom_copy:
       section_segments: 6
       offset:
-        x: 2
+        x: 1.5+f
         y: -60-a
         z: -20+b
       position:
@@ -306,7 +307,7 @@ return model =
         number: 1
         error: 0
       texture: [16.9,2.9,2.9,2.9,2.9]   
-    cube_by_money:
+    minigun_mount_which_is_a_cube_by_money:
       section_segments: [45,135,225,315]
       offset:
         x: 0
@@ -318,7 +319,20 @@ return model =
         z: [0,0,0,0,0,-1]
       width:  [0,7,7,7,7,0]
       height: [0,5,5,5,5,0]
-      texture: [3,2.96,3,3]
+      texture: [63,2.96,3,3]
+    minigun_spinny_thingy:
+      section_segments: 20
+      offset:
+        x: 0
+        y: -54-a
+        z: -18.5+b
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [4,-9,-6,-1,3,5,5]
+        z: [0,0,0,0,0,0,0]
+      width:  [3.5,3.5,4,4.5,4.5,4,3.5]
+      height: [3.5,3.5,4,4.5,4.5,4,3.5]
+      texture: [4,13,13,63,2]  
     Turret:
       section_segments: 6
       offset:
@@ -340,7 +354,7 @@ return model =
         number: 1
         error: 0
       texture: [16.9,2.9,2.9,2.9,2.9]   
-    Turret_base_which_is_cube_by_money:
+    Turret_base_which_is_a_cube_by_money:
       section_segments: [45,135,225,315]
       offset:
         x: 0
