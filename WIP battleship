@@ -6,13 +6,14 @@ d=25        #turret stuff y offset
 e=0         #turret stuff z offset
 f=-0.19     #minigun stuff 3
 g=6         #turret stuff x offset
-h=5         #cockpit reactor movement
+h=5         #cockpit + reactor movement
 i=3         #x offset for side cannons
+j=20        #ractor moveent stuff (seperate from cockpit)
 return model =
   name: 'Corsa'
   level: 6
   model: 12
-  size: 1.4
+  size: 3.4
   specs:
     shield:
       capacity: [11200,11275]
@@ -138,7 +139,7 @@ return model =
         speed: [170,220]
         number: 1        
   #Minigun  
-    mini_gun_cannons_top:
+    ###mini_gun_cannons_top:
       section_segments: 6
       offset:
         x: 1.5+f
@@ -247,7 +248,7 @@ return model =
         z: [0,0,0,0,0,0,0]
       width:  [3.5,3.5,4,4.5,4.5,4,3.5]
       height: [3.5,3.5,4,4.5,4.5,4,3.5]
-      texture: [4,13,13,63,2]  
+      texture: [4,13,13,63,2] ###
   #cannon spam AAAAA  
     Turret:
       section_segments: 6
@@ -592,7 +593,6 @@ return model =
         error: 0
       texture: [16.9,8,3.9,3.9,3.9]
   #reactors
-
     Reactor_ring_middle3:
       section_segments: 8
       offset:
@@ -656,7 +656,7 @@ return model =
       offset:
         x: 0
         y: 30
-        z: 10-h
+        z: 10-h-j
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
         y: [-2.25,2.25,2.25,-2.25,-2.25]
@@ -671,7 +671,7 @@ return model =
       offset:
         x: 0
         y: 30
-        z: 10-h
+        z: 10-h-j
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
         y: [-2.25,2.25,2.25,-2.25,-2.25]
@@ -685,7 +685,7 @@ return model =
       section_segments: 4
       offset:
         x: 0
-        y: 3.2+h
+        y: 3.2+h+j
         z: 32
       position:
         x: [0,0,0,0,0,0,0,0,0]
@@ -699,7 +699,7 @@ return model =
       section_segments: 4
       offset:
         x: 7
-        y: -10+h
+        y: -10+h+j
         z: 32
       position:
         x: [0,0,0,0,0,0,0,0,0]
