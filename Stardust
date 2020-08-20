@@ -170,6 +170,34 @@ return model =
       bump:
         position: 0
         size: 10
+    highight_for_main:
+      offset:
+        x: 0
+        y: 6
+        z: -1
+      length: [25,15]
+      width: [41,16,4]
+      angle: [0,0]
+      position: [-40,10,20]
+      texture: [17]
+      doubleside: true
+      bump:
+        position: 0
+        size: 10
+    hidding_highlight_for_main:
+      offset:
+        x: 0
+        y: 7
+        z: -2
+      length: [25,15]
+      width: [40,15,3]
+      angle: [0,0]
+      position: [-40,10,20]
+      texture: [3,63]
+      doubleside: true
+      bump:
+        position: 0
+        size: 10    
     back:
       offset:
         x: 0
@@ -184,3 +212,4 @@ return model =
       bump:
         position: 0
         size: 10
+    
