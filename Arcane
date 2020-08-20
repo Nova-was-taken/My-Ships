@@ -49,16 +49,16 @@ model =
     cannons_1:
       section_segments: 10
       offset:
-        x: 16.5
+        x: 6.5
         y: -30
-        z: 0
+        z: -10
       position:
         x: [0,0,0,0,0]
         y: [-40,-45,-37,-25,10]
         z: [0,0,0,0,0]
-      width:  [0,2,3,3,0]
-      height: [0,2,3,3,0]
-      texture: [17,6,8,13,13]
+      width:  [0,2,5,5,0]
+      height: [0,2,5,5,0]
+      texture: [17,12,8,13,13]
       laser:
         damage: [17,29]
         rate: 3
