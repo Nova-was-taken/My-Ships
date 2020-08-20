@@ -41,7 +41,7 @@ return model =
       texture: [3,63,4,3,11,63,13,17]
       propeller: true
     cockpit:
-      section_segments: 7
+      section_segments: [45,95,185,275,325]
       offset:
         x: 0
         y: -31
