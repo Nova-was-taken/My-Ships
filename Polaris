@@ -31,18 +31,18 @@ return model =
       texture: [4,4,4,63,11,63,12,17]
       propeller: true  
     cockpit:
-      section_segments: 7
+      section_segments: [45,95,185,275,325]
       offset:
         x: 0
         y: -17
         z: 15
       position:
         x: [0,0,0,0,0,0,0]
-        y: [-30,-20,0,20,40]
+        y: [-30,-15,0,20,40]
         z: [0,0,0,0,0]
-      width:  [0,5,9,9,9,0]
+      width:  [2,5,9,9,9,0]
       height: [0,5,5.7,6,0]
-      texture: [7,9,9,4]
+      texture: [9,9,9,4]
     cannon_top_wings:
       section_segments: 10
       offset:
@@ -142,7 +142,7 @@ return model =
         z: [0,0,0,0,0,0,0,0]
       width:  [0,0,4,4,3,3,3,0,0]
       height: [0,0,8,8,6,5,3,0,0]
-      texture: [4,63,4,11,63,4,17]
+      texture: [4,63,4,18,63,4,17]
       propeller: true
   wings:
     top_wing:
