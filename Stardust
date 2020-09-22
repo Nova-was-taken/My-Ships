@@ -97,64 +97,37 @@ return model =
       angle: 0
       propeller: false
       texture: [4,4,13]
+     Reactor_ring_outside:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 9
+        z: -25
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-2.25,2,3.25,0.5,-2.25]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [10.5,11.5,9,4.5,.5]
+      height: [10.5,11.5,9,4.5,.5]
+      vertical: true
+      texture: [12.9,16.9,63,4]
+      angle: 0
     Reactor_ring_middle:
       section_segments: 8
       offset:
         x: 0
-        y: 8.6
-        z: -23
+        y: 9
+        z: -25
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-2.25,2.25,2.25,-2.25,-2.25]
+        y: [-2.25,2.25,1.25,-2.25,-2.25]
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width: [9.5,9.5,4.5,4.5,9.5]
-      height: [9.5,9.5,4.5,4.5,9.5]
+      width:  [7.5,7.5,0,2.5,7.5]
+      height: [7.5,7.5,0,2.5,9.5]
       vertical: true
       texture: [13,17,17,4]
       angle: 0
-    Reactor_inside:
-      section_segments: 8
-      offset:
-        x: 0
-        y: 8.6
-        z: -23
-      position:
-        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-2.25,2.25,2.25,-2.25,-2.25]
-        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width: [5,5,0,0,5]
-      height: [5,5,0,0,5]
-      vertical: true
-      texture: [16,4,17,17]
-      angle: 180
-    cover_top_straight:
-      section_segments: 4
-      offset:
-        x: 0
-        y: 36.3
-        z: 10.5
-      position:
-        x: [0,0,0,0,0,0,0,0,0]
-        y: [-21.6,-21.6,-9.5,-9.5,-5,-5,-5,-5,-5]
-        z: [0,0,0,0,0,0,0,0,0]
-      width: [3,3,3,3,3,3,3,3,0]
-      height: [0,2,2,2,2,2,2,2,0]
-      texture: [4]
-      angle: 0
-    cover_top_sideways:
-      section_segments: 4
-      offset:
-        x: 10.5
-        y: 23
-        z: 10.5
-      position:
-        x: [0,0,0,0,0,0,0,0,0]
-        y: [-19,-19,-9.5,-9.5,-5,-5,-5,-5,-5]
-        z: [0,0,0,0,0,0,0,0,0]
-      width: [3,3,3,3,3,3,3,3,0]
-      height: [0,2,2,2,2,2,2,2,0]
-      texture: [4]
-      angle: 90
+
   wings:
     main:
       offset:
