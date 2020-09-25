@@ -46,14 +46,14 @@ return model =
     side_propulsors:
       section_segments: 8
       offset:
-        x: 40
-        y: -5
-        z: 0
+        x: 80
+        y: 0
+        z: -10
       position:
-        x: [-18,-18,-18,-18,-14,-7,-7,0,0,0,0,0]
-        y: [-110,-90,-100,-90,-70,-30,-30,10,40,60,70,60]
+        x: [-17,-17,-17,-17,-15,-12,-12,0,0,0,0,0]
+        y: [-80,-60,-70,-60,-50,-30,-30,10,40,60,70,60]
         z: [0,0,0,0,0,0,0,0,0,0,0,0]
-      width: [0,6,6,6,6,5,5,10,15,15,10,0]
+      width:  [0,6,7,7,8,10,10,13,15,15,10,0]
       height: [0,6,6,6,6,5,5,5,10,10,10,0]
       texture: [63,6,13,63,3,3,8,3,63,13,17]
       propeller: true
@@ -68,13 +68,13 @@ return model =
     main:
       offset:
         x: 20
-        y: -40
+        y: -43
         z: 0
-      length: [50,15]
-      width: [60,20,10]
-      angle: [20,0]
+      length: [90,5]
+      width: [120,30,40]
+      angle: [0,40]
       position: [30,90,85]
-      texture: [3,63]
+      texture: [11,63]
       doubleside: true
       bump:
         position: 0
@@ -83,7 +83,7 @@ return model =
       offset:
         x: 0
         y: 45
-        z: 15
+        z: 16
       length: [20,30]
       width: [30,20,25]
       angle: [10,-30]
