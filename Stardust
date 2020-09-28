@@ -62,7 +62,7 @@ return model =
         z: 2
       position:
         x: [-6.5,-2,1,1,1,-5,-5,-5]
-        y: [-20,-5,3,7,10,30,40,36]
+        y: [-20,-4,4,7,10,30,40,36]
         z: [0,0,0,0,0,0,0,0]
       width: [1,2.5,2.5,2.5,2.5,2.5,2.5,0]
       height: [0,2.5,2.5,2.5,2.5,2.5,2.5,0]
@@ -95,20 +95,6 @@ return model =
       width:  [0,.5,.5,.5,0]
       height: [0,.5,.5,.5,0]
       texture: [17]
-    Backside_wing_detail:
-      section_segments: 8
-      offset:
-        x: 0
-        y: -27.4
-        z: 2
-      position:
-        x: [-3,0,0,0,0]
-        y: [-4,5,5,5,5]
-        z: [-.8,0,0,0,0]
-      width:  [0,.5,.5,.5,0]
-      height: [0,.5,.5,.5,0]
-      texture: [17]
-      angle: 0
     Pipes_side:
       section_segments: 6
       offset:
@@ -179,29 +165,15 @@ return model =
       angle: [0,0]
       position: [-40,10,20]
       texture: [17]
-      doubleside: true
+      doubleside: false
       bump:
         position: 0
-        size: 10
-    hidding_highlight_for_main:
-      offset:
-        x: 0
-        y: 7
-        z: -2
-      length: [25,15]
-      width: [40,15,3]
-      angle: [0,0]
-      position: [-40,10,20]
-      texture: [3,63]
-      doubleside: true
-      bump:
-        position: 0
-        size: 10    
+        size: 0
     back:
       offset:
         x: 0
         y: 15
-        z: -3
+        z: -2.5
       length: [25,15]
       width: [30,30,10]
       angle: [25,0]
