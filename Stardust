@@ -34,25 +34,25 @@ return model =
         z: 0
       position:
         x: [0,0,0,0,0,0,0,0,0]
-        y: [-110,-85,-70,-60,-40,-20,-10,0,-5]
+        y: [-110,-90,-70,-60,-40,-20,-10,0,-5]
         z: [0,0,0,0,0,0,0,0,0]
       width: [0,6,10,10,15,14,10,5,0]
       height: [0,6,10,10,10,10,10,5,0]
-      texture: [3,63,4,3,11,63,13,17]
+      texture: [2,63,3,2,10,63,13,17]
       propeller: true
     cockpit:
-      section_segments: [45,95,185,275,325]
+      section_segments: [45,95,185,275,320]
       offset:
         x: 0
         y: -31
         z: 14
       position:
         x: [0,0,0,0,0,0]
-        y: [-10,5,15,25,30,38]
-        z: [-9,-8,-6,-5,-5,-4]
-      width: [0,4,6,6,4,0]
+        y: [-7,5,15,25,30,38]
+        z: [-7.6,-8,-6,-5,-5,-4]
+      width:  [1,5,6,6,4,0]
       height: [0,4,4,4,4,0]
-      texture: [7,9,9,3]
+      texture: [9,9,9,3]
       propeller: false
     side_thrusters:
       section_segments: 8
@@ -61,12 +61,12 @@ return model =
         y: 8
         z: 2
       position:
-        x: [-5,-1,1,1,1,-5,-5,-3]
-        y: [-15,-5,3,7,10,30,40,36]
+        x: [-6.5,-2,1,1,1,-5,-5,-5]
+        y: [-20,-5,3,7,10,30,40,36]
         z: [0,0,0,0,0,0,0,0]
       width: [1,2.5,2.5,2.5,2.5,2.5,2.5,0]
       height: [0,2.5,2.5,2.5,2.5,2.5,2.5,0]
-      texture: [4,63,8,11,3,13,17]
+      texture: [3,63,8,11,3,13,17]
       propeller: true
     wing_thrusters:
       section_segments: 8
@@ -76,12 +76,39 @@ return model =
         z: 8
       position:
         x: [0,0,0,0,0,0,0,0]
-        y: [-10,-1,5,8,8,10,15,10]
+        y: [-10,-1,5,7.5,8,10,15,12]
         z: [0,0,0,0,0,0,0,0]
       width: [0,1.5,1.5,1.5,1.5,1.5,1.5,0]
       height: [0,1.5,1.5,1.5,1.5,1.5,1.5,0]
-      texture: [3,63,4,4,11,13,17]
+      texture: [2,63,4,5,18,13,17]
       propeller: true
+    wing_thrusters_detail:
+      section_segments: 8
+      offset:
+        x: 36
+        y: 50
+        z: 9.4
+      position:
+        x: [0,0,0,0,0]
+        y: [-4,5,5,5,5]
+        z: [0,0,0,0,0]
+      width:  [0,.5,.5,.5,0]
+      height: [0,.5,.5,.5,0]
+      texture: [17]
+    Backside_wing_detail:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -27.4
+        z: 2
+      position:
+        x: [-3,0,0,0,0]
+        y: [-4,5,5,5,5]
+        z: [-.8,0,0,0,0]
+      width:  [0,.5,.5,.5,0]
+      height: [0,.5,.5,.5,0]
+      texture: [17]
+      angle: 0
     Pipes_side:
       section_segments: 6
       offset:
@@ -97,7 +124,7 @@ return model =
       angle: 0
       propeller: false
       texture: [4,4,13]
-     Reactor_ring_outside:
+     Reactor_body_outside:
       section_segments: 8
       offset:
         x: 0
@@ -112,7 +139,7 @@ return model =
       vertical: true
       texture: [12.9,16.9,63,4]
       angle: 0
-    Reactor_ring_middle:
+    Reactor_body_inside:
       section_segments: 8
       offset:
         x: 0
@@ -127,7 +154,6 @@ return model =
       vertical: true
       texture: [13,17,17,4]
       angle: 0
-
   wings:
     main:
       offset:
@@ -138,7 +164,7 @@ return model =
       width: [40,15,3]
       angle: [0,0]
       position: [-40,10,20]
-      texture: [3,63]
+      texture: [8,63]
       doubleside: true
       bump:
         position: 0
@@ -185,4 +211,4 @@ return model =
       bump:
         position: 0
         size: 10
-    
+      
