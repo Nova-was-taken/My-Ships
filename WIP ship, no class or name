@@ -1,6 +1,5 @@
-reactor_down_movement= 5
-reactor_y_movement= 30
-return model =
+
+model =
   name: "A ship"
   level: 7
   model: 5
@@ -45,14 +44,14 @@ return model =
       height: [0,15,20,25,25,22,24,24,20,0]
       texture: [3,63,3,11,63,11,3,13,17]
       propeller: true
-    cannon1:
-      section_segments: 10
+    cannon_left:
+      section_segments: [40,90,180,270,320]
       offset:
-        x: 95
+        x: 0
         y: -5
-        z: 10
+        z: 7
       position:
-        x: [0,0,0,0,0,0,0]
+        x: [95,95,95,95,95,95,95]
         y: [-20,-34,-18,10,25,20]
         z: [0,0,0,0,0,0,0]
       width:  [0,2,5,5,2,0]
@@ -64,7 +63,27 @@ return model =
         speed: [225,225]
         number: 1
         error: 0
-      texture: [12,6,63,3,17]
+      texture: [12,5.9,63,3,17]
+    cannon_right:
+      section_segments: [40,90,180,270,320]
+      offset:
+        x: 0
+        y: -5
+        z: 7
+      position:
+        x: [-95,-95,-95,-95,-95,-95,-95]
+        y: [-20,-34,-18,10,25,20]
+        z: [0,0,0,0,0,0,0]
+      width:  [0,2,5,5,2,0]
+      height: [0,2,5,5,2,0]
+      propeller: true
+      laser:
+        damage: [8,8]
+        rate: 5
+        speed: [225,225]
+        number: 1
+        error: 0
+      texture: [12,5.9,63,3,17]  
     cannon2:
       section_segments: 10
       offset:
@@ -112,121 +131,21 @@ return model =
       height: [0,10,10,10,10,10,10,0]
       texture: [3,3,10,3,63,13,17]
       propeller: true
-  #reactor, to go back at somepoint  
-    ###Reactor_ring_outside:
+    Reactor:
       section_segments: 9
       offset:
         x: 0
-        y: 28.9-reactor_down_movement
-        z: -5-reactor_y_movement
+        y: 25
+        z: -25
       position:
-        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-2.25,-.5,2.25,-2.25,-2.25]
-        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [21,21,15,15,20]
-      height: [21,21,15,15,20]
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-2.25,1.25,4,-0,-0.25,-0.25,4,-.15,-3.25,-3.25]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [18,18,15,15,0,15,15,0,0,15]
+      height: [18,18,15,15,0,15,15,0,0,15]
       vertical: true
-      texture: [12.9,16.9,17,4]
-      angle: 0###
-    Reactor_ring_middle:
-      section_segments: 9
-      offset:
-        x: 0
-        y: 29-reactor_down_movement
-        z: -5-reactor_y_movement
-      position:
-        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-2.25,1.25,4,-3.25,-3.25]
-        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [18,18,15,15,20]
-      height: [18,18,15,15,20]
-      vertical: true
-      texture: [12.9,63,17,4]
+      texture: [12.9,63,17,3,13,16.9,16.9]
       angle: 0
-    Reactor_inside:
-      section_segments: 9
-      offset:
-        x: 0
-        y: 29-reactor_down_movement
-        z: -5-reactor_y_movement
-      position:
-        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-3.25,4,-.15,-3.25,-3.25]
-        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [15,15,0,0,15]
-      height: [15,15,0,0,15]
-      vertical: true
-      texture: [13,16.9,4,13]
-      angle: 0
-    ###cover_front:
-      section_segments: 4
-      offset:
-        x: 0
-        y: 5+reactor_y_movement
-        z: 34-reactor_down_movement
-      position:
-        x: [0,0,0,0,0,0,0,0,0]
-        y: [-14.5,-14.5,-9.5,-9.5,-5,-5,-5,-5,-5]
-        z: [-10,-5,-5,-2,-2,-2,-2,-2,-2]
-      width:  [3,3,3,3,3,3,3,3,0]
-      height: [0,2,2,2,2,2,2,2,0]
-      texture: [4]
-    cover_back:
-      section_segments: 4
-      offset:
-        x: 0
-        y: 5+reactor_y_movement
-        z: 34-reactor_down_movement
-      position:
-        x: [0,0,0,0,0,0,0,0,0]
-        y: [-14.5,-14.5,-9.5,-9.5,-5,-5,-5,-5,-5]
-        z: [-10,-5,-5,-2,-2,-2,-2,-2,-2]
-      width:  [3,3,3,3,3,3,3,3,0]
-      height: [0,2,2,2,2,2,2,2,0]
-      texture: [4] 
-      angle: 180
-    cover_right:
-      section_segments: 4
-      offset:
-        x: 0.1
-        y: 5+reactor_y_movement
-        z: 34-reactor_down_movement
-      position:
-        x: [0,0,0,0,0,0,0,0,0]
-        y: [-14.5,-14.5,-9.5,-9.5,-5,-5,-5,-5,-5]
-        z: [-10,-5,-5,-2,-2,-2,-2,-2,-2]
-      width:  [3,3,3,3,3,3,3,3,0]
-      height: [0,2,2,2,2,2,2,2,0]
-      texture: [4] 
-      angle: 270
-    cover_top_straight:
-      section_segments: 4
-      offset:
-        x: 0
-        y: 15+reactor_y_movement
-        z: 32-reactor_down_movement
-      position:
-        x: [0,0,0,0,0,0,0,0,0]
-        y: [-15.2,-15,-9.5,-9.5,-5,-5,-5,-5,-5]
-        z: [0,0,0,0,0,0,0,0,0]
-      width:  [3,3,3,3,3,3,3,3,0]
-      height: [0,2,2,2,2,2,2,2,0]
-      texture: [4] 
-      angle: 0
-    cover_top_sideways:
-      section_segments: 4
-      offset:
-        x: 10.5
-        y: 5+reactor_y_movement
-        z: 32-reactor_down_movement
-      position:
-        x: [0,0,0,0,0,0,0,0,0]
-        y: [-15,-15,-9.5,-9.5,-5,-5,-5,-5,-5]
-        z: [0,0,0,0,0,0,0,0,0]
-      width:  [3,3,3,3,3,3,3,3,0]
-      height: [0,2,2,2,2,2,2,2,0]
-      texture: [4] 
-      angle: 90    ###
   wings:
     main:
       offset:
@@ -270,3 +189,4 @@ return model =
       bump:
         position: 0
         size: 10
+return model;
