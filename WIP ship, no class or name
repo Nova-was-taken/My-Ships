@@ -1,11 +1,11 @@
 
 model =
-  name: "A ship"
+  name: "Fighter"
   level: 7
-  model: 5
+  model: 8
   size: 4.25
   specs:
-    shields:
+    shield:
       capacity: [600,600]
       reload: [20,20]
     generator:
@@ -104,7 +104,7 @@ model =
         speed: [225,225]
         number: 1
         error: 0
-    cannon3:
+    armor:
       section_segments: 8
       offset:
         x: 12
