@@ -31,14 +31,7 @@ return model =
       height: [0,5,10,15,10,10,15,15,15,10,10,0]
       texture: [13,63,4,4,63,63,4,4,4,13,17]
       propeller: true
-      laser:
-        damage: [50,50]
-        rate: 3
-        type: 1
-        speed: [200,200]
-        number: 1
-        error: 0
-        recoil: 0
+      
     cockpit_base:
       section_segments: [40,90,180,270,320]
       offset:
@@ -102,12 +95,12 @@ return model =
         y: 50
         z: 19
       position:
-        x: [-22,-14,-9,-8,-4,-5,-7,-7,-11,-11,-7]
-        y: [-190,-160,-135,-110,-60,0,25,40,70,70,60]
-        z: [-7,-5,0,0,0,0,0,0,0,0,0]
-      width: [0,2,5,7,7,7,5,5,5,5,0]
-      height: [1,7,8,10,10,10,8,8,8,8,0]
-      texture: [63,4,18,4,63,8,18,13,13,17]
+        x: [-22,-14,-9,-8,-4,-5,-7,-7,-7,-11,-11,-7]
+        y: [-190,-160,-135,-110,-60,-40,-0,25,40,70,70,60]
+        z: [-8,-5,0,0,0,0,0,0,0,0,0,0]
+      width: [0,2,5,7,7,7,5,5,5,5,5,0]
+      height: [1,7,8,10,10,10,8,8,8,8,8,0]
+      texture: [63,4,18,4,63,4,8,18,13,13,17]
       propeller: true
     Turret:
       section_segments: 6
@@ -234,28 +227,29 @@ return model =
       height: [0,5,5,5,5,5,0]
       angle: 0
       texture: [4,63,4,18,4,4]  
-    ###Side_cannons_3:
+    Mian_cannon:
       section_segments: 6
       offset:
-        x: 31.5
-        y: 57
-        z: -3
+        x: 0
+        y: -81
+        z: 5
       position:
         x: [0,0,0,0,0,0,0]
-        y: [-45,-50,-45,-36,-35,-10,10]
-        z: [0,0,0,0,0,0,0]
-      width: [0,5,5,5,5,10,5]
-      height: [0,5,5,5,5,5,0]
-      angle: 264
+        y: [-55,-60,-45,-36,-32,-10,10]
+        z: [1.5,.5,0,0,0,0,0]
+      width:  [0,7,13,15,15,10,5]
+      height: [0,2.4,3,4,4,4,0]
+      angle: 0
       laser:
-        damage: [40,55]
-        rate: 2
+        damage: [250,250]
+        rate: 3
         type: 1
-        speed: [260,280]
-        number: 2
+        speed: [200,200]
+        number: 1
         error: 0
-      texture: [16.9,12.9,8,17,18,13]
-    Side_cannons_4:
+        recoil: 0
+      texture: [16.9,12.9,8,63,18,13]
+    ###Side_cannons_4:
       section_segments: 6
       offset:
         x: 28.5
@@ -343,14 +337,14 @@ return model =
       section_segments: 10
       offset:
         x: 20.5
-        y: -93
+        y: -85
         z: -10
       position:
-        x: [0,0,0,0,0,0]
-        y: [-40,-50,0,5,50,70]
-        z: [0,0,0,0,0,3]
-      width: [0,5,5,5,5,0]
-      height: [0,5,5,5,5,0]
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-45,-50,-45,-36,-35,-10,4,10,17]
+        z: [0,0,0,0,0,2,4,4,4]
+      width:  [0,5,6,7,8,8,8,8,0]
+      height: [0,5,5,5,5,5,7,7,0]
       angle: 0
       laser:
         damage: [150,150]
@@ -359,7 +353,7 @@ return model =
         speed: [280,280]
         number: 2
         error: 0
-      texture: [16.9,8,3.9,3.9,3.9]
+      texture: [16.9,12.9,8,17,18,13,12,4]
     Reactors_side:
       section_segments: 6
       offset:
