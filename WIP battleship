@@ -1,7 +1,7 @@
 
-
-model =
+return model =
   name: 'Battleship MK1'
+  Designer: `Nova`
   level: 6
   model: 12
   size: 3.4
@@ -539,5 +539,3 @@ model =
       texture: [63,17,63,4]
       angle: 102###
 
-
-return model;
