@@ -1,22 +1,22 @@
 
 
 model =
-  name: 'Corsa'
+  name: 'Battleship MK1'
   level: 6
   model: 12
   size: 3.4
   specs:
     shield:
-      capacity: [11200,11275]
-      reload: [215,400]
+      capacity: [11275,11275]
+      reload: [400,400]
     generator:
-      capacity: [11125,11200]
-      reload: [1120,1150]
+      capacity: [11200,11200]
+      reload: [1150,1150]
     ship:
       mass: 30000
-      speed: [100,130]
-      rotation: [55,75]
-      acceleration: [60,90]
+      speed: [70,70]
+      rotation: [75,75]
+      acceleration: [90,90]
   bodies:
     main:
       section_segments: 12
@@ -33,10 +33,10 @@ model =
       texture: [13,63,4,4,63,63,4,4,4,13,17]
       propeller: true
       laser:
-        damage: [30,50]
-        rate: 1
+        damage: [50,50]
+        rate: 3
         type: 1
-        speed: [170,200]
+        speed: [200,200]
         number: 1
         error: 0
         recoil: 0
@@ -82,13 +82,7 @@ model =
       height: [0,5,10,15,15,15,10,10,10,10,0]
       texture: [13,3,4,18,63,4,18,4,13,17]
       propeller: true
-      laser:
-        damage: [17,27]
-        rate: 3
-        type: 1
-        speed: [170,220]
-        number: 1
-    Cocpit_armor_and_more_thrusters:
+    Thrusters:
       section_segments: 8
       offset:
         x: 32
@@ -102,12 +96,6 @@ model =
       height: [1,3,6,8,8,8,6,6,6,6,0]
       texture: [63,3,8,4,63,4,18,8,13,17]
       propeller: true
-      laser:
-        damage: [17,27]
-        rate: 3
-        type: 1
-        speed: [170,220]
-        number: 1
     Cocpit_armor_and_more_thrusters2:
       section_segments: 8
       offset:
@@ -122,12 +110,6 @@ model =
       height: [1,7,8,10,10,10,8,8,8,8,0]
       texture: [63,4,18,4,63,8,18,13,13,17]
       propeller: true
-      laser:
-        damage: [17,27]
-        rate: 3
-        type: 1
-        speed: [170,220]
-        number: 1
     Turret:
       section_segments: 6
       offset:
@@ -142,10 +124,10 @@ model =
       height: [0,2.5,2.5,2.5,2.5,0]
       angle: 0
       laser:
-        damage: [10,15]
-        rate: 2
+        damage: [27,27]
+        rate: 3
         type: 1
-        speed: [260,280]
+        speed: [220,220]
         number: 1
         error: 0
       texture: [16.9,8,3.9,3.9,2.9]
@@ -177,10 +159,10 @@ model =
       height: [0,2.5,2.5,2.5,2.5,0]
       angle: 0
       laser:
-        damage: [10,15]
-        rate: 2
+        damage: [27,27]
+        rate: 3
         type: 1
-        speed: [260,280]
+        speed: [220,220]
         number: 1
         error: 0
       texture: [16.9,8,3.9,3.9,3.9]
@@ -197,7 +179,7 @@ model =
       width: [0,7,7,7,7,0]
       height: [0,5,5,5,5,0]
       texture: [4,3.96,4,4]
-    Side_cannons_1:
+    ###Side_cannons_1:
       section_segments: 6
       offset:
         x: 30.5
@@ -343,7 +325,7 @@ model =
         speed: [260,280]
         number: 2
         error: 0
-      texture: [16.9,12.9,8,17,18,13]
+      texture: [16.9,12.9,8,17,18,13]###
     Large_ass_cannons_1:
       section_segments: 10
       offset:
@@ -359,41 +341,26 @@ model =
       angle: 0
       laser:
         damage: [150,150]
-        rate: 2
+        rate: 3
         type: 1
         speed: [280,280]
         number: 2
         error: 0
       texture: [16.9,8,3.9,3.9,3.9]
-    Reactor_ring_middle3:
+    Reactors_side:
       section_segments: 6
       offset:
         x: 38
         y: 15.5
         z: -30
       position:
-        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-2.25,4.5,2.25,0.5,-2.25]
-        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width: [12.5,12.5,9.5,2.5,2.5]
-      height: [12.5,12.5,9.5,2.5,2.5]
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-2.25,1.25,4,0,-0.25,-0.25,4,-0.15,-3.25,-3.25]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [12,12,10,10,0,10,10,0,0,10]
+      height: [12,12,10,10,0,10,10,0,0,10]
       vertical: true
-      texture: [12.9,16.9,63,4]
-      angle: 0
-    Reactor_inside3:
-      section_segments: 6
-      offset:
-        x: 38
-        y: 15.5
-        z: -30
-      position:
-        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-3.25,3.25,3.25,-2.25,-2.25]
-        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width: [7.5,7.5,0,0,5]
-      height: [7.5,7.5,0,0,5]
-      vertical: true
-      texture: [12.9,16.9,16.9,17]
+      texture: [12.9,63,17,3,13,16.9,16.9]
       angle: 0
     Pipes_1:
       section_segments: 10
@@ -416,8 +383,8 @@ model =
         y: 3
         z: 15
       position:
-        x: [0,0,2,3,9,12]
-        y: [-30,-20,0,5,35,40]
+        x: [0,0,2,2,4,12]
+        y: [-30,-20,0,5,30,40]
         z: [0,0,0,-2,-6,-6]
       width: [0,2.5,2.5,2.5,2.5,0]
       height: [0,2.5,2.5,2.5,2.5,0]
@@ -430,7 +397,7 @@ model =
         y: 43
         z: 15
       position:
-        x: [0,0,-1,-4,-7,-7]
+        x: [0,-2,-2,-4,-7,-7]
         y: [-20,-10,4,15,35,40]
         z: [0,0,0,-4,-8,-8]
       width: [0,2.5,2.5,2.5,2.5,0]
@@ -440,13 +407,13 @@ model =
     Pipes_4:
       section_segments: 10
       offset:
-        x: 46.5
-        y: 43
-        z: 31000000000000
+        x: 25.5
+        y: 13
+        z: 30
       position:
         x: [0,0,-1,-4,-7,-7]
-        y: [-20,-10,4,15,35,40]
-        z: [0,0,0,-4,-8,-8]
+        y: [-20,-10,4,13,20,25]
+        z: [0,0,-8,-16,-22,-26]
       width: [0,2.5,2.5,2.5,2.5,0]
       height: [0,2.5,2.5,2.5,2.5,0]
       angle: 90
