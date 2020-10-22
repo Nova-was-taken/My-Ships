@@ -450,9 +450,9 @@ return model =
       width: [80,60,50,40,35]
       angle: [-10,20,0,0]
       position: [10,0,-20,-50,-80]
-      texture: [3,63,18,3]
+      texture: [3,63,3.5,4]
       doubleside: true
       bump:
         position: 20
-        size: 15
+        size: 10
 
