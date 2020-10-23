@@ -269,69 +269,6 @@ return model =
         number: 2
         error: 0
       texture: [63,63,16.9,12.9,8,17,4,63,4,4]
-    ###Side_cannons_5:
-      section_segments: 6
-      offset:
-        x: 26.5
-        y: -23
-        z: -3
-      position:
-        x: [0,0,0,0,0,0,0]
-        y: [-45,-50,-45,-36,-35,-10,10]
-        z: [0,0,0,0,0,0,0]
-      width: [0,5,5,5,5,5,0]
-      height: [0,5,5,5,5,5,0]
-      angle: 277
-      laser:
-        damage: [40,55]
-        rate: 2
-        type: 1
-        speed: [260,280]
-        number: 2
-        error: 0
-      texture: [16.9,12.9,8,17,18,13]
-    Side_cannons_6:
-      section_segments: 6
-      offset:
-        x: 20.5
-        y: -43
-        z: -3
-      position:
-        x: [0,0,0,0,0,0,0]
-        y: [-45,-50,-45,-36,-35,-10,10]
-        z: [0,0,0,0,0,0,0]
-      width: [0,5,5,5,5,10,5]
-      height: [0,5,5,5,5,5,0]
-      angle: 280
-      laser:
-        damage: [40,55]
-        rate: 2
-        type: 1
-        speed: [260,280]
-        number: 2
-        error: 0
-      texture: [16.9,12.9,8,17,18,13]
-    Side_cannons_7:
-      section_segments: 6
-      offset:
-        x: 15.5
-        y: -63
-        z: -3
-      position:
-        x: [0,0,0,0,0,0,0]
-        y: [-45,-50,-45,-36,-35,-10,10]
-        z: [0,0,0,0,0,0,0]
-      width: [0,5,5,5,5,10,5]
-      height: [0,5,5,5,5,5,0]
-      angle: 280
-      laser:
-        damage: [40,55]
-        rate: 2
-        type: 1
-        speed: [260,280]
-        number: 2
-        error: 0
-      texture: [16.9,12.9,8,17,18,13]###
     Large_ass_cannons_1:
       section_segments: 10
       offset:
@@ -368,62 +305,6 @@ return model =
       vertical: true
       texture: [12.9,63,17,3,13,16.9,16.9]
       angle: 0
-    ###Pipes_1:
-      section_segments: 10
-      offset:
-        x: 28.5
-        y: 43
-        z: 15
-      position:
-        x: [2,2,0,-2,-9,-12]
-        y: [-20,-10,0,5,35,40]
-        z: [0,0,0,-2,-6,-6]
-      width: [0,2.5,2.5,2.5,2.5,0]
-      height: [0,2.5,2.5,2.5,2.5,0]
-      angle: 0
-      texture: [13,13,8,13,2]
-    Pipes_2:
-      section_segments: 10
-      offset:
-        x: 40.5
-        y: 3
-        z: 15
-      position:
-        x: [0,0,2,2,4,12]
-        y: [-30,-20,0,5,30,40]
-        z: [0,0,0,-2,-6,-6]
-      width: [0,2.5,2.5,2.5,2.5,0]
-      height: [0,2.5,2.5,2.5,2.5,0]
-      angle: 180
-      texture: [13,13,8,13,2]
-    Pipes_3:
-      section_segments: 10
-      offset:
-        x: 46.5
-        y: 43
-        z: 15
-      position:
-        x: [0,-2,-2,-4,-7,-7]
-        y: [-20,-10,4,15,35,40]
-        z: [0,0,0,-4,-8,-8]
-      width: [0,2.5,2.5,2.5,2.5,0]
-      height: [0,2.5,2.5,2.5,2.5,0]
-      angle: 0
-      texture: [13,13,8,13,2]
-    Pipes_4:
-      section_segments: 10
-      offset:
-        x: 25.5
-        y: 13
-        z: 30
-      position:
-        x: [0,0,0,0,0,0]
-        y: [-20,-10,4,13,20,25]
-        z: [0,0,-8,-16,-25,-28]
-      width: [0,2.5,2.5,2.5,2.5,0]
-      height: [0,2.5,2.5,2.5,2.5,0]
-      angle: 90
-      texture: [13,13,8,13,2]###
     Main_reactor:
       section_segments: 9
       offset:
