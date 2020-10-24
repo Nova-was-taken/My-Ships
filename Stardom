@@ -57,7 +57,7 @@ return model =
         z: [-2,-3,0,0,0,0,0,0,0,0,0,0]
       width: [4,10,10,10,12,12,13,12,10,4,0]
       height: [0,10,10,10,10,10,10,10,10,10,0]
-      texture: [9,9,18,63,8,4,13,4,4,4]
+      texture: [9,9,18.2,63,8,4,13,4,4,4]
       propeller: false
     side_thrusters_lower_main:
       section_segments: 8
