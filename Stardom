@@ -269,7 +269,7 @@ return model =
         number: 2
         error: 0
       texture: [63,63,16.9,12.9,8,17,4,63,4,4]
-    Large_ass_cannons_1:
+    Duel_main_cannons:
       section_segments: 10
       offset:
         x: 20.5
@@ -328,7 +328,7 @@ return model =
         z: 0
       length: [15,15,10,10]
       width: [80,60,50,40,35]
-      angle: [-10,20,0,0]
+      angle: [-10,20,0,0,0]
       position: [10,0,-20,-50,-80]
       texture: [3,63,3.5,4]
       doubleside: true
