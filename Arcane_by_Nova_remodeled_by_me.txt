@@ -1,0 +1,425 @@
+Array::mult = (m) -> @map (v) -> v*m
+Array::add = (m) -> @map (v) -> v+m
+for key, value of []
+  delete Array::[key]
+  Object.defineProperty Array::, key,
+    value: value
+    configurable: true
+    enumerable: false
+
+powerHub = (n,xp,yp,zp,size) ->
+  model.bodies['centerhubpiece'+n] =
+    section_segments: 20
+    vertical: true
+    offset:
+      x: xp
+      y: zp
+      z: -yp
+    position:
+      x: [0,0,0,0,0,0]
+      y: [-1,0.3,1.3,1.2,1.6,1.7].mult(size+1)
+      z: [0,0,0,0,0,0]
+    width: [2,2.6,2.8,2,0.8,0].mult(size)
+    height: [2,2.6,2.7,2,0.8,0].mult(size)
+    texture: [4,3,11,4,18]
+  model.bodies['partone'+n] =
+    section_segments: [45,135,225,315]
+    angle: 0
+    offset:
+      x: xp
+      y: yp
+      z: zp
+    position:
+      x: [0,0,0,0]
+      y: [-1,-1,1,1].add(1.15).mult(size).add(size/2)
+      z: [0,0,-1,-1].mult(size*1.1).add(size*2.1+1.4)
+    width: [0,0.3,0.3,0].mult(size)
+    height: [0,0,0.3,0].mult(size)
+    texture: 17
+  model.bodies['parttwo'+n] =
+    section_segments: [45,135,225,315]
+    angle: 60
+    offset:
+      x: xp
+      y: yp
+      z: zp
+    position:
+      x: [0,0,0,0]
+      y: [-1,-1,1,1].add(1.15).mult(size).add(size/2)
+      z: [0,0,-1,-1].mult(size*1.1).add(size*2.1+1.4)
+    width: [0,0.3,0.3,0].mult(size)
+    height: [0,0,0.3,0].mult(size)
+    texture: 17
+  model.bodies['partthree'+n] =
+    section_segments: [45,135,225,315]
+    angle: 120
+    offset:
+      x: xp
+      y: yp
+      z: zp
+    position:
+      x: [0,0,0,0]
+      y: [-1,-1,1,1].add(1.15).mult(size).add(size/2)
+      z: [0,0,-1,-1].mult(size*1.1).add(size*2.1+1.4)
+    width: [0,0.3,0.3,0].mult(size)
+    height: [0,0,0.3,0].mult(size)
+    texture: 17
+  model.bodies['partfour'+n] =
+    section_segments: [45,135,225,315]
+    angle: 180
+    offset:
+      x: xp
+      y: yp
+      z: zp
+    position:
+      x: [0,0,0,0]
+      y: [-1,-1,1,1].add(1.15).mult(size).add(size/2)
+      z: [0,0,-1,-1].mult(size*1.1).add(size*2.1+1.4)
+    width: [0,0.3,0.3,0].mult(size)
+    height: [0,0,0.3,0].mult(size)
+    texture: 17
+  model.bodies['partfive'+n] =
+    section_segments: [45,135,225,315]
+    angle: 240
+    offset:
+      x: xp
+      y: yp
+      z: zp
+    position:
+      x: [0,0,0,0]
+      y: [-1,-1,1,1].add(1.15).mult(size).add(size/2)
+      z: [0,0,-1,-1].mult(size*1.1).add(size*2.1+1.4)
+    width: [0,0.3,0.3,0].mult(size)
+    height: [0,0,0.3,0].mult(size)
+    texture: 17
+  model.bodies['partsix'+n] =
+    section_segments: [45,135,225,315]
+    angle: 300
+    offset:
+      x: xp
+      y: yp
+      z: zp
+    position:
+      x: [0,0,0,0]
+      y: [-1,-1,1,1].add(1.15).mult(size).add(size/2)
+      z: [0,0,-1,-1].mult(size*1.1).add(size*2.1+1.4)
+    width: [0,0.3,0.3,0].mult(size)
+    height: [0,0,0.3,0].mult(size)
+    texture: 17
+  model.bodies['hexagonsone'+n] = 
+    section_segments: [30,90,150,210,270,330]
+    offset:
+      x: xp
+      y: yp
+      z: zp
+    position:
+      x: [0,0,0,0,0,0].add(0.3).add(size*2)
+      y: [-1,-1,-0.3,0.3,1,1].mult(size/2)
+      z: [0,0,0,0,0,0].add(0.3)
+    width: [0,3,3.2,3.2,3,0].mult(0.6).mult(size)
+    height: [0,1.2,1.2,1.2,1.2,0].mult(size+1)
+    texture: [3.9,3.9,16.9,3.9]
+  model.bodies['hexagonstwo'+n] = 
+    section_segments: [30,90,150,210,270,330]
+    angle: -10
+    offset:
+      x: xp
+      y: yp
+      z: zp
+    position:
+      x: [0,0,0,0,0,0].add(size*2)
+      y: [-1,-1,-0.3,0.3,1,1].mult(size/2).add(size+0.3)
+      z: [0,0,0,0,0,0].add(0.3)
+    width: [0,3,3.2,3.2,3,0].mult(0.6).mult(size)
+    height: [0,1.2,1.2,1.2,1.2,0].mult(size+1)
+    texture: [3.9,3.9,16.9,3.9]
+  model.bodies['hexagonsthree'+n] = 
+    section_segments: [30,90,150,210,270,330]
+    angle: 10
+    offset:
+      x: xp
+      y: yp
+      z: zp
+    position:
+      x: [0,0,0,0,0,0].add(size*2)
+      y: [-1,-1,-0.3,0.3,1,1].mult(size/2).add(-size-0.3)
+      z: [0,0,0,0,0,0].add(0.3)
+    width: [0,3,3.2,3.2,3,0].mult(0.6).mult(size)
+    height: [0,1.2,1.2,1.2,1.2,0].mult(size+1)
+    texture: [3.9,3.9,16.9,3.9]
+  model.bodies['hexagonsfour'+n] = 
+    section_segments: [30,90,150,210,270,330]
+    offset:
+      x: xp
+      y: yp
+      z: zp
+    position:
+      x: [0,0,0,0,0,0].add(-0.3).add(-size*2)
+      y: [-1,-1,-0.3,0.3,1,1].mult(size/2)
+      z: [0,0,0,0,0,0].add(0.3)
+    width: [0,3,3.2,3.2,3,0].mult(0.6).mult(size)
+    height: [0,1.2,1.2,1.2,1.2,0].mult(size+1)
+    texture: [3.9,3.9,16.9,3.9]
+  model.bodies['hexagonsfive'+n] = 
+    section_segments: [30,90,150,210,270,330]
+    angle: 10
+    offset:
+      x: xp
+      y: yp
+      z: zp
+    position:
+      x: [0,0,0,0,0,0].add(-size*2)
+      y: [-1,-1,-0.3,0.3,1,1].mult(size/2).add(size+0.3)
+      z: [0,0,0,0,0,0].add(0.3)
+    width: [0,3,3.2,3.2,3,0].mult(0.6).mult(size)
+    height: [0,1.2,1.2,1.2,1.2,0].mult(size+1)
+    texture: [3.9,3.9,16.9,3.9]
+  model.bodies['hexagonssix'+n] = 
+    section_segments: [30,90,150,210,270,330]
+    angle: -10
+    offset:
+      x: xp
+      y: yp
+      z: zp
+    position:
+      x: [0,0,0,0,0,0].add(-size*2)
+      y: [-1,-1,-0.3,0.3,1,1].mult(size/2).add(-size-0.3)
+      z: [0,0,0,0,0,0].add(0.3)
+    width: [0,3,3.2,3.2,3,0].mult(0.6).mult(size)
+    height: [0,1.2,1.2,1.2,1.2,0].mult(size+1)
+    texture: [3.9,3.9,16.9,3.9]
+highlight = (n,xx,yy,zz,width,angle,length,tilt) ->
+  model.bodies['highLight'+n] =
+    section_segments: [45,135,225,315]
+    offset:
+      x: xx
+      y: yy
+      z: zz
+    position:
+      x: [0,0,0,0]
+      y: [-2,-2,2,2].mult(length)
+      z: [tilt,tilt,0,0]
+    width: [0,20,20,0].mult(width)
+    height: [0,2,2,0]
+    angle: angle
+    texture: 17
+featherOne = (n,xx,yy,zz,size,angle,seg) ->
+  model.bodies['main'+n] =
+    section_segments: seg
+    offset:
+      x: xx
+      y: yy
+      z: zz
+    position:
+      x: [1.75,1,0,0].mult(size)
+      y: [-21,-20,0,0].mult(size)
+      z: [0,0,0,0]
+    width: [0,1,3,0].mult(size)
+    height: [1,1,1,0].mult(size)
+    angle: angle
+    texture: 2
+  model.bodies['mainTwo'+n] =
+    section_segments: seg
+    offset:
+      x: xx
+      y: yy
+      z: zz+0.1
+    position:
+      x: [2.5,1,0,0,0].add(-2).mult(size)
+      y: [-20,-18,-8,0,0].mult(size)
+      z: [0,0,0,0,0]
+    width: [0,1.5,2,1.5,0].mult(size)
+    height: [1,1,1,1,0].mult(size)
+    texture: 63
+    angle: angle
+  model.bodies['smallCut'+n] =
+    section_segments: seg
+    offset:
+      x: xx
+      y: yy
+      z: zz+0.1
+    position:
+      x: [0.69,0,0.1,0.79].add(1.2).mult(size)
+      y: [-11,-9,-5,-3].mult(size).add(size-1)
+      z: [0,0,0,0]
+    width: [0,1,1,0].mult(size)
+    height: [1,1,1,1].mult(size)
+    angle: angle
+    texture: 63
+
+model =
+  name: "Arcane"
+  level: 6
+  model: 7
+  size: 1.3
+  specs:
+    shield:
+      capacity: [150,200]
+      reload: [3,5]
+    generator:
+      capacity: [180,220]
+      reload: [20,50]
+    ship:
+      mass: 170
+      speed: [120,150]
+      rotation: [50,70]
+      acceleration: [80,100]
+  bodies:
+    main:
+      section_segments: 10
+      offset:
+        x: 0
+        y: -20
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-95,-45,-10,30,70,90,110,125,145,120]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,15,25,25,30,25,20,20,20,0]
+      height: [0,10,20,25,25,25,20,20,20,0]
+      texture: [3,10,63,11,3,4,63,12,17,17]
+      propeller: true
+    cockpit:
+      section_segments: 7
+      offset:
+        x: 0
+        y: -40
+        z: 25
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-30,-10,20,30,40]
+        z: [-15.3,-11,-4,-4,0]
+      width: [4,6,10,7,4]
+      height: [0,5,5,5,0]
+      texture: [9,9,3,3]
+    cannons_1:
+      section_segments: 10
+      offset:
+        x: 9.5
+        y: -60
+        z: -10
+      position:
+        x: [0,0,0,0,0]
+        y: [-35,-35,-27,20,20]
+        z: [0,0,0,10,10]
+      width: [0,2,6,6,0]
+      height: [0,2,6,6,0]
+      texture: [15.9,6,4,4]
+      laser:
+        damage: [17,29]
+        rate: 3
+        speed: [200,235]
+        number: 1
+        error: 0
+    cannons_wings:
+      section_segments: 10
+      offset:
+        x: 86
+        y: 120
+        z: -4
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-58,-62,-40,-30,0,0]
+        z: [0,0,0,0,0,0]
+      width: [0,3,5,7,6,5,0]
+      height: [0,4,5.5,5.5,5.5,0]
+      texture: [17,12,3,4,4]
+      laser:
+        damage: [12,17]
+        rate: 2
+        speed: [200,235]
+        number: 1
+        error: 0
+        angle: 5
+    Engine:
+      section_segments: 10
+      offset:
+        x: 38
+        y: 30
+        z: 0
+      position:
+        x: [-15,-13,-10,-5,-8,-12,-12,-12,-12,-22,-20]
+        y: [-50,-25,0,15,40,50,60,70,90,75]
+        z: [-8,-7,-3,0,0,0,0,0,0,0,0]
+      width: [0,2.5,2.72,5.72,7.5,7.5,7.5,7.5,7.5,0,0]
+      height: [0,2.5,2.7,5.72,7.5,7.5,7.5,7.5,7.5,0,0]
+      texture: [5,4,63,8,2,17,2,13,17]
+      propeller: true
+    highlightLine:
+      section_segments: [45,135,225,315]
+      offset:
+        x: 86
+        y: 120
+        z: 2.1
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-55,-55,-40,-30,0,0]
+        z: [0,-3,-2,0,0,0]
+      width: [0,2,2,2,2,0].mult(0.5)
+      height: [0,2,2,2,2,0]
+      texture: 17
+
+  wings:
+    main:
+      length: [70,20]
+      width: [90,30,5]
+      angle: [0,-50]
+      position: [-50,40,80]
+      doubleside: true
+      bump:
+        position: 10
+        size: 10
+      texture: [4,63]
+      offset:
+        x: 19
+        y: 64
+        z: -10
+    mainCover:
+      length: [70]
+      width: [30,7]
+      angle: [0]
+      position: [-40,39]
+      bump:
+        position: 10
+        size: 0
+      texture: [63]
+      offset:
+        x: 19
+        y: 64
+        z: -3
+    winglets:
+      offset:
+        x: 10
+        y: 70
+        z: 10
+      length: [10,20]
+      width: [15,30,50]
+      angle: [60,-20]
+      position: [0,5,60]
+      texture: [4]
+      bump:
+        position: 10
+        size: 60
+    
+highlight1: highlight(1,53,30,-11,5,120,1,0)
+highlight2: highlight(2,53,86,-11,3,-40,1,0)
+highlight3: highlight(3,28,116,34,0.05,189.5,19,-20)
+
+reactor: powerHub(1,0,30,22,4)
+
+feather1: featherOne(1,10,-70,0,1,-110,[45,135,225,315])
+feather2: featherOne(2,13,-60,0,1.1,-110,[45,135,225,315])
+feather3: featherOne(3,16,-50,0,1.2,-110,[45,135,225,315])
+feather4: featherOne(4,-89,120,2,1.4,0,[45,135,225,315])
+feather5: featherOne(5,83,120,2,1.4,0,[45,135,225,315])
+
+return model;
+
+
+
+
+
+
+
+
+
