@@ -73,7 +73,7 @@ return model =
       height: [0,3,10,15,15,15,10,10,10,10,0]
       texture: [13,3,4,18,63,4,18,4,13,17]
       propeller: true
-    side_hrusters_upper_main:
+    side_trusters_upper_main:
       section_segments: 8
       offset:
         x: 32
@@ -94,9 +94,9 @@ return model =
         y: 50
         z: 19
       position:
-        x: [-19,-13,-9,-8,-4,-5,-7,-7,-7,-11,-11,-7]
-        y: [-147,-125,-105,-90,-60,-40,-0,25,40,70,70,60]
-        z: [0,0,0,0,0,0,0,0,0,0,0,0]
+        x: [-12,-9,-9,-8,-4,-5,-7,-7,-7,-11,-11,-7]
+        y: [-144,-125,-105,-90,-60,-40,-0,25,40,70,70,60]
+        z: [-0,0,0,0,0,0,0,0,0,0,0,0]
       width:  [0,4,5,7,7,7,5,5,5,5,5,0]
       height: [0,4,8,10,10,10,8,8,8,8,8,0]
       texture: [63,4,18,4,63,4,8,18,13,13,17]
@@ -319,7 +319,7 @@ return model =
       height: [18,18,15,15,0,15,15,0,0,15]
       vertical: true
       texture: [12.9,63,17,3,13,16.9,16.9]
-      angle: 0
+      angle: 0 
   wings:
     wings:
       offset:
@@ -334,5 +334,4 @@ return model =
       doubleside: true
       bump:
         position: 20
-        size: 10
-
+        size: 10   
