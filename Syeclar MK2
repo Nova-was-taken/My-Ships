@@ -159,6 +159,34 @@ return model =
       bump:
         position: 15
         size: 5
+    detail_1:
+      doubleside: true
+      offset:
+        x: 10
+        y: 64+bulk_move
+        z: -1
+      length: [42]
+      width: [80,30,0]
+      angle: [20,-10]
+      position: [-24,38]
+      texture: [63]
+      bump:
+        position: 15
+        size: 0
+    top2:
+      doubleside: true
+      offset:
+        x: 10
+        y: 68+bulk_move
+        z: -1.2
+      length: [45,10]
+      width: [80,30,0]
+      angle: [20,-10]
+      position: [-20,40,65]
+      texture: [4,63]
+      bump:
+        position: 15
+        size: 5    
     bottom:
       doubleside: true
       offset:
@@ -173,6 +201,34 @@ return model =
       bump:
         position: 15
         size: 5
+    ###detail_2:
+      doubleside: true
+      offset:
+        x: 10
+        y: 82+bulk_move
+        z: 6
+      length: [46]
+      width: [70,20]
+      angle: [-31,0]
+      position: [-20,45]
+      texture: [63]
+      bump:
+        position: 15
+        size: 0
+    bottom_2:
+      doubleside: true
+      offset:
+        x: 10
+        y: 80+bulk_move
+        z: 6.3
+      length: [55,10]
+      width: [70,20,0]
+      angle: [-31,0]
+      position: [-20,50,75]
+      texture: [4,63]
+      bump:
+        position: 15
+        size: 5###    
     winglets:
       doubleside: true
       offset:
