@@ -57,7 +57,7 @@ return model =
         z: [-4,-2,0,0,0]
       width:  [2,6,8,8,2,0]
       height: [0,6,8,8,0]
-      texture: [9,9,9,63]
+      texture: [9,9,2,63]
     main_laser:
       section_segments: 10
       offset:
@@ -102,7 +102,7 @@ return model =
         angle: 0
         error: 0###
     mini_lasers_bottom:
-      section_segments: 12
+      section_segments: 6
       offset:
         x: 59
         y: 130+bulk_move
