@@ -29,7 +29,7 @@ return model =
       width: [0,11,15,20,25,25,20,15,0]
       height: [0,6,8,12,20,20,18,15,0]
       propeller: true
-      texture: [3,63,63,11,3,10,12,17]
+      texture: [2,63,63,11,3,10,12,17]
     cockpit:
       section_segments: 7
       offset:
