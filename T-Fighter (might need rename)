@@ -1,7 +1,7 @@
 return model =
   name: 'T-Fighter'
   level: 6
-  model: 8
+  model: 3
   size: 2
   specs:
     shield:
@@ -58,12 +58,13 @@ return model =
       height: [0,2.5,4,5.5,5,0]
       angle: 0
       laser:
-        damage: [10,15]
-        rate: 2
+        damage: [20,25]
+        rate: 3
         type: 1
         speed: [180,230]
         number: 1
         error: 0
+        angle: 0
       propeller: true
       texture: [6,4,10,13,17]
     cannon_side:
@@ -80,12 +81,13 @@ return model =
       height: [0,3,6,9,6,0]
       angle: 0
       laser:
-        damage: [25,30]
+        damage: [10,15]
         rate: 2
         type: 1
         speed: [170,220]
-        number: 1
+        number: 5
         error: 0
+        angle: 10
       propeller: false
       texture: [4,4,11,4]  
     cannon_wings:
