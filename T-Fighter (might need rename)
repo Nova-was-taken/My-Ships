@@ -5,14 +5,14 @@ return model =
   size: 2
   specs:
     shield:
-      capacity: [275,300]
-      reload: [5,7]
+      capacity: [220,350]
+      reload: [6,8]
     generator:
-      capacity: [140,160]
+      capacity: [140,170]
       reload: [30,45]
     ship:
-      mass: 260
-      speed: [75,105]
+      mass: 300
+      speed: [75,110]
       rotation: [70,80]
       acceleration: [100,120]
   bodies:
@@ -40,7 +40,7 @@ return model =
         x: [0,0,0,0,0,0,0]
         y: [-15,0,16,35,50]
         z: [-7,-6,-7,0,0]
-      width:  [0,5,10,8,5]
+      width: [0,5,10,8,5]
       height: [0,6,11,6,5]
       propeller: false
       texture: [7,9,9,4,4]
@@ -58,8 +58,8 @@ return model =
       height: [0,2.5,4,5.5,5,0]
       angle: 0
       laser:
-        damage: [20,25]
-        rate: 3
+        damage: [5,10]
+        rate: 2
         type: 1
         speed: [180,230]
         number: 1
@@ -77,19 +77,19 @@ return model =
         x: [0,0,0,0,0,0]
         y: [-35,-40,-20,10,35,45]
         z: [0,0,0,0,7,7]
-      width:  [0,3,6,9,5,0]
+      width: [0,3,6,9,5,0]
       height: [0,3,6,9,6,0]
       angle: 0
       laser:
         damage: [10,15]
-        rate: 2
+        rate: 4
         type: 1
         speed: [170,220]
         number: 5
         error: 0
-        angle: 10
+        angle: 20
       propeller: false
-      texture: [4,4,11,4]  
+      texture: [4,4,11,4]
     cannon_wings:
       section_segments: 8
       offset:
@@ -100,20 +100,20 @@ return model =
         x: [-2.5,-2.5,0,0,0,0,0,0]
         y: [-45,-50,-35,-20,0,20,15,15]
         z: [0,0,0,0,0,0,0,0]
-      width: [0,2.5,4,5.5,3.5,3.0,0]
-      height: [0,2.5,4,5.5,5,3.0,0]
+      width: [0,2.5,4,5.5,3.5,3,0]
+      height: [0,2.5,4,5.5,5,3,0]
       angle: 0
       laser:
         damage: [6,7]
         rate: 2
         type: 1
         speed: [150,200]
-        number: 2
-        angle: 2.5
+        number: 1
+        angle: 3.5
         error: 0
       propeller: true
-      texture: [6,63,4,10,4,17]  
-  wings: 
+      texture: [6,63,4,10,4,17]
+  wings:
     main:
       length: [60,15,5]
       width: [80,30,20,20]
