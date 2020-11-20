@@ -26,25 +26,25 @@ return model =
         z: 0
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-135,-120,-60,-35,-10,26,40,60,95,130,150,170,190,185]
+        y: [-125,-90,-60,-60,-10,26,40,60,95,110,110,130,148,148]
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [0,6,28,26,29,38,40,40,45,40,35,25,20,0]
-      height: [0,5,25,25,30,44,40,40,45,40,35,25,20,0]
-      texture: [1,2,2,63,10,4,4,11,4,3,8,13,17]
-      propeller: true
+      width:  [0,16,20,23,25,26,28,30,28,26,23,20,20,0]
+      height: [0,15,20,24,24,26,28,28,26,26,23,20,20,0]
+      texture: [1,2,13,63,10,4,4,11,4,13,8,13,4]
+      propeller: 0
     cockpit:
       section_segments: 10
       offset:
         x: 0
-        y: -77
-        z: 15
+        y: -21
+        z: 22
       position:
         x: [0,0,0,0,0,0,0]
         y: [-40,-20,0,20,40]
-        z: [-8.3,-3,-3,0,0]
+        z: [0,0,0,0,0]
       width: [0,5,9,9,9,0]
       height: [0,5,14.7,12,0]
-      texture: [9,9,9,9]
+      texture: [7,9,3,3]
     ###thruster_suround:
       section_segments: 14
       offset:
@@ -108,8 +108,8 @@ return model =
     cannon_tubes_Side:
       section_segments: 10
       offset:
-        x: 30
-        y: -10
+        x: 0
+        y: 0
         z: 0
       position:
         x: [0,0,0,-5]
@@ -124,9 +124,9 @@ return model =
     cannon_top_wings:
       section_segments: 10
       offset:
-        x: 10
+        x: 0
         y: 17
-        z: 5
+        z: 0
       position:
         x: [0,0,0,0]
         y: [-30,-35,-20,0]
@@ -143,9 +143,9 @@ return model =
     cannon_bottom_wings:
       section_segments: 10
       offset:
-        x: 10
+        x: 0
         y: 17
-        z: -0
+        z: 0
       position:
         x: [0,0,0,0]
         y: [-30,-35,-20,0]
@@ -162,9 +162,9 @@ return model =
     mini_cannons:
       section_segments: 10
       offset:
-        x: 12.5
+        x: 0
         y: -60
-        z: -15
+        z: 0
       position:
         x: [0,0,0,0,0,0]
         y: [-34,-35,-20,-10,30,40]
@@ -183,7 +183,7 @@ return model =
       offset:
         x: 0
         y: -60
-        z: -25.7
+        z: 0
       position:
         x: [0,0,0,0,0,0,0,0,0]
         y: [-30,-35,-20,-10,0,10,30,70,70]
@@ -203,8 +203,8 @@ return model =
     Engines_Main_top:
       section_segments: 10
       offset:
-        x: 27
-        y: 125
+        x: 0
+        y: 0
         z: 0
       position:
         x: [0,0,0,0,0,0,0,0,0]
@@ -219,7 +219,7 @@ return model =
       offset:
         x: 0
         y: 15
-        z: -11
+        z: 0
       position:
         x: [0,0,0,0,0,0,0,0,0]
         y: [-20,-15,0,25,50,60,70,70]
@@ -231,15 +231,15 @@ return model =
     Engines_wing_tip_top:
       section_segments: 18
       offset:
-        x: 114
-        y: 147
-        z: 19
+        x: 9
+        y: 120
+        z: 0
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
         y: [-95,-85,-80,-86,-75,-68,-67,-50,-45,-5,20,35,31]
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [0,1.5,0,3,5,6,6.7,7.3,8.5,9.5,7.5,7.5,0]
-      height: [0,1.5,0,3,5,6,6.7,7.3,8.5,9.5,7.5,7.5,0]
+      width:  [0,1.5,0,3,6,7,7,8,9,11,10,10,0]
+      height: [0,1.5,0,3,6,7,7,8,9,10,8,8,0]
       texture: [63,63,13,4,4,17,8,10,8,4,13,17]
       propeller: true
       laser:
@@ -248,36 +248,36 @@ return model =
         speed: [225,225]
         number: 1
         error: 0
-    Engines_wing_tip_bottom:
+    ###Engines_wing_tip_bottom:
       section_segments: 10
       offset:
-        x: 10
-        y: 16
-        z: -7
+        x: 48
+        y: 40
+        z: 0
       position:
-        x: [0,0,0,0,0,0,0,0,0]
-        y: [-20,-15,0,25,30,40,50,40]
-        z: [0,0,0,0,0,0,0,0,0]
-      width: [0,0,4.375,4.375,3.375,3.75,3.75,0,0]
-      height: [0,0,4.125,4.375,4.375,3.75,3.75,0,0]
-      texture: [1,63,2,2,2,17,2]
-      propeller: true
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-95,-85,-80,-86,-75,-68,-67,-50,-45,-35,-10,20,40,55,51]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,1.5,0,3,5,6,6,7,8,9,8,8,8,8,0]
+      height: [0,1.5,0,3,6,7,7,8,8,9,8,8,8,8,0]
+      texture: [63,63,13,4,4,17,8,10,8,2,3,4,13,17]
+      propeller: 1###
 #~~~~~~~~~~~~~Wings~~~~~~~~~~~~#
   wings:
     top_wing:
       offset:
-        x: 5
-        y: 20
+        x: 15
+        y: 60
         z: 0
       doubleside: true
-      length: [50,40,20,10]
-      width: [75,65,50,45,35]
-      angle: [2,20,30,0]
-      position: [10,30,70,100,130]
+      length: [20,15]
+      width: [75,65,50,10]
+      angle: [0,0,0,0]
+      position: [10,10,-30]
       texture: [3,3.6,4,63]
       bump:
-        position: 10
-        size: 20
+        position: 0
+        size: 10
     ###bottom_wing:
       offset:
         x: 10
@@ -292,31 +292,31 @@ return model =
       bump:
         position: 0
         size: 10###
-    cannon_suport_side:
+    ###cannon_suport_side:
       offset:
-        x: 14.3
-        y: 125
-        z: 34.5
+        x: 0
+        y: 0
+        z: 0
       doubleside: true
-      length: [14,18]
-      width: [35,35,10]
-      angle: [25,0]
-      position: [-10,20,40]
+      length: [0,0]
+      width: [0,0,0]
+      angle: [0,0]
+      position: [0,0,0]
       texture: [3,63]
       bump:
         position: 0
-        size: 14
-    ###cannon_suport_bottom:
+        size: 14###
+    cannon_suport_bottom:
       offset:
-        x: 0
-        y: -75
-        z: -40
+        x: 24
+        y: -30
+        z: 0
       doubleside: true
-      length: [16]
-      width: [25,25]
-      angle: [24]
-      position: [0,0]
+      length: [24]
+      width: [25,15]
+      angle: [0]
+      position: [-4,6]
       texture: [3]
       bump:
         position: 0
-        size: 0###
+        size: 10
