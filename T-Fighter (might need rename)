@@ -14,7 +14,7 @@ return model =
       mass: 300
       speed: [75,110]
       rotation: [70,80]
-      acceleration: [100,120]
+      acceleration: [80,120]
   bodies:
     main:
       section_segments: 12
