@@ -164,7 +164,7 @@ return model =
       width: [41,16,4]
       angle: [0,0]
       position: [-40,10,20]
-      texture: [17]
+      texture: [63,4]
       doubleside: false
       bump:
         position: 0
@@ -183,4 +183,3 @@ return model =
       bump:
         position: 0
         size: 10
-      
