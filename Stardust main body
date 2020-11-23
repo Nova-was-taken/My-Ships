@@ -1,0 +1,195 @@
+return model =
+  name: 'Stardust'
+  designer: 'Nova'
+  level: 1
+  model: 2
+  size: 1.6
+  #zoom: 0.66
+  next: []
+  specs:
+    shield:
+      capacity: [240,400]
+      reload: [400,400]
+    generator:
+      capacity: [240,240]
+      reload: [19,29]
+    ship:
+      mass: 230
+      speed: [300,300]
+      rotation: [70,70]
+      acceleration: [95,95]
+      dash:
+        rate: 2
+        burst_speed: [250,250]
+        speed: [400,400]
+        acceleration: [100,100]
+        initial_energy: [50,50]
+        energy: [100,100]
+  bodies:
+    main:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 50
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-110,-90,-70,-60,-40,-20,-10,0,-5]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,6,10,10,15,14,10,5,0]
+      height: [0,6,10,10,10,10,10,5,0]
+      texture: [2,63,3,2,10,63,13,17]
+      propeller: true
+    ###cockpit:
+      section_segments: [45,95,185,275,320]
+      offset:
+        x: 0
+        y: -31
+        z: 14
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-7,5,15,25,30,38]
+        z: [-7.6,-8,-6,-5,-5,-4]
+      width:  [1,5,6,6,4,0]
+      height: [0,4,4,4,4,0]
+      texture: [9,9,9,3]
+      propeller: false###
+    ###side_thrusters:
+      section_segments: 8
+      offset:
+        x: 16
+        y: 8
+        z: 2
+      position:
+        x: [-6.5,-2,1,1,1,-5,-5,-5]
+        y: [-20,-4,4,7,10,30,40,36]
+        z: [0,0,0,0,0,0,0,0]
+      width: [1,2.5,2.5,2.5,2.5,2.5,2.5,0]
+      height: [0,2.5,2.5,2.5,2.5,2.5,2.5,0]
+      texture: [3,63,8,11,3,13,17]
+      propeller: true
+    wing_thrusters:
+      section_segments: 8
+      offset:
+        x: 36
+        y: 46
+        z: 8
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-10,-1,5,7.5,8,10,15,12]
+        z: [0,0,0,0,0,0,0,0]
+      width: [0,1.5,1.5,1.5,1.5,1.5,1.5,0]
+      height: [0,1.5,1.5,1.5,1.5,1.5,1.5,0]
+      texture: [2,63,4,5,18,13,17]
+      propeller: true
+    wing_thrusters_detail:
+      section_segments: 8
+      offset:
+        x: 36
+        y: 50
+        z: 9.4
+      position:
+        x: [0,0,0,0,0]
+        y: [-4,5,5,5,5]
+        z: [0,0,0,0,0]
+      width:  [0,.5,.5,.5,0]
+      height: [0,.5,.5,.5,0]
+      texture: [17]
+    Pipes_side:
+      section_segments: 6
+      offset:
+        x: 9
+        y: 40
+        z: 9
+      position:
+        x: [-4,-1,0,2,2,2]
+        y: [-20,-15,-12,2,4,4]
+        z: [0,0,0,-7,-7,-7]
+      width: [0,2,2,2,2,0]
+      height: [0,2,2,2,2,0]
+      angle: 0
+      propeller: false
+      texture: [4,4,13]
+     Reactor_body_outside:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 9
+        z: -25
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-2.25,2,3.25,0.5,-2.25]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [10.5,11.5,9,4.5,.5]
+      height: [10.5,11.5,9,4.5,.5]
+      vertical: true
+      texture: [12.9,16.9,63,4]
+      angle: 0
+    Reactor_body_inside:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 9
+        z: -25
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-2.25,2.25,1.25,-2.25,-2.25]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [7.5,7.5,0,2.5,7.5]
+      height: [7.5,7.5,0,2.5,9.5]
+      vertical: true
+      texture: [13,17,17,4]
+      angle: 0###
+  wings:
+    ###main:
+      offset:
+        x: 0
+        y: 7
+        z: 0
+      length: [25,15]
+      width: [40,15,3]
+      angle: [0,0]
+      position: [-40,10,20]
+      texture: [8,63]
+      doubleside: true
+      bump:
+        position: 0
+        size: 10
+    highight_for_main:
+      offset:
+        x: 0
+        y: 6
+        z: -1
+      length: [25,15]
+      width: [41,16,4]
+      angle: [0,0]
+      position: [-40,10,20]
+      texture: [63,4]
+      doubleside: false
+      bump:
+        position: 0
+        size: 0
+    back:
+      offset:
+        x: 0
+        y: 15
+        z: -2.5
+      length: [25,15]
+      width: [30,30,10]
+      angle: [25,0]
+      position: [-20,20,40]
+      texture: [63,4]
+      doubleside: true
+      bump:
+        position: 0
+        size: 10###
+    back1:
+      offset:
+        x: 0
+        y: 0
+        Z: 0
+      length: [0]
+      width: [0]
+      angle: [0]
+      position: [0,0]
+      
