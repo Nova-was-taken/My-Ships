@@ -1,0 +1,341 @@
+return model =
+  name: "Valiant Starbird"
+  level: 7
+  model: 2
+  size: 3.75
+  specs:
+    shield:
+      capacity: [300,300]
+      reload: [10,10]
+    generator:
+      capacity: [300,300]
+      reload: [60,60]
+    ship:
+      mass: 800
+      speed: [65,65]
+      rotation: [30,30]
+      acceleration: [80,80]
+  bodies:
+    main:
+      section_segments: 15
+      offset:
+        x: 0
+        y: 0
+        z: 10
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-95,-80,-40,-35,-10,26,70,80]
+        z: [0,0,0,0,0,0,0,0,0]
+      width:  [0,5,25,25,28,28,20,0]
+      height: [0,5,25,25,22,24,20,0]
+      texture: [63,3,3,3,3,18,4]
+      propeller: false
+    cockpit:
+      section_segments: 10
+      offset:
+        x: 0
+        y: -17
+        z: 15
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [0,0,0,0,0,0,0]
+        z: [0,0,0,0,0,0,0]
+      width: [0,5,9,9,9,0]
+      height: [0,5,14.7,12,0]
+      texture: [9,9,9,9]
+  #====  
+    ###thruster_suround:
+      section_segments: 15
+      offset:
+        x: 0
+        y: 129.6
+        z: 0
+      position:
+        x: [0,0,0,0]
+        y: [-30,-35,-20,20]
+        z: [0,1,0,0]
+      width: [40,40,30,29.3,10,0]
+      height: [40,40,30,29.5,12,0]
+      texture: [4,4,4,4,4,4]
+      angle: 0###
+    ###fuel_tubes_tubes_top_front:
+      section_segments: 10
+      offset:
+        x: 11
+        y: 59
+        z: 45
+      position:
+        x: [0,0,0,0]
+        y: [-70,-39,-20,5]
+        z: [-39,0,0,0]
+      width: [3,3,3,3]
+      height: [3,3,3,3]
+      texture: [3,63,63,4]
+      angle: [0]
+      vertical: false
+    fuel_tubes_tubes__top_back:
+      section_segments: 10
+      offset:
+        x: 11
+        y: 49
+        z: 45
+      position:
+        x: [0,0,0,0]
+        y: [-70,-39,-20,5]
+        z: [-25,0,0,0]
+      width: [3,3,3,3]
+      height: [3,3,3,3]
+      texture: [4,63,63,4]
+      angle: [180]
+      vertical: false
+    fuel_tubes_Bottom_front:
+      section_segments: 10
+      offset:
+        x: 13.5
+        y: 75
+        z: -45
+      position:
+        x: [0,0,0,0]
+        y: [-70,-39,-20,5]
+        z: [39,0,0,0]
+      width: [3,3,3,3]
+      height: [3,3,3,3]
+      texture: [4,4,4,4]
+      angle: [0]
+      vertical: false
+    fuel_tubes_Bottom_back:
+      section_segments: 10
+      offset:
+        x: 13.5
+        y: 49
+        z: -45
+      position:
+        x: [0,0,0,0]
+        y: [-70,-39,-20,5]
+        z: [25,0,0,0]
+      width: [3,3,3,3]
+      height: [3,3,3,3]
+      texture: [4,4,4,4]
+      angle: [180]
+      vertical: false
+    cannon_tubes_Center:
+      section_segments: 10
+      offset:
+        x: 0
+        y: 29
+        z: -36.5
+      position:
+        x: [0,0,0,0]
+        y: [-70,-39,-20,5]
+        z: [0,0,0,0]
+      width: [3,3,3,3]
+      height: [3,3,3,3]
+      texture: [3,3,3,3]
+      angle: [0]
+      vertical: false
+    cannon_tubes_Side:
+      section_segments: 10
+      offset:
+        x: 13.5
+        y: 29
+        z: -35
+      position:
+        x: [0,0,0,0]
+        y: [-70,-39,-20,5]
+        z: [0,0,0,0]
+      width: [0,3,3,3,0]
+      height: [0,3,3,3,0]
+      texture: [3,3,3,3]
+      angle: [0]
+      vertical: false###
+    side_cannon_1_2_top_wings:
+      section_segments: 10
+      offset:
+        x: 0
+        y: 0
+        z: 0
+      position:
+        x: [0,0,0,0]
+        y: [-30,-35,-20,0]
+        z: [0,0,0,0]
+      width: [0,1,3,3,1,0]
+      height: [0,1,3,3,0]
+      texture: [15.9,63,4,4,4,4]
+      laser:
+        damage: [8,8]
+        rate: 5
+        speed: [225,225]
+        number: 1
+        error: 0
+    side_cannon_3_4_bottom_wings:
+      section_segments: 10
+      offset:
+        x: 0
+        y: 0
+        z: 0
+      position:
+        x: [0,0,0,0]
+        y: [-30,-35,-20,0]
+        z: [0,0,0,0]
+      width: [0,1,3,3,1,0]
+      height: [0,1,3,3,0]
+      texture: [15.9,63,4,4]
+      laser:
+        damage: [8,8]
+        rate: 5
+        speed: [225,225]
+        number: 1
+        error: 0
+    aim_cannons_1_2:
+      section_segments: 10
+      offset:
+        x: 13.5
+        y: -20
+        z: -35
+      position:
+        x: [0,0,0,0]
+        y: [-34,-35,-20,0]
+        z: [0,0,0,0]
+      width: [0,0.5,1.5,1.5,0.5,0]
+      height: [0,0.5,1.5,1.5,0]
+      texture: [15.9,3,3,3]
+      laser:
+        damage: [1,1]
+        rate: 10
+        speed: [225,225]
+        number: 1
+        error: 0
+    Super_cannon:
+      section_segments: 6
+      offset:
+        x: 0
+        y: -20
+        z: -36.9
+      position:
+        x: [0,0,0,0]
+        y: [-30,-35,-20,0]
+        z: [0,0,0,0]
+      width: [0,15,14,0]
+      height: [0,15,14,0]
+      texture: [15.9,3.9,3,15]
+      laser:
+        damage: [245,245]
+        rate: 1
+        type: 2
+        speed: [200,200]
+        number: 1
+        error: 0
+        recoil: 500
+    Engines_Main_top:
+      section_segments: 10
+      offset:
+        x: 0
+        y: 0
+        z: 14
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [0,0,0,0,0,0,0,0]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,10,11.7,11.7,11.7,10,10,0,0]
+      height: [0,10,8.3,11.7,11.7,10,10,0,0]
+      texture: [1,63,4,4,4,17,4]
+      propeller: true
+    Engines_Main_bottom:
+      section_segments: 10
+      offset:
+        x: 0
+        y: 0
+        z: -13
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [0,0,0,0,0,0,0,0]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,10,11.7,11.7,11.7,10,10,0,0]
+      height: [0,10,8.3,11.7,11.7,10,10,0,0]
+      texture: [1,63,4,4,4,17,4]
+      propeller: true
+    Engines_5_6_wing_tip_top:
+      section_segments: 10
+      offset:
+        x: 0
+        y: 0
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-20,-15,0,25,30,40,50,40]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,0,4.375,4.375,3.375,3.75,3.75,0,0]
+      height: [0,0,4.125,4.375,4.375,3.75,3.75,0,0]
+      texture: [1,63,4,4,4,17,4]
+      propeller: true
+    Engines_7_8_wing_tip_bottom:
+      section_segments: 10
+      offset:
+        x: 0
+        y: 0
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-20,-15,0,25,30,40,50,40]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,0,4.375,4.375,3.375,3.75,3.75,0,0]
+      height: [0,0,4.125,4.375,4.375,3.75,3.75,0,0]
+      texture: [1,63,4,4,4,17,4]
+      propeller: true
+  wings:
+    top_wing:
+      offset:
+        x: 0
+        y: -70
+        z: 10
+      doubleside: true
+      length: [80]
+      width: [85,5]
+      angle: [0]
+      position: [18,150]
+      texture: [4]
+      bump:
+        position: 0
+        size: 10
+    bottom_wing:
+      offset:
+        x: 10
+        y: 0
+        z: 0
+      doubleside: true
+      length: [0]
+      width: [85,35]
+      angle: [-30]
+      position: [-0,0]
+      texture: [4]
+      bump:
+        position: 0
+        size: 10
+    cannon_suport_side:
+      offset:
+        x: 14.3
+        y: -45
+        z: -43.6
+      doubleside: true
+      length: [1]
+      width: [25,25]
+      angle: [85]
+      position: [0,0]
+      texture: [3.9]
+      bump:
+        position: 0
+        size: 0
+    cannon_suport_bottom:
+      offset:
+        x: 0
+        y: -45
+        z: -51
+      doubleside: true
+      length: [1]
+      width: [25,25]
+      angle: [24]
+      position: [0,0]
+      texture: [3.9]
+      bump:
+        position: 0
+        size: 0
