@@ -43,7 +43,7 @@ return model =
         y: [-40,-20,0,20,40]
         z: [0,0,0,0,0]
       width: [0,5,9,9,9,0]
-      height: [0,5,14.7,12,0]
+      height: [0,5,7.7,7,0]
       texture: [7,9,3,3]
     ###thruster_suround:
       section_segments: 14
@@ -112,7 +112,7 @@ return model =
         y: 0
         z: 0
       position:
-        x: [0,0,0,-5]
+        x: [0,0,0,0]
         y: [-40,-45,-30,-10]
         z: [0,0,0,0]
       width: [0,3,3,3,0]
@@ -242,13 +242,7 @@ return model =
       height: [0,1.5,0,3,6,7,7,8,9,10,8,8,0]
       texture: [63,63,13,4,4,17,8,10,8,4,13,17]
       propeller: true
-      laser:
-        damage: [5,5]
-        rate: 10
-        speed: [225,225]
-        number: 1
-        error: 0
-    ###Engines_wing_tip_bottom:
+    Engines_wing_tip_bottom:
       section_segments: 10
       offset:
         x: 48
@@ -261,13 +255,13 @@ return model =
       width:  [0,1.5,0,3,5,6,6,7,8,9,8,8,8,8,0]
       height: [0,1.5,0,3,6,7,7,8,8,9,8,8,8,8,0]
       texture: [63,63,13,4,4,17,8,10,8,2,3,4,13,17]
-      propeller: 1###
+      propeller: 1
 #~~~~~~~~~~~~~Wings~~~~~~~~~~~~#
   wings:
     top_wing:
       offset:
-        x: 15
-        y: 60
+        x: 20
+        y: 61
         z: 0
       doubleside: true
       length: [20,15]
