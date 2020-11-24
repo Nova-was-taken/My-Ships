@@ -106,6 +106,20 @@ return model =
       bump:
         position: 0
         size: 10    
+    back_bit:
+      offset:
+        x: 20
+        y: 7
+        z: -1
+      length: [90,5]
+      width: [30,10]
+      angle: [0]
+      position: [30,51]
+      texture: [63]
+      doubleside: true
+      bump:
+        position: 0
+        size: 10        
     tail:
       offset:
         x: 10
