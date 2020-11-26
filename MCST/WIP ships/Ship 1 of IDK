@@ -1,0 +1,53 @@
+Array::mult = (m) -> @map (v) -> v*m
+Array::add = (m) -> @map (v) -> v+m
+for key of Array::
+  Object.defineProperty Array::, key,
+    enumerable: false
+bulk_y_move =30
+return model =
+  name: 'Ship'
+  level: 6
+  model: 10
+  size: 1.75
+  zoom: 0.85
+  specs:
+    shield:
+      capacity: [210,330]
+      reload: [7,10]
+    generator:
+      capacity: [140,220]
+      reload: [50,80]
+    ship:
+      mass: 175
+      speed: [85,120]
+      rotation: [50,75]
+      acceleration: [140,160]
+  bodies:
+    main:  
+      section_segments: 8
+      offset:
+        x: 0
+        y: 0+bulk_y_move
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0]
+        y: [-100,-80,-60,-40,-20,0,1,20,30,40,39]
+        z: [0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,4,7,9,12,12,11,9,7,4,0].mult(1.3)
+      height: [0,4,7,9,12,12,11,9,7,4,0].mult(1.3)
+      texture: [1,3,63,11,3,17,3,8,13,17]
+      propeller: true
+    side:
+      section_segments: 8
+      offset:
+        x: 30
+        y: -10+bulk_y_move
+        z: 0
+      position: 
+        x: [0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-40,-37,-30,-27,-10,-4,4,14,32,35,40,38]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,2,4,6,8,8,8,8,6,4,2,0]
+      height: [0,2,4,6,8,8,8,8,6,4,2,0]
+      propeller: 0
+      texture: [2,3,13,3,2,3,2,3,2,3,17]
