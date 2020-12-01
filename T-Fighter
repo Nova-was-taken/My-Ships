@@ -72,7 +72,7 @@ return model =
         number: 1
         error: 0
         angle: 0
-      propeller: true
+      propeller: 0
       texture: [6,4,10,13,17]
     side_thruster:
       section_segments: 8
@@ -99,8 +99,8 @@ return model =
         x: [0,0,0,0,0,-2]
         y: [-35,-40,-20,10,25,40]
         z: [0,0,0,0,0,0]
-      width:  [0,4,7,10,6,0].mult(.6)
-      height: [0,4,7,10,7,0].mult(.4)
+      width:  [0,4,7,10,6,0].mult(.8)
+      height: [0,4,7,10,7,0].mult(.6)
       angle: 0
       laser:
         damage: [10,15]
@@ -116,14 +116,15 @@ return model =
       section_segments: 8
       offset:
         x: 56
-        y: 43+bulk_y_move
+        y: 50+bulk_y_move
         z: 7-bulk_z_move
       position:
-        x: [-2.5,-2.5,0,0,0,0,0,0,0]
-        y: [-45,-50,-35,-20,0,10,20,15,14].mult(1)
-        z: [0,0,0,0,0,0,0,0,0]
-      width: [0,2.5,4,5.5,3.5,3,3,0].mult(1.2)
-      height: [0,2.5,4,5.5,5,3,3,0]
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-95,-85,-80,-86,-75,-68,-64,-64,-45,-15,10,25,21].mult(0.7)
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,1.5,0,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(.9)
+      height: [0,1.5,0,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(.9)
+      texture: [63,63,13,4,4,63,8,10,8,4,13,17]
       angle: 0
       laser:
         damage: [6,7]
@@ -133,8 +134,7 @@ return model =
         number: 1
         angle: 3.5
         error: 0
-      propeller: true
-      texture: [6,63,4,10,4,13,17]
+      propeller: 0
   wings:
     main:
       length: [60,15,5]
@@ -153,7 +153,7 @@ return model =
     winglets:
       length: [19,3]
       width: [30,30,59]
-      angle: [0,40,0]
+      angle: [0,50,0]
       position: [-20,23,50]
       doubleside: true
       texture: [3]
@@ -163,7 +163,35 @@ return model =
         z: 10-bulk_z_move
       bump:
         position: 30
-        size: 15    
+        size: 15
+    ###winglets_cannon_top_1:
+      length: [13,5]
+      width: [30,30,29]
+      angle: [0,0,0]
+      position: [-20,13,2]
+      doubleside: true
+      texture: [4,13]
+      offset:
+        x: 1
+        y: 65+bulk_y_move
+        z: 50-bulk_z_move
+      bump:
+        position: 10
+        size: 10###
+    winglets_cannon_top_2:
+      length: [13,3]
+      width: [10,10,15].add(5)
+      angle: [30,30,0]
+      position: [-12,0,-2]
+      doubleside: true
+      texture: [4,13]
+      offset:
+        x: 1
+        y: 65+bulk_y_move
+        z: 50-bulk_z_move
+      bump:
+        position: 10
+        size: 10
     top:
       doubleside: true
       offset:
