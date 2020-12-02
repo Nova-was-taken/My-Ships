@@ -5,23 +5,23 @@ for key of Array::
     enumerable: false
 bulk_y_move = 15
 return model =
-  name: 'Ship'
+  name: 'Yogita'
   level: 6
   model: 10
   size: 2.45
   zoom: 1.2
   specs:
     shield:
-      capacity: [210,330]
-      reload: [7,10]
+      capacity: [410,530]
+      reload: [10,15]
     generator:
       capacity: [140,220]
       reload: [50,80]
     ship:
-      mass: 175
-      speed: [85,120]
+      mass: 675
+      speed: [55,60]
       rotation: [50,75]
-      acceleration: [140,160]
+      acceleration: [80,100]
   bodies:
     main:  
       section_segments: 8
@@ -35,10 +35,10 @@ return model =
         z: [0,0,0,0,0,0,0,0,0,0,0]
       width:  [0,4,7,9,12,12,11,9,7,4,0].mult(1.7)
       height: [0,4,7,9,12,12,11,9,7,5,0].mult(1.3)
-      texture: [1,2,63,11,3,63,3,8,13,17]
+      texture: [1,2,63,11,3,63,4,8,13,17]
       propeller: 1
     cockpit:
-      section_segments: 7
+      section_segments: 8
       offset:
         x: 0
         y: -10+bulk_y_move
@@ -49,7 +49,7 @@ return model =
         z: [-4.5,-2.9,-1.5,0,0,0,0,0]
       width:  [0,5,7,7,7,7,4,0].mult(1.1)
       height: [0,5,5,5,5,5,4,0].mult(.4)
-      texture: [7,9,11,63,2.9,2.9]
+      texture: [7,9,11,63,3,4]
     side:
       section_segments: 8
       offset:
@@ -85,11 +85,11 @@ return model =
         y: 23
         z: 3
       position:         
-        x: [-11,-6,-4,-3,-0,-0,-3,-9,-14.7]
+        x: [-11,-6,-4,-3,-2,-2,-3,-9,-14.7]
         y: [-35,-30,-26,-18,-10,-4,4,14,22]
         z: [0,0,0,0,0,0,0,0,0,0,0,110]
-      width:  [0,5,7,9,11,11,9,5,0].mult(.7)
-      height: [0,5,7,9,11,11,9,7,0].mult(.6)
+      width:  [0,5,7,9,9,9,9,5,0].mult(.7)
+      height: [0,5,7,9,9,9,9,7,0].mult(.6)
       texture: [3,13,3,63,11,4,12,3]
     middle_thing:
       section_segments: 8
@@ -117,27 +117,27 @@ return model =
       width:  [0,4,0,5,7,9,10,10,11,10,9,5,0].mult(.6)
       height: [0,5,0,5,7,9,10,10,11,10,9,5,0].mult(.6)
       laser:
-        damage: [10,20]
-        rate: 1
+        damage: [30,40]
+        rate: 4
         speed: [200,220]
-        number: 1
+        number: 3
       texture: [63,63,15.8,4,4,63,8,10,8,4,13,17]
     cannon2:
       section_segments: 8
       offset:
-        x: 27
-        y: 20+bulk_y_move
-        z: -4
+        x: 23
+        y: 18+bulk_y_move
+        z: -10
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-95,-83,-80,-86,-75,-68,-64,-64,-45,-15,10,21,18].mult(0.7)
-        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-95,-83,-80,-86,-75,-68,-64,-64,-45,-15,10,21,18].mult(0.55)
+        z: [5,5,5,5,5,5,5,5,5,5,5,5,5]
       width:  [0,4,0,5,7,9,10,10,11,10,9,5,0].mult(.4)
       height: [0,5,0,5,7,9,10,10,11,10,9,5,0].mult(.4)
-      propeller: 1
+      propeller: 0
       laser:
         damage: [10,20]
-        rate: 1
+        rate: 3
         speed: [200,220]
         number: 1
       texture: [63,63,15.8,4,4,63,8,10,8,4,13,17]  
@@ -149,13 +149,13 @@ return model =
         z: 0
       width: [30,25,15,10,5].mult(1.4)
       length: [15,7,10,5].add(1)
-      angle: [0,10,20,0]
+      angle: [0,5,15,0]
       position: [-3,20,30,35,28]
       texture: [3,3,3.5,63]
       doubleside: 1
       bump:
         position: 10
-        size: 8
+        size: 10
     ###back:
       offset: 
         x: 8
