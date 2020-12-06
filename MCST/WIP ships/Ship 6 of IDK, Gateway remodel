@@ -1,0 +1,132 @@
+return model =
+  name: 'Gateway'
+  level: 6
+  model: 15
+  size: 1.8
+  designer: 'Nova and Kaleo'
+  specs:
+    shield:
+      capacity: [250,300]
+      reload: [13,15]
+    generator:
+      capacity: [160,190]
+      reload: [40,50]
+    ship:
+      mass: 120
+      speed: [105,120]
+      rotation: [60,80]
+      acceleration: [80,100]
+  bodies:
+    Main:  
+      section_segments: 16
+      offset:
+        x: 0
+        y: 15
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-103,-90,-94,-97,-85,-70,-40,0,20,60,75,90,110,100]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,8,0,8,12,15,20,30,30,35,30,30,15,0]
+      height: [0,8,0,8,12,20,20,25,20,25,15,15,10,0]
+      texture: [6,0,13,12,2,10,63,3,18,63,8,13,17]
+      propeller: 1
+      laser:
+        damage: [20,30]
+        rate: 3
+        type: 1
+        speed: [200,220]
+        number: 1
+        error: 0
+    cockpit:
+      section_segments: 12
+      offset:
+        x: 0
+        y: -24
+        z: 20
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-26,-10,7,18,25,30,35]
+        z: [-0,-1,-1,-3,-3,-3,-3]
+      width:  [2,7,8,8,6,6,0]
+      height: [0,8,8,8,6,6,0]
+      propeller: false
+      texture: [9,9,3,63,4,3]
+    cannon:
+      section_segments: 8
+      offset:
+        x: 75
+        y: 60
+        z: -1
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-95,-85,-80,-86,-75,-68,-67,-50,-45,-5,20,35,31]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,1.5,0,3,5,6,6.7,7.3,8.5,9.5,7.5,7.5,0]
+      height: [0,1.5,0,3,5,6,6.7,7.3,8.5,9.5,7.5,7.5,0]
+      texture: [63,63,13,4,4,17,8,10,8,4,13,17]
+      propeller: true
+      laser:
+        damage: [10,12]
+        rate: 4
+        type: 1
+        speed: [160,180]
+        number: 1
+        error: 0
+    deco:
+      section_segments: 12
+      offset:
+        x: 48
+        y: 75
+        z: -1
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-120,-80,-55,-34,-5,15,25,21]
+        z: [0,0,0,0,0,0,0,0]
+      width:  [0,12,14,13,12,12,8,0]
+      height: [0,12,14,13,12,11,8,0]
+      texture: [3,10,3,63,8,13,17]
+      propeller: true
+  wings:
+    main:
+      length: [60,24,15]
+      width:  [80,60,40,20]
+      angle: [-10,20,10]
+      position: [0,-40,-30,-50]
+      doubleside: true
+      bump:
+        position: 0
+        size: 5
+      texture: [3,63,4]
+      offset:
+        x: 0
+        y: 75
+        z: 5
+    winglets:
+      length: [30,10]
+      width: [40,20,30]
+      angle: [10,-10]
+      position: [-80,-60]
+      doubleside: true
+      bump:
+        position: 0
+        size: 30
+      texture: 63
+      offset:
+        x: 0
+        y: 15
+        z: 0
+    stab:
+      length: [40,10]
+      width: [50,20,20]
+      angle: [40,30]
+      position: [70,75,80]
+      doubleside: true
+      texture: 63
+      bump:
+        position: 0
+        size: 10
+      offset:
+        x: 0
+        y: 0
+        z: 0
