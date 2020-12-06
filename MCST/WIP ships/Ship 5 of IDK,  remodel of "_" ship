@@ -4,7 +4,7 @@ for key of Array::
   Object.defineProperty Array::, key,
     enumerable: false
 return model =
-  name: "Somnium"
+  name: "Astaroth"
   level: 6
   model: 7
   size: 1.3
