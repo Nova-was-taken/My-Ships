@@ -1,3 +1,8 @@
+Array::mult = (m) -> @map (v) -> v*m
+Array::add = (m) -> @map (v) -> v+m
+for key of Array::
+  Object.defineProperty Array::, key,
+    enumerable: false
 return model =
   name: 'Gateway'
   level: 6
@@ -39,7 +44,7 @@ return model =
         number: 1
         error: 0
     cockpit:
-      section_segments: 12
+      section_segments: 8
       offset:
         x: 0
         y: -24
@@ -48,10 +53,10 @@ return model =
         x: [0,0,0,0,0,0,0]
         y: [-26,-10,7,18,25,30,35]
         z: [-0,-1,-1,-3,-3,-3,-3]
-      width:  [2,7,8,8,6,6,0]
+      width:  [1,7,8,8,6,6,0]
       height: [0,8,8,8,6,6,0]
       propeller: false
-      texture: [9,9,3,63,4,3]
+      texture: [7,9,3,63,4,3]
     cannon:
       section_segments: 8
       offset:
@@ -74,18 +79,18 @@ return model =
         number: 1
         error: 0
     deco:
-      section_segments: 12
+      section_segments: 11
       offset:
         x: 48
         y: 75
         z: -1
       position:
-        x: [0,0,0,0,0,0,0,0]
-        y: [-120,-80,-55,-34,-5,15,25,21]
-        z: [0,0,0,0,0,0,0,0]
-      width:  [0,12,14,13,12,12,8,0]
-      height: [0,12,14,13,12,11,8,0]
-      texture: [3,10,3,63,8,13,17]
+        x: [0,0,0,0,0,0,0,0,0,0,0]
+        y: [-120,-100,-75,-54,-35,-16,-6,5,15,25,21]
+        z: [0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,7,9,11,13,13,13,11,9,7,0].mult(1)
+      height: [0,7,9,11,13,13,13,11,9,7,0].mult(1)
+      texture: [2,11,3,63,18,3,4,4,13,17]
       propeller: true
   wings:
     main:
@@ -97,7 +102,7 @@ return model =
       bump:
         position: 0
         size: 5
-      texture: [3,63,4]
+      texture: [3.8,63,4]
       offset:
         x: 0
         y: 75
