@@ -1,0 +1,161 @@
+Array::mult = (m) -> @map (v) -> v*m
+Array::add = (m) -> @map (v) -> v+m
+for key of Array::
+  Object.defineProperty Array::, key,
+    enumerable: false
+bulk_y_move=-30
+return model =
+  name: "Somnium"
+  level: 6
+  model: 7
+  size: 1.3
+  specs:
+    shield:
+      capacity: [150,200]
+      reload: [5,7]
+    generator:
+      capacity: [180,220]
+      reload: [20,50]
+    ship:
+      mass: 170
+      speed: [120,150]
+      rotation: [50,70]
+      acceleration: [80,100]
+  bodies:
+    main:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 0+bulk_y_move
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-95,-45,-10,30,70,90,110,125,145,155,165,163]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,15,25,25,30,30,25,20,16,13,12,0].mult(.87)
+      height: [0,10,20,25,25,25,25,20,16,13,12,0].mult(.87)
+      texture: [3,10,63,11,3,4,63,11,8,13,16.99]
+      propeller: true
+    cockpit:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -20+bulk_y_move
+        z: 19.6
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-30,-10,10,20,25,31,39,43,55]
+        z: [-14,-9,-5,-3,-3,-3,-3,-3,-3]
+      width:  [1,6,7,8,7,7,5,4,0]
+      height: [0,5,5,5,5,4,4,4,0]
+      texture: [6.9,8.99,63,2.9,2.9,2.9,2.9,3.9]
+    ###cannons_1:
+      section_segments: 10
+      offset:
+        x: 4.5
+        y: 10+bulk_y_move
+        z: -10
+      position:
+        x: [0,0,0,0,0,0,0,0,0,-2,-2]
+        y: [-90,-85,-80,-86,-75,-68,-67,-50,-47,-30,-20]
+        z: [0,0,0,0,0,0,0,3,3,10,10]
+      width:  [0,1.5,0,3,5,6,6.7,7.3,8.5,9.5,0].mult(.6)
+      height: [0,1.5,0,3,5,6,6.7,7.3,8.5,9.5,0]
+      texture: [63,63,[15.9],2,3,17,4,5,4,3]
+      laser:
+        damage: [22,35]
+        rate: 3
+        speed: [200,235]
+        number: 1
+        error: 0###
+    cannons_wings:
+      section_segments: 8
+      offset:
+        x: 67
+        y: 170+bulk_y_move
+        z: -10
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,-2,-10,-10]
+        y: [-90,-85,-80,-87,-82,-71,-62,-50,-43,-30,-20,-9,-10].mult(2.7)
+        z: [0,0,0,0,0,0,0,0,0,2,3,4,4]
+      width:  [0,1.5,0,3,5,6.7,6.7,7.3,8.5,9.5,7.5,5.5,0].mult(1.6)
+      height: [0,1.5,0,3,5,6.7,6.7,7.3,8.5,9.5,7.5,5.5,0].mult(1.7)
+      texture: [63,63,6,13,3,10,8,63,3,4,13,17]
+      propeller: 0
+      laser:
+        damage: [15,22]
+        rate: 2
+        speed: [200,235]
+        number: 1
+        error: 0
+        angle: 5
+    Side_thingy:
+      section_segments: 8
+      offset:
+        x: 22
+        y: -19+bulk_y_move
+        z: 0
+      position:
+        x: [-27,-5,5,15,25,30,30,30,30,25,15,5,-14,-27].mult(.78)
+        y: [-68,-35,-20,5,33,57,67,85,99,120,140,160,179]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,4.5,4.7,5.7,7.5,7.5,7.6,7.5,7.5,7.6,7.5,7.5,0].mult(1.5)
+      height: [0,4.5,4.7,5.7,7.5,7.5,7.5,7.5,7.5,7.5,7.5,7.5,0].mult(1.5)
+      texture: [2,4,63,3,10,3,4,11,13,3,11,3]
+      propeller: 0
+      angle: 0
+      vertical: 0
+  wings:
+    main:
+      length: [35,20,12]
+      width: [90,30,25,5]
+      angle: [10,35,5]
+      position: [-0,30,40,30]
+      doubleside: true
+      bump:
+        position: 10
+        size: 10
+      texture: [3.55,63,4]
+      offset:
+        x: 19
+        y: 19+bulk_y_move
+        z: -4
+    secondary:
+      length: [30,20]
+      width: [90,30]
+      angle: [10,30]
+      position: [30,22]
+      doubleside: true
+      bump:
+        position: 10
+        size: 10
+      texture: [3.49]
+      offset:
+        x: 19
+        y: 63+bulk_y_move
+        z: -4    
+    winglets:
+      offset:
+        x: 10
+        y: 111+bulk_y_move
+        z: 10
+      length: [20,20]
+      width: [15,30,20]
+      angle: [27,-10]
+      position: [0,1,20]
+      texture: [3,4]
+      bump:
+        position: 10
+        size: 30
+    blank:
+      offset:
+        x: 0
+        y: 0
+        z: 0
+      length: [0,0]
+      width: [0,0]
+      position: [0,0]
+      angle: [0,0]
+      bump:
+        position: 0
+        size: 0
