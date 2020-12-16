@@ -1,6 +1,6 @@
 #pos stuff
 a=22      #minigun stuff 1
-b=6       #minigun stuff 2  
+b=3       #minigun stuff 2  
 c=5       #wing stuff
 d=22      #Don't edit, turret stuff 
 e=6       #Don't edit, turret stuff
@@ -37,7 +37,14 @@ return model =
       width:  [0,7,12,15,20,22,27,25,25,21,19,15,10,0]
       height: [0,4,12,14,15,17,20,21,20,17,12,10,5,0]
       propeller: true
-      texture: [13,3,63,3,8,11,63,10,3,4,18,13,17]
+      texture: [13,3,63,2,3,11,63,10,3,4,18,13,17]
+      laser:
+        damage: [20,25]
+        rate: 2
+        type: 1
+        speed: [260,280]
+        number: 1
+        error: 0
     cockpit:
       section_segments: 8
       offset:
@@ -212,7 +219,7 @@ return model =
       texture: [3] 
       angle: 90    ###
   #minigun  
-    mini_gun_cannons_top:
+    ###mini_gun_cannons_top:
       section_segments: 6
       offset:
         x: 1.5+f
@@ -321,7 +328,7 @@ return model =
         z: [0,0,0,0,0,0,0]
       width:  [3.5,3.5,4,4.5,4.5,4,3.5]
       height: [3.5,3.5,4,4.5,4.5,4,3.5]
-      texture: [4,13,13,63,2]  
+      texture: [4,13,13,63,2]  ###
   #turret  
     ###Turret:
       section_segments: 6
