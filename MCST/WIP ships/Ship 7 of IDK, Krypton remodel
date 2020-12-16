@@ -5,6 +5,7 @@ c=5       #wing stuff
 d=22      #Don't edit, turret stuff 
 e=6       #Don't edit, turret stuff
 f=-0.19   #minigun stuff 3
+g=0
 return model =
   name: 'Krypton'
   level: 6
@@ -30,18 +31,18 @@ return model =
         y: -10
         z: 0
       position:
-        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-95,-80,-70,-55,-40,-10,10,28,49,65,78,88,84]
-        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [0,11,15,20,22,27,25,25,21,19,15,10,0]
-      height: [0,11,14,15,17,20,21,20,17,12,10,5,0]
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-98,-100,-80,-70,-55,-40,-10,10,28,49,65,78,88,84]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,7,12,15,20,22,27,25,25,21,19,15,10,0]
+      height: [0,4,12,14,15,17,20,21,20,17,12,10,5,0]
       propeller: true
-      texture: [6,63,3,8,11,63,10,3,4,18,13,17]
+      texture: [13,3,63,3,8,11,63,10,3,4,18,13,17]
     cockpit:
       section_segments: 8
       offset:
         x: 0
-        y: -37
+        y: -57
         z: 15
       position:
         x: [0,0,0,0,0,0]
@@ -55,14 +56,15 @@ return model =
       section_segments: 6
       offset:
         x: 64
-        y: 54+c
+        y: 84+c-g
         z: -3
       position:
-        x: [0,0,0,0,0,0,0,0,0,0]
-        y: [-58,-50,-52,-40,-20,0,10,20,30,25]
-        z: [0,0,0,0,0,0,0,0,0,0]
-      width:  [0,1.5,3,5.5,5.5,5.5,4.5,4,2,0].mult(1.3)
-      height: [0,1.5,3,5.5,5.5,5.5,4.5,4,2,0].mult(1.3)
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-90,-85,-80,-87,-82,-71,-62,-50,-43,-30,-20,-9,-10].mult(1)
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,1.5,0,3,5,6.7,6.7,7.3,8.5,9.5,7.5,5.5,0].mult(.6)
+      height: [0,1.5,0,3,5,6.7,6.7,7.3,8.5,9.5,7.5,5.5,0].mult(.7)
+      texture: [63,63,6,13,3,10,8,4,8,4,3,16.9]
       angle: 0
       laser:
         damage: [7,8]
@@ -71,20 +73,19 @@ return model =
         speed: [160,180]
         number: 1
         error: 0
-      propeller: true
-      texture: [63,13,13,63,11,8,3,13,16.9]
+      propeller: 1
     Side_thruster_thingys:
       section_segments: 6
       offset:
-        x: 27
+        x: 29
         y: 60+c
-        z: -4.4
+        z: -3.4
       position:
         x: [-16,-17,-8,-4,-1,1-1,-4,-6,-6,-6]
         y: [-160,-165,-130,-110,-80,-50,-20,0,10,8]
         z: [0,0,0,0,0,0,0,0,0,0]
-      width:  [0,1.5,3,4,4,4,4,4,2,0]
-      height: [0,1,4,3,3,3,3,3,2,0]
+      width:  [0,1.5,3,4,4,4,4,4,2,0].mult(1.5)
+      height: [0,1,4,3,3,3,3,3,2,0].mult(1.1)
       angle: 0
       laser:
         damage: [4,8]
@@ -372,18 +373,18 @@ return model =
       angle: 0
       propeller: false
       texture: [3,3,63,3]  ###
-    ###Armor_cannon:
+    Armor_cannon:
       section_segments: 6
       offset:
-        x: 0
-        y: -10-d
-        z: 8+e
-      position:
-        x: [-14,-14,-14,-14,-14,-14]
-        y: [-0,-10,-5,5,10,10]
-        z: [0,0,0,0,0,-0]
-      width:  [0,1.5,1.5,1.5,1.5,0]
-      height: [0,1.5,1.5,1.5,1.5,0]
+        x: 45
+        y: -40-d
+        z: -4+e
+       position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-58,-50,-52,-40,-20,0,10,20,30,30].mult(.5)
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width:  [0,1.5,3,5.5,5.5,5.5,4.5,4,2,0].mult(.6)
+      height: [0,1.5,3,5.5,5.5,5.5,4.5,4,2,0].mult(.6)
       angle: 0
       laser:
         damage: [20,25]
@@ -392,38 +393,38 @@ return model =
         speed: [260,280]
         number: 1
         error: 0
-      texture: [16.9,12.9,8,2.9,2.9] ### 
+      texture: [63,13,13,63,11,8,3,13,3]
   wings:
   #main wings  
     main:
       length: [40,7,8]
-      width: [49,28,20,8]
+      width: [49,28,20,8].mult(1.4)
       angle: [-10,40,0]
-      position: [-20,20,20,40]
-      doubleside: true
+      position: [-20,10,10,30]
+      doubleside: 1
       offset:
-        x: 21
-        y: 20+c
-        z: 0
+        x: 19
+        y: 34+c-g
+        z: 2
       bump:
         position: 30
         size: 10
-      texture: [11,4]
-    ###Undermain:
-      length: [40,7,8]
-      width: [49,28,20,8]
-      angle: [-10,40,0]
-      position: [-20,20,20,40]
+      texture: [11,4,3]
+    front:
+      length: [26,7,8]
+      width: [49,28,20,8].mult(1.2)
+      angle: [-10,20,20]
+      position: [0,20,24,34].mult(-1)
       doubleside: true
       offset:
-        x: 25
-        y: 20+c
-        z: -1.9
+        x: 8
+        y: -50+c
+        z: 2.9
       bump:
-        position: 30
+        position: 10
         size: 10
-      texture: [11,4]  
-    highlight:
+      texture: [3,3.6,4]  
+    ###highlight:
       length: [40,7,8]
       width: [53,29,22,12]
       angle: [-10,40,0]
@@ -438,15 +439,15 @@ return model =
         size: 0
       texture: [17]###
     more_highlights:
-      length: [42]
-      width: [19,16,12,2]
-      angle: [-11]
-      position: [-22,22]
+      length: [21,21]
+      width: [19,16,12,2].mult(1.1)
+      angle: [-11,-11]
+      position: [-22,-4,10]
       doubleside: true
       offset:
-        x: 25
-        y: 26+c
-        z: 3.9
+        x: 23
+        y: 40+c-g
+        z: 5.9
       bump:
         position: 30
         size: 5
