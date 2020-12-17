@@ -1,4 +1,8 @@
-#pos stuff
+Array::mult = (m) -> @map (v) -> v*m
+Array::add = (m) -> @map (v) -> v+m
+for key of Array::
+  Object.defineProperty Array::, key,
+    enumerable: false
 a=22      #minigun stuff 1
 b=3       #minigun stuff 2  
 c=5       #wing stuff
@@ -34,8 +38,8 @@ return model =
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
         y: [-98,-100,-90,-80,-70,-55,-40,-10,10,28,49,65,78,88,84]
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [0,6,10,12,15,20,22,27,25,25,21,19,15,10,0]
-      height: [0,3,4,12,14,15,17,20,21,20,17,12,10,5,0]
+      width:  [0,6,10,12,15,20,22,27,25,25,21,19,15,12,0].mult(.87)
+      height: [0,3,4,12,14,15,17,20,21,20,17,12,10,10,0]
       propeller: true
       texture: [13,2,11,63,3,4,11,63,10,3,4,18,13,17]
       laser:
@@ -52,25 +56,40 @@ return model =
         y: -57
         z: 15
       position:
-        x: [0,0,0,0,0,0]
-        y: [-17,5,28,52,80]
-        z: [0,0,0,1,0,0]
-      width:  [2,10,15,13,0]
-      height: [0,7,7,7,0]
+        x: [0,0,0,0,0,0,0]
+        y: [-17,5,28,52,70,80]
+        z: [0,0,0,1,1,2,0]
+      width:  [2,10,15,13,7,0]
+      height: [0,7,7,7,6,0]
       propeller: false
-      texture: [9,9,11,3]
-    Wing_thrusters:
+      texture: [9,9,11,3,4]
+    Cockpit_Armor:
       section_segments: 6
       offset:
-        x: 64
+        x: 15
+        y: 25
+        z: 16
+      position:
+        x: [-15,-14,0,0,-0,0]
+        y: [-55,-50,-20,0,17,10]
+        z: [0,0,0,0,-1,0]
+      width:  [0,7,4,4,2,0]
+      height: [0,3,4,6,5,0]
+      angle: 0
+      propeller: false
+      texture: [3,3,63,3]    
+    Wing_thrusters:
+      section_segments: 8
+      offset:
+        x: 61
         y: 84+c-g
         z: -3
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
         y: [-90,-85,-80,-87,-82,-71,-62,-50,-43,-30,-20,-9,-10].mult(1)
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [0,1.5,0,3,5,6.7,6.7,7.3,8.5,9.5,7.5,5.5,0].mult(.6)
-      height: [0,1.5,0,3,5,6.7,6.7,7.3,8.5,9.5,7.5,5.5,0].mult(.7)
+      width:  [0,1.5,0,3,5,6.7,6.7,7.3,8.5,9.5,7.5,5.5,0].mult(1.1)
+      height: [0,1.5,0,3,5,6.7,6.7,7.3,8.5,9.5,7.5,5.5,0].mult(1.1)
       texture: [63,63,6,13,3,10,8,4,8,4,3,16.9]
       angle: 0
       laser:
@@ -82,16 +101,16 @@ return model =
         error: 0
       propeller: 1
     Side_thruster_thingys:
-      section_segments: 6
+      section_segments: 8
       offset:
-        x: 29
+        x: 27
         y: 60+c
         z: -3.4
       position:
-        x: [-16,-17,-8,-4,-1,1-1,-4,-6,-6,-6]
-        y: [-160,-165,-130,-110,-80,-50,-20,0,10,8]
-        z: [0,0,0,0,0,0,0,0,0,0]
-      width:  [0,1.5,3,4,4,4,4,4,2,0].mult(1.5)
+        x: [-16,-17,-8,-4,-1,1,1-1,-4,-6,-6,-6]
+        y: [-160,-165,-130,-110,-90,-80,-50,-20,0,10,8]
+        z: [0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,1.5,3,4,4,4,6,5,4,0].mult(1.5)
       height: [0,1,4,3,3,3,3,3,2,0].mult(1.1)
       angle: 0
       laser:
@@ -102,9 +121,9 @@ return model =
         number: 1
         error: 0
       propeller: true
-      texture: [16.9,12.9,63,8,8,63,18,12.9,16.9]
+      texture: [16.9,12.9,63,8,63,8,63,18,12.9,16.9]
     Front_cannon:
-      section_segments: 6
+      section_segments: 8
       offset:
         x: 45
         y: -40-d
@@ -113,9 +132,10 @@ return model =
         x: [0,0,0,0,0,0,0,0,0,0]
         y: [-58,-50,-52,-40,-20,0,10,20,30,30].mult(.5)
         z: [0,0,0,0,0,0,0,0,0,0]
-      width:  [0,1.5,3,5.5,5.5,5.5,4.5,4,2,0].mult(.6)
-      height: [0,1.5,3,5.5,5.5,5.5,4.5,4,2,0].mult(.6)
+      width:  [0,1.5,3,5.5,5.5,5.5,4.5,4,2,0].mult(1)
+      height: [0,1.5,3,5.5,5.5,5.5,4.5,4,2,0].mult(1)
       angle: 0
+      propeller: 0
       laser:
         damage: [20,25]
         rate: 2
@@ -133,7 +153,7 @@ return model =
       position: [-20,10,10,30]
       doubleside: 1
       offset:
-        x: 19
+        x: 16
         y: 34+c-g
         z: 2
       bump:
@@ -153,17 +173,17 @@ return model =
       bump:
         position: 10
         size: 10
-      texture: [3,3.6,4]  
+      texture: [3,3,4]  
     more_highlights:
       length: [21,21]
-      width: [19,16,12,2].mult(1.1)
+      width: [19,16,12].mult(1.1)
       angle: [-11,-11]
-      position: [-22,-4,10]
+      position: [-23,-6,6]
       doubleside: true
       offset:
-        x: 23
+        x: 17
         y: 40+c-g
-        z: 5.9
+        z: 6.9
       bump:
         position: 30
         size: 5
