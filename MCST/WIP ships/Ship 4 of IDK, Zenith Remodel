@@ -92,12 +92,12 @@ return model =
         y: -25
         z: 12
       position:
-        x: [12,12,12,10,8,7,5,2,2,2]
-        y: [-40,-20,-10,10,30,50,70,95,105,102]
-        z: [0,0,0,0,0,0,0,0,0,0]
-      width:  [0,7,10,10,10,10,10,7,7,0]
-      height: [0,7,10,13,17,13,10,7,7,0]
-      texture: [4,3,8,2,3,2,3,13,17]
+        x: [-5,0,5,10,12,12,10,8,7,5,2,2,2]
+        y: [-90,-75,-60,-40,-20,-10,10,30,50,70,95,105,102]
+        z: [0,0,0,0,0,0,0,-4,-4,-4,-4,-4,0]
+      width:  [0,7,7,7,7,10,10,10,10,10,7,7,0]
+      height: [0,7,7,7,7,10,13,17,13,10,7,7,0]
+      texture: [2,2,3,11,63,8,3,3,18,13,13,17]
       propeller: 0
     ###cannon_sides:
       section_segments: 8
@@ -172,21 +172,21 @@ return model =
         angle: 0
         recoil: 0###
   wings:
-    ###main:
+    main:
       offset:
         x: 20
         y: -40
         z: 0
-      length: [70]
-      width: [70,0]
-      angle: [0]
-      position: [-20,20]
-      texture: [3]
+      length: [35,20,10]
+      width: [70,50,40,30]
+      angle: [0,0,0]
+      position: [-20,0,40,70]
+      texture: [3,4,63]
       doubleside: true
       bump:
         position: 10
-        size: 10
-    main_back:
+        size: 20
+    ###main_back:
       offset:
         x: 20
         y: 15
