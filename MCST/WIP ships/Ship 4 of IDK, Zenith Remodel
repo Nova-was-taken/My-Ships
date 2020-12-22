@@ -5,7 +5,7 @@ for key of Array::
     enumerable: false
 return model =
   name: "Zenith"
-  level: 5
+  level: 6
   model: 8
   size: 1.5
   specs:
@@ -28,12 +28,12 @@ return model =
         y: 0
         z: 0
       position:
-        x: [0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-130,-120,-85,-60,-30,-10,20,40,50,70,95,92]
-        z: [0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [0,20,30,30,36,36,30,25,25,25,15,0].mult(0.9)
-      height: [0,10,10,15,25,25,25,20,15,15,10,0]
-      texture: [6,11,3,63,3,10,4,5,18,13,17]
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-140,-143,-130,-120,-85,-60,-30,-10,20,40,50,70,95,92]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,10,17,22,27,30,36,36,30,25,25,25,15,0].mult(0.9)
+      height: [0,5,17,22,20,15,25,25,25,20,15,15,10,0]
+      texture: [2,3,63,11,3,63,3,10,4,5,18,13,17]
       propeller: true
       laser:
         damage: [12,18]
@@ -49,7 +49,7 @@ return model =
       offset:
         x: 0
         y: 20
-        z: 12
+        z: 20
       position:
         x: [0,0,0,0,0]
         y: [-120,-95,-75,-60,-30]
@@ -65,26 +65,13 @@ return model =
         y: 0
         z: 0
       position:
-        x: [-56,-40,-35,-30,-25,-23,-27,-33,-38,-38,-38,-38].add(-3)
-        y: [-120,-95,-85,-60,-30,-20,20,40,50,70,85,85]
+        x: [-56,-44,-40,-31,-25,-23,-27,-33,-38,-38,-38,-38].add(-3)
+        y: [-130,-105,-95,-70,-40,-20,20,40,50,70,85,85]
         z: [0,0,0,0,0,0,0,0,0,0,0,0]
       width:  [0,12,17,19,23,26,23,19,15,12,5,0].mult(.8)
       height: [0,10,15,15,20,20,15,15,15,10,10,0]
-      texture: [3,4,63,11,4,63,3,63,18,12,17]
-      propeller: 0
-    ###cockpit_armor:
-      section_segments: 8
-      offset:
-        x: 19
-        y: -115
-        z: 11
-      position:
-        x: [-20,-10,-5,-3,0,0]
-        y: [5,20,30,60,90,90]
-        z: [0,0,0,0,0,0]
-      width: [0,4,4,4,4,0]
-      height: [0,7,7,7,8,0]
-      texture: [4,4,63]###
+      texture: [3,4,63,11,4,63,3,63,8,12,17]
+      propeller: 1
     cockpit_armor2:
       section_segments: 8
       offset:
@@ -97,23 +84,24 @@ return model =
         z: [0,0,0,0,0,0,0,-4,-4,-4,-4,-4,0]
       width:  [0,7,7,7,7,10,10,10,10,10,7,7,0]
       height: [0,7,7,7,7,10,13,17,13,10,7,7,0]
-      texture: [2,2,3,11,63,8,3,3,18,13,13,17]
+      texture: [2,2,3,11,63,8,3,4,63,13,13,17]
       propeller: 0
-    ###cannon_sides:
+    cannon_sides:
       section_segments: 8
       offset:
-        x: 76
-        y: -115
-        z: 0
+        x: 100
+        y: -15
+        z: -10
       position:
-        x: [0,0,0,0,0]
-        y: [12.5,20,30,70,70]
-        z: [0,0,0,0,0]
-      width: [0,4,4,4,0]
-      height: [0,4,4,4,0]
-      texture: [6,3,3]
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-95,-85,-80,-86,-75,-68,-64,-64,-45,-15,10,25,21].mult(0.7)
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,1.5,0,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(.9)
+      height: [0,1.5,0,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(.9)
+      texture: [63,63,13,4,4,63,8,10,8,4,13,17]
       propeller: false
       angle: 0
+      propeller: 1
       laser:
         damage: [5,7]
         rate: 3
@@ -126,18 +114,16 @@ return model =
     cannon_mini:
       section_segments: 8
       offset:
-        x: 15
-        y: -140
-        z: -11
+        x: 10
+        y: -60
+        z: -26
       position:
-        x: [0,0,0,0,0]
-        y: [5,15,60,90,90]
-        z: [0,0,0,6,6]
-      width: [0,4,4,4,0]
-      height: [0,4,4,4,0]
-      texture: [6,4,2]
-      propeller: false
-      angle: 0
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-95,-85,-80,-86,-75,-68,-64,-64,-45,-15,10,25,21].mult(0.7)
+        z: [3,3,3,3,3,5,7,7,9,9,11,11,11]
+      width:  [0,1.5,0,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(.9)
+      height: [0,1.5,0,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(.9)
+      texture: [63,63,13,4,4,63,8,10,8,4,13,17]
       laser:
         damage: [5,7]
         rate: 3
@@ -147,41 +133,39 @@ return model =
         error: 0
         angle: 0
         recoil: 0
-    cannon_main:
+    Wing_cannons:
       section_segments: 8
       offset:
-        x: 0
-        y: -130
-        z: -19
+        x: 76
+        y: 16
+        z: -12
       position:
-        x: [0,0,0,0,0,0]
-        y: [20,10,30,40,90,90]
-        z: [0,0,0,0,5,5]
-      width: [0,10,8,7,7,0]
-      height: [0,10,7,7,7,0]
-      texture: [4,3,4]
-      propeller: false
+        x: [0,0,0,0,0,0,0,0,0,0,0]
+        y: [-65,-58,-55,-60,-55,-40,-30,-25,-11,0,-2].mult(1.2)
+        z: [0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,2,0,3,4,4,4,4,4,3,0].mult(1.5)
+      height: [0,2,0,3,4,4,4,4,4,3,0].mult(1.5)
       angle: 0
+      propeller: 0
       laser:
-        damage: [12,18]
+        damage: [55,55]
         rate: 2
         type: 1
-        speed: [200,240]
-        number: 1
+        speed: [280,280]
+        number: 2
         error: 0
-        angle: 0
-        recoil: 0###
+      texture: [63,63,17,12.9,8,11,3,63,4,17]    
   wings:
     main:
       offset:
-        x: 20
-        y: -40
-        z: 0
-      length: [35,20,10]
-      width: [70,50,40,30]
-      angle: [0,0,0]
-      position: [-20,0,40,70]
-      texture: [3,4,63]
+        x: 53
+        y: -10
+        z: 0-3
+      length: [20,15,10,10]
+      width: [80,60,50,40,35]
+      angle: [-10,20,0,0,0]
+      position: [10,0,-10,-20,-40]
+      texture: [3,63,3,4]
       doubleside: true
       bump:
         position: 10
@@ -199,24 +183,24 @@ return model =
       doubleside: true
       bump:
         position: 5
-        size: 2
+        size: 2###
     winglets1:
       offset:
-        x: 80
+        x: 40
         y: 25
         z: 10
       length: [36]
       width: [50,20]
       angle: [30,-10,0]
       position: [-20,30]
-      texture: [18]
+      texture: [4]
       doubleside: true
       bump:
         position: 5
         size: 2
     winglets:
       offset:
-        x: 10
+        x: 0
         y: 27
         z: 10
       length: [26]
@@ -227,7 +211,7 @@ return model =
       doubleside: true
       bump:
         position: 5
-        size: 2###
+        size: 2
     Blank:
       offset:
         x: 0
