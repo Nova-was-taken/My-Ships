@@ -170,20 +170,6 @@ return model =
       bump:
         position: 10
         size: 20
-    ###main_back:
-      offset:
-        x: 20
-        y: 15
-        z: 0
-      length: [56]
-      width: [70,0]
-      angle: [0]
-      position: [-20,20]
-      texture: [8.2]
-      doubleside: true
-      bump:
-        position: 5
-        size: 2###
     winglets1:
       offset:
         x: 40
@@ -212,17 +198,3 @@ return model =
       bump:
         position: 5
         size: 2
-    Blank:
-      offset:
-        x: 0
-        y: 0
-        z: 0
-      length: [0]
-      width: [0,0]
-      angle: [0,0,0]
-      position: [0,0]
-      texture: [0]
-      doubleside: true
-      bump:
-        position: 0
-        size: 0  
