@@ -3,6 +3,8 @@ Array::add = (m) -> @map (v) -> v+m
 for key of Array::
   Object.defineProperty Array::, key,
     enumerable: false
+a=-33    
+b=-15
 return model =
   name: 'Gateway'
   level: 6
@@ -23,18 +25,18 @@ return model =
       acceleration: [80,100]
   bodies:
     Main:  
-      section_segments: 16
+      section_segments: 8
       offset:
         x: 0
-        y: 15
+        y: 15+b
         z: 0
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-103,-90,-94,-97,-85,-70,-40,0,20,50,65,75,90,105,102]
+        y: [-110,-115,-107,-100,-88,-70,-40,-10,10,40,60,75,90,100,92]
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [0,8,0,8,12,15,20,30,30,35,30,30,30,15,0]
-      height: [0,8,0,8,12,20,20,25,20,25,15,15,15,10,0]
-      texture: [6,0,13,12,2,10,63,3,18,63,4,8,13,17]
+      width:  [0,5,9,13,16,20,25,27,30,27,25,20,16,13,0]
+      height: [0,5,8,13,16,20,20,25,30,27,25,22,16,10,0]
+      texture: [6,1,3,13,2,10,63,3,18,63,4,8,13,17]
       propeller: 1
       laser:
         damage: [20,30]
@@ -47,7 +49,7 @@ return model =
       section_segments: 8
       offset:
         x: 0
-        y: -24
+        y: -24+b
         z: 20
       position:
         x: [0,0,0,0,0,0,0]
@@ -60,8 +62,8 @@ return model =
     cannon:
       section_segments: 8
       offset:
-        x: 75
-        y: 60
+        x: 78
+        y: 60+a+b
         z: -1
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
@@ -78,12 +80,25 @@ return model =
         speed: [160,180]
         number: 1
         error: 0
-    deco:
-      section_segments: 11
+    side_body:
+      section_segments: 8
       offset:
-        x: 48
-        y: 75
+        x: 25
+        y: 60+a+b
         z: -1
+      position:
+        x: [-12,-8,-6,-4,0,1,2,2,4,5,1,-3,-5,-10]
+        y: [-105,-95,-90,-86,-75,-70,-62,-50,-22,-1,20,40,55,75]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,1.5,2,3,5,6,6.7,7.3,8.5,9,9.5,7.5,7.5,0].mult(1.7)
+      height: [0,1.5,2,3,5,6,6.7,7.3,8.5,9,9.5,7.5,7.5,0].mult(1.7)
+      texture: [3,63,13,3,4,63,8,10,8,4,13,3,4]    
+    deco:
+      section_segments: 8
+      offset:
+        x: 52
+        y: 85+a+b
+        z: -4
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0]
         y: [-120,-100,-75,-54,-35,-16,-6,5,15,25,21]
@@ -105,7 +120,7 @@ return model =
       texture: [3.8,63,4]
       offset:
         x: 0
-        y: 75
+        y: 75+a+b
         z: 5
     winglets:
       length: [30,10]
@@ -119,7 +134,7 @@ return model =
       texture: 63
       offset:
         x: 0
-        y: 15
+        y: 0+b
         z: 0
     stab:
       length: [40,10]
@@ -133,5 +148,5 @@ return model =
         size: 10
       offset:
         x: 0
-        y: 0
+        y: 0+b
         z: 0
