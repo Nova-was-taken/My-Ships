@@ -39,7 +39,7 @@ return model =
         angle: 0
         error: 0
         recoil: 0
-    Engine2:
+    ###Engine2:
       section_segments: 12
       offset:
         x: 20
@@ -54,7 +54,7 @@ return model =
       texture: [3,4,4,63,3,3,11,13,17]
       propeller: true
     cockpit:
-      section_segments: 7
+      section_segments: 8
       offset:
         x: 0
         y: 12
@@ -108,9 +108,9 @@ return model =
         speed: [130,160]
         number: 1
         angle: 0
-        error: 0
+        error: 0###
   wings:
-    top:
+    ###top:
       doubleside: true
       offset:
         x: 17
@@ -137,5 +137,18 @@ return model =
       texture: [4]
       bump:
         position: 0
-        size: 5
-
+        size: 5###
+    blank:
+      offset:
+        x: 0
+        y: 0
+        z: 0
+      length: [0]
+      width: [0,0]
+      angle: [0]
+      position: [0,0]
+      texture: [0]
+      bump:
+        position: 0
+        size: 0
+      
