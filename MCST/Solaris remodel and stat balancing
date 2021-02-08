@@ -47,15 +47,16 @@ return model =
       section_segments: 10
       offset:
         x: 0
-        y: -45
-        z: 15
+        y: -65
+        z: 18
       position:
         x: [0,0,0,0,0,0,0]
-        y: [-40,-20,0,20,30]
-        z: [-8.3,-3,-3,0,0]
-      width: [0,5,9,9,3,0]
-      height: [0,5,14.7,12,0]
-      texture: [9,9,3,3]
+        y: [-12,0,16,35,50]
+        z: [-4,-6,-7,-5,-6]
+      width: [0,5,10,8,5]
+      height: [0,6,11,6,5]
+      propeller: false
+      texture: [7,9,9,4,4]
     mini_cannons:
       section_segments: 10
       offset:
@@ -81,14 +82,14 @@ return model =
       offset:
         x: 20
         y: -20
-        z: 0
+        z: -1100000000000
       position:
-        x: [0,0,0,0]
-        y: [-34,-35,-20,0]
-        z: [0,0,0,0]
-      width: [0,1.5,4.5,4.5,1.5,0]
-      height: [0,1.5,4.5,4.5,0]
-      texture: [15.9,4,63,3]
+        x: [0,0,0,0,0,0]
+        y: [-25,-30,-10,10,20,15]
+        z: [0,0,0,0,0,0]
+      width: [0,2.5,4,5.5,3.5,0].mult(1.2)
+      height: [0,2.5,4,5.5,5,0]
+      texture: [6,4,10,13,17]
       angle: -3
       laser:
         damage: [12,21]
@@ -116,7 +117,7 @@ return model =
       offset:
         x: 19
         y: -5
-        z: 0
+        z: -1100000000000
       position:
         x: [0,0,0,0,0,0,0,0,0]
         y: [0,0,0,-5,20,35,70,70]
@@ -124,6 +125,28 @@ return model =
       width: [0,0,0,4.83,5.83,5,5,0,0]
       height: [0,0,0.3,1.7,11.7,10,10,0,0]
       texture: [1,1,1,13,13,4,17]
+      propeller: true
+    ###New_body:
+      section_segments: 10
+      offset:
+        x: 20
+        y: -20
+        z: 110
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]###
+    New_body_1:
+      section_segments: 10
+      offset:
+        x: 19
+        y: 40
+        z: 1 
+      position:
+        x: [4,4,4,4,4,3,3,2,0,-3,-6,-6]
+        y: [-90,-95,-86,-75,-69,-64,-55,-45,-15,10,25,21].mult(1)
+        z: [0,0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,1.5,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(1)
+      height: [0,1.5,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(.9)
+      texture: [63,13,2,3,4,63,8,10,8,4,13,17]    
       propeller: true
   wings:
     bottom_wing:
