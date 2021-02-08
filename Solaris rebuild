@@ -102,17 +102,18 @@ return model =
         x: [0,0,0,0,0,0]
         y: [-81,-108,-54,0,27,40.5]
         z: [0,0,0,0,0,0]
-      width: [0,5.2,11.700000000000001,14.3,9.1,0]
+      width: [0,5.2,11.7,14.3,9.1,0]
       height: [0,5,9,11,10,0]
       texture: [4,4,10,13,16.9]
       angle: 0
       laser:
-        damage: [12,21]
-        rate: 3
+        damage: [6,8]
+        rate: 6
         type: 1
         speed: [130,190]
         number: 1
         error: 1
+      propeller: 1
     cannon:
       section_segments: 8
       offset:
@@ -128,13 +129,13 @@ return model =
       angle: 0
       texture: [3,4,10,2,13,17]
       laser:
-        damage: [6,8]
-        rate: 6
+        damage: [12,21]
+        rate: 3
         type: 1
         speed: [130,190]
         number: 1
         error: 1
-      propeller: 1
+
   wings:
     bridge1:
       length: [10,28]
