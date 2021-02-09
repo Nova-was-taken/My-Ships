@@ -1,0 +1,146 @@
+Array::mult = (m) ->
+  @map (v) ->
+    v * m
+
+Array::add = (m) ->
+  @map (v) ->
+    v + m
+
+for key of Array.prototype
+  `key = key`
+  Object.defineProperty Array.prototype, key, enumerable: false
+return model =
+  name: 'H-Mercury'
+  level: 6
+  model: 82
+  size: 2.2
+  specs:
+    shield:
+      capacity: [270,370]
+      reload: [6,8]
+    generator:
+      capacity: [100,150]
+      reload: [50,73]
+    ship:
+      mass: 500
+      speed: [75,95]
+      rotation: [50,60]
+      acceleration: [55,90]
+  bodies:
+    main:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 20
+        z: 20
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0]
+        y: [-68,-60,-50,-40,-20,-3,3,20,30,40,39].mult(2)
+        z: [0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,4,7,9,12,12,11,9,7,4,0].mult(2.1)
+      height: [0,4,7,9,12,12,11,9,7,5,0].mult(1.3)
+      texture: [1,2,63,11,3,63,4,8,13,17]
+      propeller: true
+      laser:
+        damage: [4,7]
+        rate: 8
+        type: 1
+        speed: [100,150]
+        number: 1
+        error: 0
+    cockpit:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -50
+        z: 35
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-40,-30,-20,-10,0,10,20,20]
+        z: [-4.5,-2.9,-1.5,0,0,0,0,0]
+      width:  [0,5,7,7,7,7,4,0].mult(1.5)
+      height: [0,5,5,5,5,5,4,0].mult(.4)
+      texture: [7,9,11,63,3,4]
+    arms:
+      section_segments: 8
+      offset:
+        x: 60
+        y: 50
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-95,-85,-80,-86,-75,-68,-64,-64,-45,-15,10,25,21].mult(1.7)
+        z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,1.5,0,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(1.9)
+      height: [0,1.5,0,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(1.6)
+      texture: [63,63,13,4,4,63,8,10,8,4,13,17]
+      propeller: true
+      laser:
+        damage: [3,5]
+        rate: 4
+        type: 1
+        speed: [150,200]
+        number: 1
+        error: 0
+    canon:
+      section_segments: 12
+      offset:
+        x: 100
+        y: 27
+        z: 5
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-50,-45,-20,0,20,30,40]
+        z: [0,0,0,0,0,0,0]
+      width: [0,5,7,7,3,5,0]
+      height: [0,5,15,15,3,5,0]
+      angle: 3
+      laser:
+        damage: [4,8]
+        rate: 1.5
+        type: 1
+        speed: [150,200]
+        number: 1
+        error: 0
+      propeller: false
+      texture: [6,4,10,4,4,4]
+  wings:
+    main:
+      offset:
+        x: 0
+        y: -15
+        z: 20
+      length: [60,40]
+      width: [60,30,20]
+      angle: [-20,10]
+      position: [30,50,30]
+      texture: [11,11]
+      bump:
+        position: 30
+        size: 10
+    font:
+      length: [ 60 ]
+      width: [20,15]
+      angle: [-10,20]
+      position: [-20,-40]
+      texture: [ 63 ]
+      bump:
+        position: 30
+        size: 10
+      offset:
+        x: 0
+        y: 0
+        z: 0
+    font2:
+      offset:
+        x: 0
+        y: 40
+        z: 8
+      length: [ 60 ]
+      width: [20,15]
+      angle: [-10,20]
+      position: [20,40]
+      texture: [ 63 ]
+      bump:
+        position: 30
+        size: 10
