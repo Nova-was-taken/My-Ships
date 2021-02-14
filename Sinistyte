@@ -1,21 +1,20 @@
 return model =
-  name: 'Solaris'
-  level: 6
-  model: 50
-  size: 1.8
-  zoom: 0.85
+  name: 'Sinistyte'
+  level: 7
+  model: 5
+  size: 2
   specs:
     shield:
-      capacity: [180,260]
-      reload: [9,11]
+      capacity: [350,360]
+      reload: [11,11]
     generator:
-      capacity: [120,180]
-      reload: [30,40]
+      capacity: [200,200]
+      reload: [80,80]
     ship:
-      mass: 200
-      speed: [100,140]
-      rotation: [45,60]
-      acceleration: [100,125]
+      mass: 300
+      speed: [150,150]
+      rotation: [105,105]
+      acceleration: [125,125]
   bodies:
     main:
       section_segments: 12
@@ -32,10 +31,10 @@ return model =
       propeller: true
       texture: [2,3,8,11,63,2,11,2,8,13,17]
       laser:
-        damage: [23,41]
-        rate: 1
+        damage: [50,50]
+        rate: 3
         type: 2
-        speed: [140,210]
+        speed: [210,210]
         number: 1
         error: 0
     cockpit:
@@ -91,7 +90,7 @@ return model =
       height: [0,5,15,15,20,15,0]
       angle: 0
       texture: [63,13,63,8,10,3]
-      propeller: false
+      propeller: 0
     cannon2:
       section_segments: 6
       offset:
@@ -107,10 +106,10 @@ return model =
       texture: [4,4,10,13,16.9]
       angle: 0
       laser:
-        damage: [6,8]
+        damage: [10,10]
         rate: 6
         type: 1
-        speed: [130,190]
+        speed: [190,190]
         number: 1
         error: 1
       propeller: 1
@@ -120,6 +119,7 @@ return model =
         x: 20
         y: 80
         z: 28
+      propeller: 1
       position:
         x: [0,0,0,0,0,0,0]
         y: [-100,-90,-50,-20,20,50,50]
@@ -129,13 +129,12 @@ return model =
       angle: 0
       texture: [3,4,10,2,13,17]
       laser:
-        damage: [12,21]
-        rate: 3
+        damage: [30,30]
+        rate: 4
         type: 1
-        speed: [130,190]
+        speed: [190,190]
         number: 1
         error: 1
-
   wings:
     bridge1:
       length: [10,28]
