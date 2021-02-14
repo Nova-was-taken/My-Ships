@@ -26,7 +26,6 @@ return model =
       speed: [85,85]
       rotation: [30,30]
       acceleration: [80,80]
-#~~~~~Ship Body~~~~~~~~#  
   bodies:
     main:
       section_segments: 12
@@ -61,7 +60,6 @@ return model =
       width:  [2,5,9,11,8,5,0].mult(1.2)
       height: [0,5,7,11,7,5,0]
       texture: [7,9,11,4,63]
-
     cannon_tubes_Side:
       section_segments: 10
       offset:
@@ -117,7 +115,6 @@ return model =
         speed: [225,225]
         number: 1
         error: 0
-
   wings:
     top_wing:
       offset:
