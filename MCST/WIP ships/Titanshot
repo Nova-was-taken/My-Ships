@@ -6,21 +6,21 @@ for key of Array::
 a=0    
 return model =
   name: 'Titanshot'
-  level: 5
-  model: 15
+  level: 7
+  model: 3
   size: 2.2
   specs:
     shield:
-      capacity: [240,350]
-      reload: [5,7]
+      capacity: [450,450]
+      reload: [7,7]
     generator:
-      capacity: [80,150]
-      reload: [30,48]
+      capacity: [400,400]
+      reload: [68,68]
     ship: 
-      mass: 270
-      speed: [95,110]
-      rotation: [55,75]
-      acceleration: [80,100]
+      mass: 400
+      speed: [95,95]
+      rotation: [75,75]
+      acceleration: [100,100]
   bodies:
     main:
       section_segments: 8
@@ -36,6 +36,13 @@ return model =
       height: [0,5,12,15,17,23,25,25,23,21,17,15,10,0]
       texture: [4,4,63,11,3,10,63,2,11,4,8,13,17]
       propeller: 1
+      laser:
+        damage: [350,350]
+        rate: 4
+        type: 2
+        speed: [150,175]
+        number: 1
+        error: 0      
     cockpit:
       section_segments: 8
       offset:
@@ -65,7 +72,7 @@ return model =
       texture: [63,63,13,4,3,63,3]
       angle: 0
       laser:
-        damage: [5,6]
+        damage: [3,3]
         rate: 4
         type: 2
         speed: [150,175]
@@ -86,7 +93,7 @@ return model =
       height: [0,1.3,0,3,7,9,9,10,9,7,5,0]
       angle: 0
       laser:
-        damage: [3,4]
+        damage: [4,4]
         rate: 6
         type: 1
         speed: [100,150]
@@ -107,13 +114,6 @@ return model =
       width:  [0,3,5,8,9,10,9,7,5,0]
       height: [0,3,5,7,9,10,9,7,5,0]
       angle: 0
-      laser:
-        damage: [3,4]
-        rate: 6
-        type: 1
-        speed: [100,150]
-        number: 1
-        error: 0
       propeller: true
       texture: [63,13,3,63,3,11,63,13,17]
     stripes:
@@ -145,20 +145,6 @@ return model =
         x: 0
         y: 10+a
         z: -2
-    ###main2:
-      length: [10,45,30,13]
-      width: [100,85,50,30,20]
-      angle: [0,0,-20,-10]
-      position: [-20,-5,50,80,65]
-      doubleside: true
-      bump:
-        position: 40
-        size: 11
-      texture: [4,3.6,13,63]
-      offset:
-        x: 0
-        y: 0+a
-        z: -42###
     stab1:
       length: [ 20 ]
       width: [40,20]
