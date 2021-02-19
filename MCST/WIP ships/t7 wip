@@ -5,7 +5,7 @@ for key of Array::
     enumerable: false
 a=0    
 return model =
-  name: 'Xeroc'
+  name: 'Titanshot'
   level: 5
   model: 15
   size: 2.2
