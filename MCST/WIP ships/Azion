@@ -31,6 +31,13 @@ return model =
       height: [0,2,3,11,14,19,23,25,23,21,17,14,0]
       texture: [4,4,63,8,3,11,2,3,11,63,13,17]
       propeller: true
+      laser:
+        damage: [15,22]
+        rate: 2
+        speed: [200,235]
+        number: 1
+        error: 0
+        angle: 5      
     cockpit:
       section_segments: 8
       offset:
@@ -74,6 +81,13 @@ return model =
       texture: [17,3,11,3,63,2,13,4]
       propeller: false
       angle: 3
+      laser:
+        damage: [4,7]
+        rate: 7
+        speed: [200,235]
+        number: 1
+        error: 0
+        angle: 0      
   wings:
     front:
       doubleside: true
