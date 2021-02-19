@@ -1,16 +1,5 @@
-Array::mult = (m) ->
-  @map (v) ->
-    v * m
-
-Array::add = (m) ->
-  @map (v) ->
-    v + m
-
-for key of Array.prototype
-  `key = key`
-  Object.defineProperty Array.prototype, key, enumerable: false
 return model =
-  name: "Zarion"
+  name: "Azion"
   level: 5
   model: 46
   size: 1.5
@@ -85,21 +74,6 @@ return model =
       texture: [17,3,11,3,63,2,13,4]
       propeller: false
       angle: 3
-    ###cannonwings:
-      section_segments: 8
-      offset:
-        x: 49.1
-        y: 46
-        z: -2.1
-      position:
-        x: [0,0,0,-1,-2,-3,-4,-5,-6]
-        y: [-28,-30,-25,-10,-4,2,10,16,20]
-        z: [0,0,0,0,0,0,0,0,0]
-      width:  [0,1.5,2.5,4.5,4.5,4,3,2,0]
-      height: [0,1.5,2.5,4.5,4.5,4,3,2,0]
-      texture: [17,3,11,3,63,2,13,4]
-      propeller: false
-      angle: 3### 
   wings:
     front:
       doubleside: true
