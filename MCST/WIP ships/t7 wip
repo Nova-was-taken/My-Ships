@@ -3,6 +3,7 @@ Array::add = (m) -> @map (v) -> v+m
 for key of Array::
   Object.defineProperty Array::, key,
     enumerable: false
+a=0    
 return model =
   name: 'Xeroc'
   level: 5
@@ -15,7 +16,7 @@ return model =
     generator:
       capacity: [80,150]
       reload: [30,48]
-    ship:
+    ship: 
       mass: 270
       speed: [95,110]
       rotation: [55,75]
@@ -25,7 +26,7 @@ return model =
       section_segments: 8
       offset:
         x: 0
-        y: -20
+        y: -20+a
         z: 0
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
@@ -39,22 +40,22 @@ return model =
       section_segments: 8
       offset:
         x: 0
-        y: -30
-        z: 17.29
+        y: -30+a
+        z: 20
       position:
         x: [0,0,0,0,0,0,0]
-        y: [-30,-20,0,20,40,45,40]
-        z: [-2.2,-4,-1,-2,-2,-2]
-      width:  [2,5,9,11,8,5,0].mult(1.2)
-      height: [0,5,7,11,7,5,0]
+        y: [-30,-20,0,20,40,55,65]
+        z: [-5.2,-6,-1,1,1,1-2,-3]
+      width:  [2,5,9,11,10,7,0].mult(1.2)
+      height: [0,5,7,11,10,5,0]
       propeller: false
-      texture: [3,9,11,3]
+      texture: [3,9,9,11,3]
     cannon:
       section_segments: 12
       offset:
-        x: 15
-        y: 3
-        z: 0
+        x: 25
+        y: 60+a
+        z: -10
       position:
         x: [0,0,0,0,0,0,-1,-2]
         y: [-95,-85,-80,-86,-68,-50,-35,-15]
@@ -74,15 +75,15 @@ return model =
     deco:
       section_segments: 8
       offset:
-        x: 47
-        y: 11
-        z: -10
+        x: 64
+        y: 20+a
+        z: -3
       position:
-        x: [0,0,0,0,0,0,0,0,0,0]
-        y: [0,-10,0,10,45,50]
-        z: [0,0,0,0,0,0,0,0,0,0]
-      width: [0,3,5,5,5,0]
-      height: [0,3,5,5,5,0]
+        x: [0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-22,-15,-12,-15,-5,10,30,40,50,60,70,70].mult(1)
+        z: [0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,1.3,0,3,7,9,9,10,9,7,5,0]
+      height: [0,1.3,0,3,7,9,9,10,9,7,5,0]
       angle: 0
       laser:
         damage: [3,4]
@@ -91,20 +92,20 @@ return model =
         speed: [100,150]
         number: 1
         error: 0
-      propeller: false
-      texture: [17,13,63,4]
+      propeller: 1
+      texture: [63,3,4,13,3,63,4,11,63,13,17]
     deco2:
       section_segments: 8
       offset:
-        x: 64
-        y: 21
-        z: -10
+        x: 20
+        y: -12+a
+        z: 10
       position:
-        x: [0,0,0,0,0,0,0,0,0,0]
-        y: [5,-5,5,20,30,40]
+        x: [0,5,5,4,3,2,0,0,0,0]
+        y: [-15,-5,5,20,30,40,50,60,70,70].mult(1.5)
         z: [0,0,0,0,0,0,0,0,0,0]
-      width: [0,3,5,5,5,0]
-      height: [0,3,5,5,5,0]
+      width:  [0,3,5,8,9,10,9,7,5,0]
+      height: [0,3,5,7,9,10,9,7,5,0]
       angle: 0
       laser:
         damage: [3,4]
@@ -113,17 +114,17 @@ return model =
         speed: [100,150]
         number: 1
         error: 0
-      propeller: false
-      texture: [17,13,3,63,4]
+      propeller: true
+      texture: [63,13,3,63,3,11,63,13,17]
     stripes:
       section_segments: 10
       offset:
         x: 26
-        y: 63
-        z: 4
+        y: 63+a
+        z: 0
       position:
         x: [-6,-8,-1,0,0,0,0,0,0,0,0]
-        y: [-85,-96,-68,-60,-35,-15,-0,10,20,30,29]
+        y: [-85,-96,-68,-60,-35,-20,-5,5,20,30,29]
         z: [0,0,0,0,0,0,0,0,0,0,0]
       width:  [0,4,7,8,9,10,9,8,8,7,0].mult(1.5)
       height: [0,4,7,8,9,10,9,8,8,7,0].mult(1.5)
@@ -134,7 +135,7 @@ return model =
       length: [0,55,20,13]
       width: [0,85,40,20,10]
       angle: [0,0,-20,-10]
-      position: [-10,30,50,60,60]
+      position: [0,-20,40,50,40]
       doubleside: true
       bump:
         position: 20
@@ -142,11 +143,11 @@ return model =
       texture: [0,11,3,63]
       offset:
         x: 0
-        y: -10
+        y: 10+a
         z: -2
     ###main2:
       length: [10,45,30,13]
-      width: [240,185,50,30,20]
+      width: [100,85,50,30,20]
       angle: [0,0,-20,-10]
       position: [-20,-5,50,80,65]
       doubleside: true
@@ -156,8 +157,22 @@ return model =
       texture: [4,3.6,13,63]
       offset:
         x: 0
-        y: 0
-        z: -2###
+        y: 0+a
+        z: -42###
+    stab1:
+      length: [ 20 ]
+      width: [40,20]
+      angle: [ 0 ]
+      position: [60,80]
+      doubleside: true
+      texture: [ 3 ]
+      bump:
+        position: 0
+        size: 10
+      offset:
+        x: 10
+        y: -123+a
+        z: 0      
     stab:
       length: [ 20 ]
       width: [40,20]
@@ -169,6 +184,6 @@ return model =
         position: 0
         size: 10
       offset:
-        x: 10
-        y: 3
-        z: 11
+        x: 20
+        y: 3+a
+        z: 15
