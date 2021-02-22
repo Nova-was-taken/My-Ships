@@ -1,0 +1,110 @@
+  
+Array::mult = (m) -> @map (v) -> v*m
+Array::add = (m) -> @map (v) -> v+m
+for key of Array::
+  Object.defineProperty Array::, key,
+    enumerable: false
+
+return model =
+  name: "Lightbane"
+  level: 6
+  model: 10
+  size: 2
+  specs:
+    shield:
+      capacity: [235,315]
+      reload: [6,8]
+    generator:
+      capacity: [125,200]
+      reload: [30,45]
+    ship:
+      mass: 200
+      speed: [80,105]
+      rotation: [60,80]
+      acceleration: [90,120]
+  #yet another cursed pos#    
+  bodies:
+    main:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 10
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [-35,-44,-36,-27,-18,-12,-3,5,10,10]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,1.5,5,8,10,10,7,6,4,0].mult(.9)
+      height: [0,1.5,4,8,12,12,7,6,4,0].mult(.7)
+      texture: [3,2,10,63,3,11,3,13,17]
+      propeller: true
+    side_things:
+      section_segments: 8
+      offset:
+        x: 15
+        y: -16
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-1,3,2,10,20,25,30,30].mult(1.1)
+        z: [0,0,0,0,0,0,0,0,0]
+      width:  [0,0.5,1,3,3,3,1.5,0]
+      height: [0,0.5,1,3,3,3,1,0]
+      texture: [63,4,4,11,63,13,17]
+      propeller: 1
+    u_side_things:
+      section_segments: [0,60,120,180]
+      offset:
+        x: -8
+        y: -16
+        z: 0
+      position:
+        x: [3.5,2,.5,4,4,5,5]
+        y: [-10,-5,15,23,30,35,35]
+        z: [0,0,0,0,0,0,0,0,0]
+      width:  [0,1.5,3,3,3,1.5,0]
+      height: [0,1,3,3,3,2,0]
+      texture: [ 4 ]
+      propeller: 0 
+    cockpit:
+      section_segments: 9
+      offset:
+        x: 0
+        y: -10
+        z: 7
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-15,-10,-4,3,10,17,17]
+        z: [-4,-4,-2,-.3,-.5,-3,-3]
+      width:  [1,3,4,4,3,2,0]
+      height: [0,2,3,2,2,2,0]
+      texture: [9,9,9,3,63]
+  wings:
+    main:
+      length: [13,10]
+      width: [40,15,5]
+      angle: [10,-14]
+      position: [2,23]
+      bump:
+        position: 30
+        size: 10
+      texture: 3
+      doubleside: true
+      offset:
+        x: 0
+        y: -15
+        z: -2
+    back_fins:
+      doubleside: true
+      length: [ 5 ]
+      width: [15,5]
+      angle: [ 45 ]
+      position: [-8,-1]
+      texture: [ 63 ]
+      bump:
+        position: 30
+        size: 5
+      offset:
+        x: 2
+        y: 20
+        z: 2
