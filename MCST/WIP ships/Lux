@@ -1,5 +1,5 @@
 return model =
-  name: 'Xeroc'
+  name: 'Lux'
   level: 7
   model: 15
   size: 2.2
@@ -82,15 +82,15 @@ return model =
       propeller: 1
   wings:
     main:
-      length: [25,10,5]
+      length: [25,20,5]
       width: [85,30,20,10]
       angle: [0,0,-20,-10]
-      position: [20,50,40,30]
+      position: [20,50,40]
       doubleside: true
       bump:
         position: 20
         size: 5
-      texture: [11,3,63]
+      texture: [11,63]
       offset:
         x: 17
         y: 19
@@ -109,3 +109,17 @@ return model =
         x: 10
         y: 23
         z: 11
+    front:
+      length: [ 16 ]
+      width: [40,20]
+      angle: [ 0 ]
+      position: [-60,-90]
+      doubleside: true
+      texture: [ 4   ]
+      bump:
+        position: 0
+        size: 10
+      offset:
+        x: 10
+        y: 25
+        z: 0    
