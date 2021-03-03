@@ -1,16 +1,3 @@
-Array::mult = (m) ->
-  @map (v) ->
-    v * m
-
-Array::add = (m) ->
-  @map (v) ->
-    v + m
-
-for key of Array.prototype
-  `key = key`
-  Object.defineProperty Array.prototype, key, enumerable: false
-bulk_z_move = 10
-bulk_y_move = 0
 return model =
   name: 'T-Fighter'
   level: 6
@@ -25,7 +12,7 @@ return model =
       reload: [30,45]
     ship:
       mass: 300
-      speed: [75,110]
+      speed: [85,114]
       rotation: [70,80]
       acceleration: [80,120]
   bodies:
@@ -33,8 +20,8 @@ return model =
       section_segments: 12
       offset:
         x: 0
-        y: 0 + bulk_y_move
-        z: 10 - bulk_z_move
+        y: 0
+        z: 0
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0]
         y: [-95,-65,-47,-20,15,17,29,50,60,75,72]
@@ -47,8 +34,8 @@ return model =
       section_segments: 7
       offset:
         x: 0
-        y: -59 + bulk_y_move
-        z: 20 - bulk_z_move
+        y: -59
+        z: 10
       position:
         x: [0,0,0,0,0,0,0]
         y: [-15,0,16,35,50]
@@ -57,40 +44,18 @@ return model =
       height: [0,6,11,6,5]
       propeller: false
       texture: [7,9,9,4,4]
-    cannon_wing_top:
-      section_segments: 8
-      offset:
-        x: 0
-        y: 60 + bulk_y_move
-        z: 50 - bulk_z_move
-      position:
-        x: [0,0,0,0,0,0]
-        y: [-25,-30,-10,10,20,15]
-        z: [0,0,0,0,0,0]
-      width: [0,2.5,4,5.5,3.5,0].mult(1.2)
-      height: [0,2.5,4,5.5,5,0]
-      angle: 0
-      laser:
-        damage: [5,10]
-        rate: 2
-        type: 1
-        speed: [180,230]
-        number: 1
-        error: 0
-        angle: 0
-      propeller: 0
-      texture: [6,4,10,13,17]
+    
     side_thruster:
       section_segments: 8
       offset:
         x: 19
-        y: 57 + bulk_y_move
-        z: 0 - bulk_z_move
+        y: 57
+        z: -10
       position:
         x: [1,1,1,0,0,0]
         y: [-45,-30,-10,10,20,15]
         z: [0,0,0,0,0,0]
-      width: [0,2.5,4,5.5,3.5,0].mult(1.3)
+      width: [0,3.25,5.2,7.15,4.55,0]
       height: [0,2.5,4,5.5,5,0]
       angle: 0
       propeller: true
@@ -99,14 +64,14 @@ return model =
       section_segments: 8
       offset:
         x: 10
-        y: -43 + bulk_y_move
-        z: 0 - bulk_z_move
+        y: -43
+        z: -10
       position:
         x: [0,0,0,0,0,-2]
         y: [-35,-40,-20,10,25,40]
         z: [0,0,0,0,0,0]
-      width: [0,4,7,10,6,0].mult(.8)
-      height: [0,4,7,10,7,0].mult(.6)
+      width: [0,3.2,5.6,8,4.8,0]
+      height: [0,2.4,4.2,6,4.2,0]
       angle: 0
       laser:
         damage: [10,15]
@@ -118,18 +83,41 @@ return model =
         angle: 20
       propeller: false
       texture: [4,4,11,4]
+    cannon_wing_top:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 60
+        z: 40
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-25,-30,-10,10,20,15]
+        z: [0,0,0,0,0,0]
+      width: [0,3,4.8,6.6,4.2,0]
+      height: [0,2.5,4,5.5,5,0]
+      angle: 0
+      laser:
+        damage: [5,10]
+        rate: 2
+        type: 1
+        speed: [180,230]
+        number: 1
+        error: 0
+        angle: 0
+      propeller: 0
+      texture: [6,4,10,13,17]  
     cannon_wings:
       section_segments: 8
       offset:
         x: 56
-        y: 50 + bulk_y_move
-        z: 7 - bulk_z_move
+        y: 50
+        z: -3
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-        y: [-95,-85,-80,-86,-75,-68,-64,-64,-45,-15,10,25,21].mult(0.7)
+        y: [-66.5,-59.4,-56,-60.1,-52.5,-47.5,-44.8,-44.8,-31.4,-10.5,7,17.5,14.7]
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width: [0,1.5,0,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(.9)
-      height: [0,1.5,0,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(.9)
+      width: [0,1.35,0,2.7,4.5,5.4,6.9,6.9,7.65,8.55,6.75,4.5,0]
+      height: [0,1.35,0,2.7,4.5,5.4,6.9,6.9,7.65,8.55,6.75,4.5,0]
       texture: [63,63,13,4,4,63,8,10,8,4,13,17]
       angle: 0
       laser:
@@ -141,6 +129,29 @@ return model =
         angle: 3.5
         error: 0
       propeller: 0
+    cannon_pulse_fix:
+      section_segments: 0
+      offset:
+        x: 0
+        y: 0
+        z: 0
+      position:
+        x: [0]
+        y: [0]
+        z: [0]
+      width: [0]
+      height: [0]
+      texture: [0]
+      angle: 0
+      laser:
+        damage: [100,150]
+        rate: 10
+        type: 1
+        speed: [1,1]
+        number: 100
+        error: 0
+        angle: 0
+      propeller: false
   wings:
     main:
       length: [60,15,5]
@@ -151,8 +162,8 @@ return model =
       texture: [11,63,4]
       offset:
         x: 1
-        y: 13 + bulk_y_move
-        z: 4.69 - bulk_z_move
+        y: 13
+        z: -5.31
       bump:
         position: 10
         size: 10
@@ -165,22 +176,22 @@ return model =
       texture: [ 3 ]
       offset:
         x: 1
-        y: -58 + bulk_y_move
-        z: 10 - bulk_z_move
+        y: -58
+        z: 0
       bump:
         position: 30
         size: 15
     winglets_cannon_top_2:
       length: [13,3]
-      width: [10,10,15].add(5)
+      width: [15,15,20]
       angle: [30,30,0]
       position: [-12,0,-2]
       doubleside: true
       texture: [4,13]
       offset:
         x: 1
-        y: 65 + bulk_y_move
-        z: 50 - bulk_z_move
+        y: 65
+        z: 40
       bump:
         position: 10
         size: 10
@@ -188,8 +199,8 @@ return model =
       doubleside: true
       offset:
         x: 0
-        y: 44 + bulk_y_move
-        z: 30 - bulk_z_move
+        y: 44
+        z: 20
       length: [0,20]
       width: [0,50,20]
       angle: [0,90]
