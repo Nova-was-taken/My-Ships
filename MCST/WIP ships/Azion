@@ -1,6 +1,5 @@
- 
 return model =
-  name: "Azion"
+  name: 'Azion'
   level: 5
   model: 46
   size: 1.5
@@ -28,7 +27,7 @@ return model =
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0]
         y: [-100,-98,-100,-85,-60.5,-40,-10,20,50,70,90,100,96]
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [0,2,3,10,17,20,23,25,23,23,18,15,0]
+      width: [0,2,3,10,17,20,23,25,23,23,18,15,0]
       height: [0,2,3,11,14,19,23,25,23,21,17,14,0]
       texture: [4,4,63,8,3,11,2,3,11,63,13,17]
       propeller: true
@@ -40,9 +39,9 @@ return model =
         z: 23
       position:
         x: [0,0,0,0,0,0,0]
-        y: [-20,-0,22,40,65,86,100]
+        y: [-20,0,22,40,65,86,100]
         z: [-11,-10,-6,-4,-1,0,0]
-      width:  [2,7,10,10,9,6,0]
+      width: [2,7,10,10,9,6,0]
       height: [0,7,10,10,9,5,0]
       texture: [9,9,4,63,3]
     side:
@@ -52,12 +51,12 @@ return model =
         y: 60
         z: 0
       position:
-        x: [-7,-5,0-2,0,0,0,0,0]
+        x: [-7,-5,-2,0,0,0,0,0]
         y: [-80,-70,-50,-16,6,24,40,35]
         z: [0,0,0,0,0,0,0,0]
-      width:  [0,8,12,17,15,11,9,0]
+      width: [0,8,12,17,15,11,9,0]
       height: [0,8,12,15,15,11,9,0]
-      texture   : [3,3,63,11,4,13,16.9]
+      texture: [3,3,63,11,4,13,16.9]
       propeller: true
       angle: 0
     cannonCenter:
@@ -70,18 +69,18 @@ return model =
         x: [0,0,0,0,0,0,-1,-2,-3]
         y: [-28,-30,-25,-10,-4,2,10,16,20]
         z: [0,0,0,0,0,0,0,0,0]
-      width:  [0,3,4,6,6,5,4,2,0]
+      width: [0,3,4,6,6,5,4,2,0]
       height: [0,3,4,6,6,6,4,2,0]
       texture: [17,3,11,3,63,2,13,4]
       propeller: false
-      angle: 3
+      angle: 0
       laser:
         damage: [8,13]
         rate: 10
         type: 1
         speed: [140,200]
         number: 1
-        error: 0        
+        error: 0
   wings:
     front:
       doubleside: true
@@ -89,11 +88,11 @@ return model =
         x: 4
         y: 80
         z: 10
-      length: [30]
+      length: [ 30 ]
       width: [30,20]
-      angle: [20]
+      angle: [ 20 ]
       position: [0,25]
-      texture: [63]
+      texture: [ 63 ]
       bump:
         position: 10
         size: 5
@@ -103,11 +102,11 @@ return model =
         x: 15
         y: -26
         z: -4
-      length: [20]
+      length: [ 20 ]
       width: [30,20]
-      angle: [-0]
+      angle: [ 0 ]
       position: [0,-20]
-      texture: [63]
+      texture: [ 63 ]
       bump:
         position: 10
         size: 5
