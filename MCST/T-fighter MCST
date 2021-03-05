@@ -83,6 +83,29 @@ return model =
         angle: 20
       propeller: false
       texture: [4,4,11,4]
+    cannon_pulse_fix:
+      section_segments: 0
+      offset:
+        x: 0
+        y: 0
+        z: 0
+      position:
+        x: [0]
+        y: [0]
+        z: [0]
+      width: [0]
+      height: [0]
+      texture: [0]
+      angle: 0
+      laser:
+        damage: [100,150]
+        rate: 10
+        type: 1
+        speed: [1,1]
+        number: 100
+        error: 0
+        angle: 0
+      propeller: false      
     cannon_wing_top:
       section_segments: 8
       offset:
@@ -129,29 +152,7 @@ return model =
         angle: 3.5
         error: 0
       propeller: 0
-    cannon_pulse_fix:
-      section_segments: 0
-      offset:
-        x: 0
-        y: 0
-        z: 0
-      position:
-        x: [0]
-        y: [0]
-        z: [0]
-      width: [0]
-      height: [0]
-      texture: [0]
-      angle: 0
-      laser:
-        damage: [100,150]
-        rate: 10
-        type: 1
-        speed: [1,1]
-        number: 100
-        error: 0
-        angle: 0
-      propeller: false
+
   wings:
     main:
       length: [60,15,5]
