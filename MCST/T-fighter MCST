@@ -12,7 +12,7 @@ return model =
       reload: [30,45]
     ship:
       mass: 300
-      speed: [85,114]
+      speed: [85,110]
       rotation: [70,80]
       acceleration: [80,120]
   bodies:
