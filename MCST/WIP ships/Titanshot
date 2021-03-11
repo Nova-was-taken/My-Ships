@@ -1,3 +1,4 @@
+
 return model =
   name: 'Titanshot'
   level: 7
@@ -5,7 +6,7 @@ return model =
   size: 2.2
   specs:
     shield:
-      capacity: [450,450]
+      capacity: [350,350]
       reload: [7,7]
     generator:
       capacity: [400,400]
@@ -31,10 +32,10 @@ return model =
       texture: [4,4,63,11,3,10,63,2,11,4,8,13,17]
       propeller: 1
       laser:
-        damage: [350,350]
-        rate: 4
+        damage: [375,375]
+        rate: .4
         type: 2
-        speed: [150,175]
+        speed: [175,175]
         number: 1
         error: 0
     cockpit:
