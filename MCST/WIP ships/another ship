@@ -1,0 +1,74 @@
+return model =
+  name: 'Challenege 1'
+  level: 1
+  model: 1
+  size: 1.05
+  specs:
+    shield:
+      capacity: [75,100]
+      reload: [2,3]
+    generator:
+      capacity: [40,60]
+      reload: [10,15]
+    ship:
+      mass: 60
+      speed: [125,145]
+      rotation: [110,130]
+      acceleration: [100,120]
+  bodies:
+    main:
+      section_segments: 12
+      offset:
+        x: 0
+        y: 0
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0]
+        y: [-56,-60,-50,-20,10,30,40,55,75,90,88]
+        z: [0,0,0,0,0,0,0,0,0,0,0]
+      width:  [0,7,13,18,20,22,22,20,18,12,0]
+      height: [0,7,13,18,24,24,24,24,18,12,0]
+      propeller: 1
+      texture: [6,13,2,63,11,2,3,4,13,17]
+    cockpit:
+      section_segments: 9
+      offset:
+        x: 0
+        y: 20
+        z: 17
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-60,-50,-40,-20,-10,15,55]
+        z: [-2.5,-3,-2,0,0,0,0,0,0]
+      width:  [3,6,8,10,10,10,5]
+      height: [0,6,8,10,10,10,0]
+      texture: [3,9,9,63,11,3,2]      
+    side:
+      section_segments: 12
+      offset:
+        x: 60
+        y: 30
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-50,-40,-30,-20,-10,0,15,25,40,40]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width:  [0,6,9,9,9,9,9,9,6,0]
+      height: [0,4,10,10,10,10,10,10,4,0]
+      propeller: 1
+      texture: [2,3,2,13,2,3,2,3,2]
+  wings:
+    main:
+      offset:
+        x: 20
+        y: 0
+        z: 0
+      doubleside: true
+      length: [15]
+      width: [25,25]
+      angle: [0]
+      position: [0,0]
+      texture: [1]
+      bump:
+        position: 0
+        size: 0
