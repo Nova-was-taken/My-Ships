@@ -1,0 +1,167 @@
+a=0
+return model =
+  name: 'Sinistyte'
+  designer: 'Nova'  
+  level: 6
+  model: 5
+  size: 2
+  specs:
+    shield:
+      capacity: [200,200]
+      reload: [9,9]
+    generator:
+      capacity: [160,160]
+      reload: [35,35]
+    ship:
+      mass: 150
+      speed: [125,125]
+      rotation: [85,85]
+      acceleration: [125,125]
+  bodies:
+    main:
+      section_segments: 12
+      offset:
+        x: 0
+        y: -120+a
+        z: -1
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0,0,0]
+        y: [0,4,26,41,78,124,132,156,188,207,226,220]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,6,14,20,29,35,40,43,42,32,25,0]
+      height: [0,5,12,16.5,24,29,29,25,25,25,20,0]
+      propeller: true
+      texture: [2,3,8,11,63,2,11,2,8,13,17]
+      laser:
+        damage: [110,110]
+        rate: 1
+        type: 2
+        speed: [210,210]
+        number: 1
+        error: 0
+    cockpit:
+      section_segments: 12
+      offset:
+        x: 0
+        y: -65+a
+        z: 18.5
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [0,4,42,72,69,96,120,150,155]
+        z: [0,0,0,0,5,8,8,8,5]
+      width: [0,7,15,17,17,17,16,5,0]
+      height: [0,3,17,20,17,18,14,5,0]
+      texture: [2,9,11,17,2,3,63]
+    strut1:
+      section_segments: 8
+      offset:
+        x: 55
+        y: 24+a
+        z: -10
+      position:
+        x: [0,0,0,0]
+        y: [-10,8,49,55]
+        z: [0,0,2,3]
+      width: [0,6,7,0]
+      height: [0,12,14,0]
+      texture: [63,2,3]
+    strut2:
+      section_segments: 8
+      offset:
+        x: 60
+        y: 90+a
+        z: 28
+      position:
+        x: [0,0,0,0]
+        y: [0,8,42,45]
+        z: [0,0,2,3]
+      width: [0,5,6,0]
+      height: [0,7,8,0]
+      texture: [63,13,17]
+    cannon2:
+      section_segments: 6
+      offset:
+        x: 53
+        y: 65+a
+        z: -15
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-81,-108,-54,0,27,40.5]
+        z: [0,0,0,0,0,0]
+      width: [0,5.2,11.7,14.3,9.1,0]
+      height: [0,5,9,11,10,0]
+      texture: [4,4,10,13,16.9]
+      angle: 0
+      laser:
+        damage: [5,5]
+        rate: 6
+        type: 1
+        speed: [190,190]
+        number: 1
+        error: 1
+      propeller: 1
+    cannon:
+      section_segments: 8
+      offset:
+        x: 20
+        y: 80+a
+        z: 28
+      propeller: 1
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-100,-90,-50,-20,20,50,50]
+        z: [-10,-10,0,0,0,0,0]
+      width: [0,4,10,11,10,8,0]
+      height: [0,5,20,22,23,10,0]
+      angle: 0
+      texture: [3,4,10,2,13,17]
+      laser:
+        damage: [15,15]
+        rate: 4
+        type: 1
+        speed: [190,190]
+        number: 1
+        error: 1
+  wings:
+    bridge1:
+      length: [10,23]
+      width: [20,218,100]
+      angle: [0,0]
+      position: [90,30,65]
+      doubleside: true
+      texture: [63,3]
+      bump:
+        position: 40
+        size: 12.3
+      offset:
+        x: 10
+        y: -57+a
+        z: 5
+    bridge2:
+      length: [0,55,0,2,11]
+      width: [0,122,36,105,105,30]
+      angle: [0,-30,-20,0,-10]
+      position: [0,13,35,10,15,30]
+      doubleside: true
+      texture: [1,11,17,63,2]
+      bump:
+        position: 17
+        size: 11
+      offset:
+        x: 18
+        y: 55+a
+        z: 27.2
+    main:
+      length: [ 65 ]
+      width: [57,30]
+      angle: [-10,0]
+      position: [0,32]
+      doubleside: true
+      texture: [ 63 ]
+      bump:
+        position: 30
+        size: 12
+      offset:
+        x: 0
+        y: 86+a
+        z: 39
