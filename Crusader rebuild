@@ -1,14 +1,8 @@
-Array::mult = (m) -> @map (v) -> v*m
-Array::add = (m) -> @map (v) -> v+m
-for key of Array::
-  Object.defineProperty Array::, key,
-    enumerable: false
-bulk_move=30
 return model =
   name: 'Crusader'
   level: 4
   model: 6
-  size: 2.0
+  size: 2
   specs:
     shield:
       capacity: [250,300]
@@ -26,13 +20,13 @@ return model =
       section_segments: 8
       offset:
         x: 0
-        y: 0+bulk_move
+        y: 30
         z: 0
       position:
         x: [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
         y: [-115,-100,-75,-45,-30,-19,0,10,25,40,40]
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [0,10,18,22,24,24,22,18,15,10,0].mult(1.0)
+      width: [0,10,18,25,30,28,22,19,16,10,0]
       height: [0,10,18,22,22,22,22,18,15,10,0]
       texture: [63,2,11,63,2,10,3,8,13,17]
       propeller: true
@@ -40,7 +34,7 @@ return model =
       section_segments: 8
       offset:
         x: 0
-        y: -50+bulk_move
+        y: -20
         z: 19
       position:
         x: [0,0,0,0,0,0,0]
@@ -53,28 +47,28 @@ return model =
       section_segments: 8
       offset:
         x: 15
-        y: -30+bulk_move
+        y: 0
         z: 0
       position:
         x: [-5,-5,-5,-5,-3,0,0,0,0,0,0,0]
         y: [-28,-20,-15,-10,-5,0,10,30,40,60,70,60]
         z: [0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [0,5,7,7,7,7,10,13,15,15,10,0].mult(.8)
-      height: [0,5,7,7,7,7,10,10,10,10,10,0].mult(.5)
+      width: [0,4,5.6,5.6,5.6,5.6,8,10.4,12,12,8,0]
+      height: [0,2.5,3.5,3.5,3.5,3.5,5,5,5,5,5,0]
       texture: [63,6,13,63,3,4,8,3,63,13,17]
       propeller: true
     Cannons:
       section_segments: 8
       offset:
         x: 20
-        y: -30+bulk_move
+        y: 0
         z: -5
       position:
         x: [0,0,0,0,0,0,0,0,0,-2,-3,-3,-3]
-        y: [-95,-85,-80,-86,-75,-68,-64,-64,-45,-15,10,25,21].mult(0.8)
+        y: [-76,-68,-64,-68.8,-60,-54.4,-51.2,-51.2,-36,-12,8,20,16.8]
         z: [0,0,0,0,0,0,0,0,0,0,0,0,0]
-      width:  [0,1.5,0,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(.9)
-      height: [0,1.5,0,3,5,6,7.7,7.7,8.5,9.5,7.5,5,0].mult(.9)
+      width: [0,1.35,0,2.7,4.5,5.4,6.9,6.9,7.65,8.55,6.75,4.5,0]
+      height: [0,1.35,0,2.7,4.5,5.4,6.9,6.9,7.65,8.55,6.75,4.5,0]
       texture: [63,63,13,4,4,63,8,10,8,4,13,17]
       laser:
         damage: [7,10]
@@ -87,12 +81,12 @@ return model =
     main:
       offset:
         x: 20
-        y: -83+bulk_move
+        y: -53
         z: 2
       length: [50,5]
-      width: [70,30,40]
-      angle: [0,40]
-      position: [50,90,85]
+      width: [80,30,30]
+      angle: [0,20]
+      position: [55,79,74]
       texture: [11,63]
       doubleside: true
       bump:
@@ -101,35 +95,21 @@ return model =
     mini:
       offset:
         x: 20
-        y: -59+bulk_move
-        z: 9
-      length: [49,5]
+        y: -30
+        z: 8.5
+      length: [51]
       width: [30,10]
-      angle: [-5]
-      position: [30,69]
-      texture: [63]
+      angle: [ -4 ]
+      position: [30,59]
+      texture: [ 63 ]
       doubleside: true
       bump:
         position: 0
-        size: 10  
-    back_bit:
-      offset:
-        x: 20
-        y: -38+bulk_move
-        z: 0
-      length: [52,5]
-      width: [30,10]
-      angle: [0]
-      position: [30,55]
-      texture: [63]
-      doubleside: true
-      bump:
-        position: 0
-        size: 10   
+        size: 10
     tail:
       offset:
         x: 10
-        y: 55+bulk_move
+        y: 85
         z: 10
       length: [10,15]
       width: [30,25,20]
