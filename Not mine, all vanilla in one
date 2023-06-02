@@ -1,0 +1,852 @@
+return model =
+  name: "Scorpion"
+  level: 7.9
+  model: 9
+  size: 2
+  specs:
+    shield:
+      capacity: [22500,40000]
+      reload: [50000,70000]
+    generator:
+      capacity: [80000,1750000]
+      reload: [38000,50000]
+  ship:
+    mass: 450000
+    speed: [750,900]
+    rotation: [500000,700000]
+    acceleration: [16000,20000]
+  bodies:
+    Scorpion_Main:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 0
+        z: 10
+      position:
+        x: [0,0,0,0,0,0,0,0]
+        y: [-90,-40,-30,0,50,100,120,110]
+        z: [-10,-5,0,0,0,0,20,20]
+      width: [0,12,20,15,25,10,5]
+      height: [0,10,15,25,15,10,5]
+      texture: [1,4,63,11,11,4]
+      propeller: false
+    Scorpion_Tail:
+      section_segments: 14
+      offset:
+        x: 0
+        y: 70
+        z: 100
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-70,-25,-10,20,40,50]
+        z: [0,0,0,0,-10,-20]
+      width: [0,5,35,25,5,5]
+      height: [0,5,25,20,5,5]
+      texture: [6,4,63,10,4]
+      laser:
+        damage: [50,100]
+        rate: 0.9
+        type: 2
+        speed: [170,230]
+        number: 1
+        angle: 0
+        error: 0
+        recoil: 100
+    U_Sniper_U_Wings:
+      section_segments: 8
+      offset:
+        x: 70
+        y: -20
+        z: -20
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-90,-100,40,80,90,100]
+        z: [0,0,0,0,0,0]
+      width: [0,10,25,20,0]
+      height: [0,5,25,20,0]
+      texture: [12,2,3,4]
+    Marauder_Cockpit:
+      section_segments: [40,90,180,270,320]
+      offset:
+        x: 0
+        y: -100
+        z: 25.25
+      position:
+        x: [0,0,0,0,0,0]
+        y: [15,35,60,95,125]
+        z: [-1,-2,-1,-1,3]
+      width: [5,12,14,15,5]
+      height: [0,12,15,15,0]
+      texture: [8.98,8.98,8.98]
+    Marauder_Outriggers:
+      section_segments: 10
+      offset:
+        x: 35
+        y: 100
+        z: 80
+      position:
+        x: [-5,-5,8,-5,0,0,0,0,0,0]
+        y: [-100,-125,-45,0,30,40,70,80,100,90]
+        z: [10,10,5,5,0,0,0,0,0,0,0,0]
+      width: [0,6,10,10,15,15,15,15,10,0]
+      height: [0,10,20,25,25,25,25,25,20,0]
+      texture: [13,4,4,63,4,18,4,13,17]
+      laser:
+        damage: [4,8]
+        rate: 3
+        type: 1
+        speed: [110,140]
+        recoil: 0
+        number: 1
+        error: 0
+      propeller: true
+    X_Warrior_Wing_End_Top:
+      section_segments: 12
+      offset:
+        x: 105
+        y: 50
+        z: 40
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-65,-70,-20,0,20,30,5]
+        z: [0,0,0,0,0,0,0]
+      width: [0,2,3,7,7,5,0]
+      height: [0,2,3,7,7,5,0]
+      texture: [12,63,63,11,63,12]
+      angle: 0
+    A_Speedster_Side_Propulsors:
+      section_segments: 10
+      offset:
+        x: 50
+        y: 25
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-20,-15,0,10,20,25,30,40,80,70]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,15,20,20,20,15,15,20,10,0]
+      height: [0,15,20,20,20,15,15,20,10,0]
+      propeller: true
+      texture: [4,4,2,2,5,63,5,4,12]
+    Barracuda_Front:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -20
+        z: 0
+      position:
+        x: [0,0,0,0,0]
+        y: [-90,-85,-70,-60,-20]
+        z: [0,0,0,0,0]
+      width: [0,40,45,10,12]
+      height: [0,15,18,8,12]
+      texture: [8,63,4,4,4]
+      propeller: true
+    Howler_Front1:
+      section_segments: 8
+      offset:
+        x: 22
+        y: -110
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,-5]
+        y: [-22.5,-12,-4.5,-7.5,22.5,60]
+        z: [0,0,0,0,0,0,0,0,0,0,0,0]
+      width: [0,4.5,4.5,6,12,9]
+      height: [0,4.5,4.5,6,12,9]
+      texture: [17,4,3]
+      laser:
+        damage: [9,15]
+        rate: 1
+        speed: [150,200]
+        number: 1
+        recoil: 25
+        type: 2
+    FuryStar_Top_Propulsors:
+      section_segments: 10
+      offset:
+        x: 75
+        y: 45
+        z: 40
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-20,-15,0,10,20,25,30,40,80,70]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,10,15,15,15,10,10,15,10,0]
+      height: [0,10,15,15,15,10,10,15,5,0]
+      propeller: true
+      texture: [4,4,2,2,5,63,5,63,17]
+    FuryStar_Cannon:
+      section_segments: 6
+      offset:
+        x: 15
+        y: -85
+        z: -20
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-40,-50,-20,0,20,30]
+        z: [0,0,0,0,0,20]
+      width: [0,5,8,11,7,0]
+      height: [0,5,8,11,10,0]
+      angle: 0
+      laser:
+        damage: [12,18]
+        rate: 2
+        type: 1
+        speed: [200,250]
+        number: 1
+        error: 0
+      propeller: false
+      texture: [3,3,10,3]
+    Vangaurd_Cannons:
+      section_segments: 8
+      offset:
+        x: 10
+        y: -163
+        z: 5.5
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [5,0,23,27,62,62,97,102,163]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,5,5,7,7,4,4,7,7]
+      height: [0,5,5,7,7,4,4,7,7]
+      texture: [12,13,4,8,4,4,3,8]
+      propeller: false
+      laser:
+        damage: [18,25]
+        rate: 3
+        type: 2
+        speed: [170,200]
+        recoil: 70
+        number: 1
+        error: 0
+    Vangaurd_Cockpit:
+      section_segments: 12
+      offset:
+        x: 0
+        y: -30
+        z: 10
+      position:
+        x: [0,0,0,0,0]
+        y: [0,40,66,84,89]
+        z: [-8,-2,-1,1,20]
+      width: [20,30,30,23,0]
+      height: [30,30,30,23,0]
+      texture: [9]
+      propeller: false
+    X3_Laser:
+      section_segments: 10
+      offset:
+        x: 115
+        y: 10
+        z: -75
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-30,-25,0,10,20,25,30,40,70,60]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,10,15,15,15,10,10,15,10,0]
+      height: [0,10,15,15,15,10,10,15,5,0]
+      texture: [6,4,10,3,4,3,2]
+      propeller: true
+      laser:
+        damage: [4,4]
+        rate: 3
+        type: 1
+        speed: [150,150]
+        number: 1
+    X3_Laser2:
+      section_segments: 10
+      offset:
+        x: 50
+        y: -20
+        z: -50
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-30,-25,0,10,20,25,30,40,70,60]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,10,15,15,15,10,10,15,12,0]
+      height: [0,10,15,15,15,10,10,15,5,0]
+      texture: [6,4,10,3,4,3,2]
+      propeller: true
+      laser:
+        damage: [4,4]
+        rate: 4
+        type: 1
+        speed: [150,150]
+        number: 1
+    T_Warrior_Top_Propulsor:
+      section_segments: 10
+      offset:
+        x: 0
+        y: 100
+        z: 105
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-20,-15,0,10,20,25,30,40,100,90]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,15,20,20,20,15,15,20,10,0]
+      height: [0,15,20,20,20,15,15,20,10,0]
+      texture: [4,63,1,1,1,63,1,1,12]
+      propeller: true
+    Pionner_Shield:
+      section_segments: 12
+      offset:
+        x: 95
+        y: -60
+        z: -10
+      position:
+        x: [0,5,3,5,0,0]
+        y: [-30,-20,0,20,30,20]
+        z: [0,0,0,0,0,0]
+      width: [5,10,10,10,5,0]
+      height: [5,25,30,25,5,0]
+      propeller: true
+      texture: 4
+      angle: 0
+    O_Defender_Side:
+      section_segments: 10
+      offset:
+        x: 50
+        y: -7
+        z: -7
+      position:
+        x: [-40,-5,15,25,20,0,-50]
+        y: [-100,-70,-40,-10,20,50,90]
+        z: [0,0,0,0,0,0,0]
+      width: [5,20,20,20,20,20,5]
+      height: [15,25,30,30,30,25,0]
+      texture: [0,1,2,3,4,63]
+    Rock_Tower_Main:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 100
+        z: 60
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-90,-85,-70,-60,-20,-25,40,85,70]
+        z: [-10,-8,-5,0,0,0,0,0,0]
+      width: [0,40,45,10,12,30,30,20,0]
+      height: [0,10,12,8,12,10,25,20,0]
+      texture: [4,63,4,4,4,11,10,12]
+      propeller: true
+    Rock_Tower_Dimeds_Banhammer:
+      section_segments: 6
+      offset:
+        x: 25
+        y: 30
+        z: 40
+      position:
+        x: [0,0,0,0,0,0]
+        y: [-20,-10,-20,0,10,12]
+        z: [0,0,0,0,0,0]
+      width: [0,0,5,7,6,0]
+      height: [0,0,5,7,6,0]
+      texture: [6,6,6,10,12]
+      angle: 0
+      laser:
+        damage: [4,6]
+        rate: 8
+        type: 1
+        speed: [150,230]
+        number: 1
+        error: 5
+    Advanced_Fighter_Cannons:
+      section_segments: 12
+      offset:
+        x: 150
+        y: 0
+        z: -55
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-50,-45,-20,0,20,50,55]
+        z: [0,0,0,0,0,0,0]
+      width: [0,5,10,10,15,10,0]
+      height: [0,5,15,15,10,5,0]
+      angle: 0
+      propeller: false
+      texture: [4,4,10,4,63,4]
+      laser:
+        damage: [6,12]
+        rate: 3
+        type: 1
+        speed: [100,150]
+        number: 1
+        error: 0
+    Advanced_Fighter_Cannons2:
+      section_segments: 12
+      offset:
+        x: 175
+        y: 0
+        z: -65
+      position:
+        x: [0,0,0,0]
+        y: [-50,-20,40,50]
+        z: [0,0,0,0]
+      width: [2,5,5,2]
+      height: [2,15,15,2]
+      angle: 0
+      propeller: false
+      texture: 6
+      laser:
+        damage: [4,10]
+        rate: 3
+        type: 1
+        speed: [100,150]
+        number: 1
+        error: 0
+    A_Speedster_Cannons:
+      section_segments: 12
+      offset:
+        x: 20
+        y: -70
+        z: 35
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-50,-45,-20,0,20,30,40]
+        z: [0,0,0,0,0,0,0]
+      width: [0,5,7,10,3,5,0]
+      height: [0,5,7,8,3,5,0]
+      angle: -10
+      laser:
+        damage: [8,12]
+        rate: 2
+        type: 1
+        speed: [100,130]
+        number: 1
+        angle: -10
+        error: 0
+      propeller: false
+      texture: [6,4,10,4,63,4]
+    Odyessey_Bumpers:
+      section_segments: 8
+      offset:
+        x: 85
+        y: 120
+        z: 0
+      position:
+        x: [-5,0,5,10,5,0,-5]
+        y: [-85,-80,-40,0,20,50,55]
+        z: [0,0,0,0,0,0,0]
+      width: [0,10,15,15,15,5,0]
+      height: [0,20,35,35,25,15,0]
+      texture: [11,2,63,4,3]
+      angle: 0
+    Odessey_Laser1:
+      section_segments: 12
+      offset:
+        x: 110
+        y: 100
+        z: 0
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-25,-30,-20,0,20,30,20]
+        z: [0,0,0,0,0,0,0]
+      width: [0,3,5,5,5,3,0]
+      height: [0,3,5,5,5,3,0]
+      texture: [12,6,63,63,6,12]
+      laser:
+        damage: [20,20]
+        rate: 3
+        type: 1
+        speed: [200,200]
+        number: 1
+        error: 0
+    Odyssey_Top_Propulsors:
+      section_segments: 10
+      offset:
+        x: 17
+        y: 50
+        z: 15
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-20,-15,0,10,20,25,30,40,50,40]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,10,15,15,15,10,10,15,10,0]
+      height: [0,10,15,15,15,10,10,15,10,0]
+      texture: [3,4,10,3,3,63,4]
+      propeller: true
+    Odyssey_Bottom_Propulsors:
+      section_segments: 10
+      offset:
+        x: 17
+        y: 50
+        z: -15
+      position:
+        x: [0,0,0,0,0,0,0,0,0,0]
+        y: [-20,-15,0,10,20,25,30,40,50,40]
+        z: [0,0,0,0,0,0,0,0,0,0]
+      width: [0,10,15,15,15,10,10,15,10,0]
+      height: [0,10,15,15,15,10,10,15,10,0]
+      texture: [3,4,10,3,3,63,4]
+      propeller: true
+    Delta_Fighter_Gun_Support:
+      section_segments: 8
+      offset:
+        x: 30
+        y: -100
+        z: 5
+      position:
+        x: [-30,-20,-10,0,0,0]
+        y: [-20,-15,-5,10,40,55]
+        z: [-20,-20,-10,0,0,0]
+      width: [3,5,8,4,5,0]
+      height: [3,5,8,12,15,0]
+      texture: 63
+    Delta_Fighter_Gun:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -120
+        z: -10
+      position:
+        x: [0,0,0,0]
+        y: [-20,-10,5,10]
+        z: [0,0,0,0]
+      width: [3,7,8,3]
+      height: [3,7,8,3]
+      texture: [6,4,5]
+      laser:
+        damage: [3,5]
+        rate: 3
+        type: 1
+        speed: [100,120]
+        number: 3
+        angle: 15
+        error: 0
+    Y_Defender_Main:
+      section_segments: 8
+      offset:
+        x: 0
+        y: 0
+        z: -25
+      position:
+        x: [0,0,0,0,0,0,0,0,0]
+        y: [-100,-95,-50,-40,-20,-10,30,70,65]
+        z: [0,0,0,0,0,0,0,0,0]
+      width: [0,20,25,10,10,20,15,20,0]
+      height: [0,10,20,15,15,20,25,15,0]
+      texture: [1,2,2,63,2,10,2,12]
+      propeller: true
+      laser:
+        damage: [20,40]
+        rate: 2
+        type: 1
+        speed: [130,170]
+        number: 1
+        recoil: 75
+        error: 0
+    Y_Defender_Cockpit:
+      section_segments: 8
+      offset:
+        x: 0
+        y: -70
+        z: -35
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-20,-10,0,10,20]
+        z: [0,0,0,0,0]
+      width: [0,10,10,10,0]
+      height: [0,10,15,12,0]
+      texture: [9]
+      propeller: false
+    Condor_Cannons:
+      section_segments: 12
+      offset:
+        x: 75
+        y: 135
+        z: 65
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-50,-45,-20,0,20,50,55]
+        z: [0,0,0,0,0,0,0]
+      width: [0,5,10,10,10,10,0]
+      height: [0,5,15,15,10,5,0]
+      angle: 0
+      laser:
+        damage: [3,6]
+        rate: 4
+        type: 1
+        speed: [100,130]
+        number: 1
+        angle: 0
+        error: 0
+      propeller: false
+      texture: [6,4,10,4,63,4]
+    Bastion_Cannon1:
+      section_segments: 4
+      offset:
+        x: 15.5
+        y: -80
+        z: 101
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-10,0,20,30,40]
+        z: [0,0,0,0,0]
+      width: [0,2,4,7,3]
+      height: [0,1,3,6,0]
+      texture: [17,4]
+      laser:
+        damage: [6,6]
+        rate: 5
+        type: 1
+        speed: [200,200]
+        number: 1
+    Bastion_Cannon3:
+      section_segments: 4
+      offset:
+        x: 110
+        y: -105
+        z: -8
+      position:
+        x: [0,0,0,0,0,0,0]
+        y: [-10,0,20,30,40]
+        z: [0,0,0,0,0]
+      width: [0,2,4,7,3]
+      height: [0,1,3,6,0]
+      texture: [17,4]
+      angle: 5
+      laser:
+        damage: [20,20]
+        rate: 1.5
+        type: 1
+        speed: [160,160]
+        number: 1
+  wings:
+    Aetos_Main:
+      doubleside: true
+      offset:
+        x: -5
+        y: 5
+        z: -15
+      length: [90,40]
+      width: [70,50,30]
+      angle: [-30,-40]
+      position: [30,20,-20]
+      texture: [8,63]
+      bump:
+        position: 10
+        size: 10
+    Scorpian_Front:
+      doubleside: true
+      length: [80,30]
+      width: [20,15]
+      angle: [-10,20]
+      position: [-20,-40]
+      texture: 4
+      bump:
+        position: 30
+        size: 10
+      offset:
+        x: 0
+        y: 0
+        z: 0
+    X_Warrior_X_Wing1:
+      doubleside: true
+      offset:
+        x: 0
+        y: 70
+        z: 0
+      length: [80,35]
+      width: [50,40,30]
+      angle: [20,20]
+      position: [0,-10,-20]
+      texture: [10,10]
+      bump:
+        position: 10
+        size: 20
+    Side_Interceptor_Wings1:
+      doubleside: true
+      offset:
+        x: 60
+        y: 30
+        z: 20
+      length: [-20,-10,-40]
+      width: [50,50,130,30]
+      angle: [280,315,315]
+      position: [0,0,-50,0]
+      texture: 4
+      bump:
+        position: 10
+        size: -10
+    Side_Interceptor_Wings2:
+      doubleside: true
+      offset:
+        x: 60
+        y: 30
+        z: 10
+      length: [20,10,40]
+      width: [50,50,130,30]
+      angle: [-100,-135,-135]
+      position: [0,0,-50,0]
+      texture: 4
+      bump:
+        position: 10
+        size: 10
+    main1:
+      doubleside: true
+      offset:
+        x: 14.5
+        y: 15
+        z: 100
+      length: [0,15,0,7]
+      width: [0,160,70,30,30]
+      angle: [0,20,0,-10]
+      position: [30,-20,30,30,30]
+      texture: [13,63,13,8]
+      bump:
+        position: 35
+        size: 5
+    Bastion_Main3:
+      doubleside: true
+      offset:
+        x: 35
+        y: 25
+        z: -7
+      length: [45,35,0,20]
+      width: [40,40,40,200,40]
+      angle: [-20,20,-20,-5]
+      position: [20,30,0,-30,10]
+      texture: [0,8,13,63]
+      bump:
+        position: 35
+        size: 20
+    FuryStar_Rooftop:
+      doubleside: true
+      offset:
+        x: 0
+        y: -20
+        z: 20
+      length: [20,15,25,25,5]
+      width: [50,40,35,35,35,30]
+      angle: [0,-20,30,30,30]
+      position: [0,10,20,50,80,100]
+      texture: [8,63,3,3]
+      bump:
+        position: -40
+        size: 5
+    X2_Wings:
+      offset:
+        x: 70
+        y: 65
+        z: -14
+      length: [80]
+      width: [100,70]
+      angle: [0]
+      position: [-80,50]
+      texture: [4]
+      bump:
+        position: 10
+        size: 15
+    Marauder_Main:
+      length: [20,70,35]
+      width: [50,55,40,20]
+      angle: [0,-20,0]
+      position: [20,20,70,25]
+      texture: [3,18,63]
+      doubleside: true
+      bump:
+        position: 30
+        size: 15
+      offset:
+        x: 0
+        y: 85
+        z: 53
+    Marauder_Front:
+      length: [37]
+      width: [40,15]
+      angle: [-10]
+      position: [0,-45]
+      texture: [63]
+      doubleside: true
+      bump:
+        position: 30
+        size: 10
+      offset:
+        x: 25
+        y: -75
+        z: 0
+    Marauder_Spoiler:
+      length: [20,45,0,5]
+      width: [40,40,20,30,0]
+      angle: [0,20,90,90]
+      position: [60,60,80,80,90]
+      texture: [10,11,63]
+      doubleside: true
+      bump:
+        position: 30
+        size: 18
+      offset:
+        x: 0
+        y: 100
+        z: 115
+    Marauder_Shields:
+      doubleside: true
+      offset:
+        x: 12
+        y: 160
+        z: 70
+      length: [0,15,45,20]
+      width: [30,30,65,65,30,30]
+      angle: [30,30,90,150]
+      position: [10,10,0,0,10]
+      texture: [4]
+      bump:
+        position: 0
+        size: 4
+    Advanced_Fighter_Main:
+      length: [100,30,20]
+      width: [100,50,40,30]
+      angle: [-25,20,25]
+      position: [30,70,50,50]
+      bump:
+        position: -20
+        size: 20
+      offset:
+        x: 70
+        y: -50
+        z: -35
+      texture: [11,11,63]
+      doubleside: true
+    A_Speedster_Winglets:
+      offset:
+        x: 0
+        y: -150
+        z: 0
+      doubleside: true
+      length: [45,10]
+      width: [5,20,30]
+      angle: [50,-10]
+      position: [90,80,50]
+      texture: [4]
+      bump:
+        position: 10
+        size: 30
+    Condor_Back:
+      offset:
+        x: 0
+        y: 115
+        z: 100
+      length: [90,40]
+      width: [70,50,30]
+      angle: [-30,40]
+      position: [0,20,0]
+      texture: [11,63]
+      doubleside: true
+      bump:
+        position: 10
+        size: 20
+    Condor_Front:
+      offset:
+        x: 0
+        y: 145
+        z: 100
+      length: [90,40]
+      width: [70,50,30]
+      angle: [-30,-40]
+      position: [-60,-20,-20]
+      texture: [11,63]
+      doubleside: true
+      bump:
+        position: 10
+        size: 10
